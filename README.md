@@ -1,17 +1,60 @@
+
 # TABLE OF CONTENT
-- [Imtroduction](#brief-introduction-to-python)
-- [Variable](#variable-naming-conventions-in-python)
-- [Comment](#comments-in-python)
-- [Datatypes](#data-types-in-python)
-- [String](#strings-in-python)
-- [Number](#numbers-and-math-in-python)
-- [Control](#control-flow-and-exception-handling-in-python)
-- [Tuple](#tuples-in-python)
-- [List](#lists-in-python)
-- [Set](#sets-in-python)
-- [Dictionary](#python-dictionaries)
-- [Loop](#range-function-for-loop-and-while-loop-in-python)
-- [Function](#functions-in-python)
+1. [BASICS](#brief-introduction-to-python)
+    - [Imtroduction](#brief-introduction-to-python)
+    - [Variable](#variable-naming-conventions-in-python)
+    - [Comment](#comments-in-python)
+    - [Datatypes](#data-types-in-python)
+    - [String](#strings-in-python)
+    - [Number](#numbers-and-math-in-python)
+
+2. [CONTROL](#control-flow-and-exception-handling-in-python)
+    - [ifs](#if-statement)
+    - [elif](#elif-statement)
+    - [try & except](#try-and-except-clauses)
+    - [Common error](#common-exceptions-errors-in-python)
+
+3. [DATA STRUCTURE](#tuples-in-python)
+    - [Tuple](#tuples-in-python)
+    - [List](#lists-in-python)
+    - [Set](#sets-in-python)
+    - [Dictionary](#python-dictionaries)
+
+4. [LOOPING](#range-function-for-loop-and-while-loop-in-python)
+    - [for](#for-loop)
+    - [while](#while-loop)
+    - [control in loop](#common-loop-control-statements)
+
+5. [REGULAR EXPRESSION](#regular-expressions-re-for-string-manipulayion)
+    - [RE chars](#common-special-characters)
+    - [Special sequence](#special-sequences)
+    - [re functions](#main-functions)
+    - [re flags](#common-flags)
+
+6. [FUNCTION](#functions-in-python)
+    - [def](#defining-a-function)
+    - [return](#the-return-statement)
+    - [Sope](#variable-scope)
+    - [Parameters](#function-with-parameters)
+    - [Order](#order-of-arguments)
+    - [Docstring](#docstrings-in-functions)
+    - [lambda](#lambda-functions)
+    - [Best practices](#best-practices-with-functions)
+    - [Creating module](#creating-your-own-python-module)
+
+7. [Numpy into](#very-breif-intro-to-numpy)
+    - [Intro](#very-breif-intro-to-numpy)
+    - [Crating array](#creating-arrays)
+    - [Slicing](#slicing)
+    - [Shaping](#common-data-shaping-funtions-in-numpy)
+    - [Math & Stats Funcs](#common-arithmetic-and-statistical-funtions-in-numpy)
+
+8. [PANDAS](#introduction-to-pandas)
+    - [Data creation](#pandas-data-structures)
+    - [Data Loading](#data-loading-in-pandas)
+    - [Exporting](#exporting-your-data-in-pandas)
+
+
 # Brief Introduction to Python
 Python is a general-purpose programming language. It is known for its simplicity and readability, making it one of the most popular programming languages today. Python was created by **Guido van Rossum** and was first released in 1991.
 ## Key Features:
@@ -568,15 +611,15 @@ Similar to that of string and tuple. You can concatenate, replicate and check fo
 
 | Method   | Description                                                                                                                                                                                                                                                                                                                                                                    |
 |:---------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| append   | Append object to the end of the list.                                                                                                                                                                                                                                                                                                                                          |
-| clear    | Remove all items from list.                                                                                                                                                                                                                                                                                                                                                    |
-| copy     | Return a shallow copy of the list.                                                                                                                                                                                                                                                                                                                                             |
-| count    | Return number of occurrences of value.                                                                                                                                                                                                                                                                                                                                         |
-| extend   | Extend list by appending elements from the iterable.                                                                                                                                                                                                                                                                                                                           |
-| index    | Return first index of value.  Raises ValueError if the value is not present.                                                                                                                                                                                                                                                                                                   |
+| append   | Append object to the end of the list.                                                                                                                                                                                                                                                                                                                                          
+| clear    | Remove all items from list.                                                                                                                                                                                                                                                                                 
+| copy     | Return a shallow copy of the list.                                                                                                                                                                                                                                                                                                                                             
+| count    | Return number of occurrences of value.                                                                                                                                                                                                                                                                                                                                         
+| extend   | Extend list by appending elements fiterable.                                                                                                                                                                                                                                                                                                                           
+| index    | Return first index of value.  Raises ValueError if the value is not present.                                                                                                                                                                                                                                                                                                
 | insert   | Insert object before index.                                                                                                                                                                                                                                                                                                                                                    |
-| pop      | Remove and return item at index (default last).  Raises IndexError if list is empty or index is out of range.                                                                                                                                                                                                                                                                  |
-| remove   | Remove first occurrence of value.  Raises ValueError if the value is not present.                                                                                                                                                                                                                                                                                              |
+| pop      | Remove and return item at index (default last).  Raises IndexError if list is empty or index is out of range.                                                                                                                                                                                                                                                                  
+| remove   | Remove first occurrence of value.  Raises ValueError if the value is not present.                                                                                                                                                                                                                                                                                     
 | reverse  | Reverse *IN PLACE*.                                                                                                                                                                                                                                                                                                                                                            |
 | sort     | Sort the list in ascending order and return None.  The sort is in-place (i.e. the list itself is modified) and stable (i.e. the order of two equal elements is maintained).  If a key function is given, apply it once to each list item and sort them, ascending or descending, according to their function values.  The reverse flag can be set to sort in descending order. |
 
@@ -604,19 +647,19 @@ Sets support mathematical operations like union, intersection, difference, etc s
 | add                         | Add an element to a set.  This has no effect if the element is already present.                                                                                 |
 | clear                       | Remove all elements from this set.                                                                                                                              |
 | copy                        | Return a shallow copy of a set.                                                                                                                                 |
-| difference                  | Return a new set with elements in the set (let's say set A) that are not in the others ((let's say set B)). You can also use `-` operator **e.g (A - B)**.                                                                                           |
+| difference                  | Return a new set with elements in the set (let's say set A) that are not in the others ((let's say set B)). You can also use `-` operator **e.g (A - B)**.                                                             
 | difference_update           | Update the set, removing elements found in others.                                                                                                              |
 | discard                     | Remove an element from a set if it is a member.  Unlike set.remove(), the discard() method does not raise an exception when an element is missing from the set. |
-| intersection                | Return a new set with elements common to the set and all others You can also use `&` operator **e.g (A & B)**.                                                                                                |
+| intersection                | Return a new set with elements common to the set and all others You can also use `&` operator **e.g (A & B)**.                                                                             
 | intersection_update         | Update the set, keeping only elements found in it and all others.                                                                                               |
 | isdisjoint                  | Return True if two sets have a null intersection.                                                                                                               |
 | issubset                    | Report whether another set contains this set.                                                                                                                   |
 | issuperset                  | Report whether this set contains another set.                                                                                                                   |
 | pop                         | Remove and return an arbitrary set element.  Raises KeyError if the set is empty.                                                                               |
 | remove                      | Remove an element from a set; it must be a member.  If the element is not a member, raise a KeyError.                                                           |
-| symmetric_difference        | Return a new set with elements in either the set or other but not both You can also use `^` operator **e.g (A ^ B)**.                                                                                         |
+| symmetric_difference        | Return a new set with elements in either the set or other but not both You can also use `^` operator **e.g (A ^ B)**.                                                                                         
 | symmetric_difference_update | Update the set, keeping only elements found in either set, but not in both.                                                                                     |
-| union                       | Return a new set with elements from the set and all others You can also use `\|` operator **e.g (A \| B)**.                                                                                                     |
+| union                       | Return a new set with elements from the set and all others You can also use `\|` operator **e.g (A \| B)**.                                                                    
 | update                      | Update the set, adding elements from all others.                                                                                                                |
 
 
@@ -759,6 +802,91 @@ Syntax
 zip(iterable1, iterable2, ...)
 
 
+
+
+## Regular Expressions (re) for String Manipulayion
+
+* `re` provides pattern matching and text searching similar to Perl.
+* Regular expressions are built from ordinary and special characters.
+* Ordinary characters (e.g. `A`, `a`, `1`) simply match themselves.
+
+
+### Common Special Characters
+
+|      Symbol      | Meaning                                                       |                                             
+| :--------------: | :------------------------------------------------------------ | 
+|        `.`       | Matches any character except newl
+|        `^`       | Matches the start of a string.                                |                           
+|        `$`       | Matches the end of a string.                        
+|        `*`       | Matches 0 or more repetitions of previous RE (greedy
+|        `+`       | Matches 1 or more repetitions (greedy).                   |                              
+|        `?`       | Matches 0 or 1 of previous RE (greedy).                   |                                         
+| `*?`, `+?`, `??` | Non-greedy versions.                                          |                                       
+|      `{m,n}`     | Matches between m and n repetitions.                      |                                        
+|     `{m,n}?`     | Non-greedy version of above.                                  |                     
+|       `[]`       | Matches any **one character inside brackets (e.g. `[a-z]`). |                                            
+|      `[^ ]`      | Matches any character not inside brackets.                |                                            
+|       `()`       | Groups pattern; can capture text for reuse.                   |
+| `\|` | Acts as OR operator |                                    
+|     `(?:...)`    | Non-capturing group.                                          |                                       
+|     `(?=...)`    | Positive lookahead (must follow).                             |                                         
+|     `(?!...)`    | Negative lookahead (must not follow).                         |                                      
+|    `(?<=...)`    | Positive lookbehind (must precede).                           |                                       
+|    `(?<!...)`    | Negative lookbehind.                                          |                                      
+
+---
+
+### **Special Sequences**
+
+| Sequence | Description                           |
+| :------: | :------------------------------------ |
+|   `\A`   | Start of string only.                 |
+|   `\Z`   | End of string only.                   |
+|   `\b`   | Word boundary.                        |
+|   `\B`   | Non-word boundary.                    |
+|   `\d`   | Any digit `[0-9]`.                |
+|   `\D`   | Any non-digit.                    |
+|   `\s`   | Any whitespace (`space, \t, \n`). |
+|   `\S`   | Any non-whitespace.               |
+|   `\w`   | Any alphanumeric or underscore.   |
+|   `\W`   | Any non-word character.           |
+|   `\\`   | Literal backslash.                    |
+
+---
+
+### **Main Functions**
+
+| Function      | Description                                                  |
+| :------------ | :----------------------------------------------------------- |
+| `match()`     | Checks for a match at the beginning of a string.         |
+| `fullmatch()` | Matches the entire string.                               |
+| `search()`    | Finds the first occurrence anywhere in the string.       |
+| `findall()`   | Returns all matches as a list.                           |
+| `finditer()`  | Returns an iterator of Match objects.                    |
+| `split()`     | Splits string by occurrences of pattern.                     |
+| `sub()`       | Replaces pattern matches with new text.                      |
+| `compile()`   | Compiles RE into a reusable pattern object.                  |
+
+
+---
+
+### **Common Flags**
+
+|  Flag  | Name       | Description                                  |
+| :----: | :--------- | :------------------------------------------- |
+| `re.I` | IGNORECASE | Case-insensitive matching.                   |
+| `re.S` | DOTALL     | `.` matches newline too.                     |
+| `re.X` | VERBOSE    | Ignore spaces and comments in pattern.       |
+
+Explore more in re module.....
+
+
+run this code
+```py
+import re
+print(re__doc__)
+```
+
 # Functions in Python
 
 A function is a reusable block of code designed to perform a specific task. Functions allow us to organize code into smaller, manageable parts, making it more readable, reusable, and efficient.
@@ -861,6 +989,7 @@ In Python, function arguments must follow a specific order when defining and cal
 1. **Positional Arguments**: Regular arguments passed in the correct order.
 2. **Default Arguments**: Arguments with default values.
 3. **Arbitrary Positional Arguments (`*args`)**: Collects extra positional arguments into a tuple.
+4. **Keyword-only Arguments (`kw=`)**: Keyword **must** be declared. 
 4. **Arbitrary Keyword Arguments (`**kwargs`)**: Collects extra keyword arguments into a dictionary.
 
 
@@ -879,10 +1008,20 @@ A **docstring** (short for "documentation string") is a special kind of string t
 ### **Purpose of Docstrings**:
 1. To explain what the function does.
 2. To describe the parameters and return values.
-3. To provide usage examples.
+3. To provide usage examples sometimes.
 
+### Format of Docstrings
 
-
+```py
+def function_name(arguments):
+"""
+Description of what the function does.
+Description of the arguments, if any.
+Description of the return value(s), if any.
+Description of errors raised, if any.
+Optional extra notes or examples of usage.
+"""
+```
 **Syntax**:
 ```python
 def function_name(parameters):
@@ -899,6 +1038,59 @@ def function_name(parameters):
     # Function body
 ```
 
+### Google-style Docstrings
+
+```py
+def function(arg_1, arg_2=42):
+"""Description of what the function does. 
+
+Args: 
+    arg_1 (str): Description of arg_1 that can break onto the next line if     needed. 
+    arg_2 (int, optional): Write optional when an argument has a default value. 
+
+Returns: 
+    bool: Optional description of the return value Extra lines are not indented. 
+    
+Raises: 
+    ValueError: Include any error types that the function intentionally raises. 
+
+Notes: 
+    More info you want to add.
+
+```
+
+### Numpydoc-style Docstrings
+```py
+def function(arg_1, arg_2=42):
+"""
+Description of what the function does.
+
+Parameters
+----------
+arg_1 : expected type of arg_1
+Description of arg_1.
+arg_2 : int, optional
+Write optional when an argument has a default value.
+Default=42.
+
+Returns
+-------
+The type of the return value
+Can include a description of the return value.
+
+
+    
+Raises
+---------
+Include any error types that the function intentionally raises. 
+
+Notes
+----------
+More info you want to add.
+
+"""
+
+```
 # Lambda Functions
 
 A **lambda function** is a small, anonymous function defined using the `lambda` keyword. It can have any number of arguments but only one expression.
@@ -939,3 +1131,303 @@ def subtract(a, b):
     return a - b
 ```
 You then import it and start using it
+
+
+
+# Very Breif Intro to NumPy
+
+NumPy (Numerical Python) is a powerful Python library for numerical computing. It provides support for:
+- Multi-dimensional arrays and matrices.
+- Mathematical functions for operations on arrays etc....
+- Alternative to Python List: NumPy Array
+- Calculations over entire arrays
+- Easy and Fast
+- Perform element-wise operations without loops.
+- Easily integrates with other libraries like pandas, matplotlib etc...
+
+
+### **Installing NumPy**:
+To install NumPy, use the following command:
+```python
+pip install numpy
+```
+# Creating NumPy Arrays
+
+The core of NumPy is the `ndarray`, a multi-dimensional array object.
+
+
+### **Creating Arrays**:
+- **From a Python List**
+```python
+import numpy as np
+array = np.array([1, 2, 3])
+
+```
+- **Using NumPy Functions**
+    - np.zeros(shape): Creates an array of zeros.
+    - np.ones(shape): Creates an array of ones.
+    - np.arange(start, stop, step): Creates a range of numbers.
+    - np.linspace(start, stop, num): Creates evenly spaced numbers....etc
+
+**Note:** NumPy arrays: contain only one type etc...
+
+Note that as we can have list of lists, we can have more than one dimensional array too.
+
+
+
+# Indexing and Slicing in NumPy
+
+You can access elements in a NumPy array using indexing and slicing.
+
+
+### Indexing
+- Access elements using their index (0-based).
+- For multi-dimensional arrays, use `array[[level(in hiher dim]),row, column]`.
+
+### Slicing
+Use the syntax `start:stop:step` to slice an array.
+
+**Example**
+```py
+arr2d = np.array([[3,4,6],[5,6,4],[7,84,7]])
+print(arr2d[1,2])
+print(arr2d[:,1])
+print(arr2d[2,2])
+print(arr2d[1:,1:])
+```
+
+### Common Data Shaping Funtions in Numpy
+
+- reshape()
+- flatten()
+- transpose() ....etc
+
+### Common Arithmetic and Statistical Funtions in Numpy
+
+-  add(a, b)      
+-  subtract(a, b) 
+-  multiply(a, b) 
+-  divide(a, b)   
+-  mean()         
+-  median()       
+-  std()          
+-  var()          
+-  sum()          
+-  min()          
+-  max()          
+-  cumsum()      
+-  cumprod()...etc
+
+
+
+
+# Introduction to Pandas
+
+Pandas is a powerful and flexible Python library for data manipulation and analysis. It provides two main data structures: **Series** and **DataFrame**, which are built on top of NumPy arrays.
+
+### **Key Features of Pandas**
+- Provides Series and DataFrame for data manipulation.
+- Works seamlessly with structured data from sources like CSV, Excel, SQL databases, and more.
+- Provides tools for filtering, sorting, grouping, merging, and reshaping data.
+- Easily integrates with other data science libraries like NumPy, Matplotlib etc...
+
+### **Installing Pandas**
+To install Pandas, run the following command:
+```python
+pip install pandas 
+```
+---
+# Pandas Data Structures
+
+Pandas provides two primary data structures for working with data:
+
+## **1. Series**
+- A one-dimensional labeled array capable of holding data of any type (integer, float, string, etc.).
+- Similar to a column in a spreadsheet or a 1D NumPy array but with labels (indices).
+
+### **Creating a Series**
+- From list
+```py
+import pandas as pd
+ls1 = ["Amala",True,2,34.65,"beans"]
+ser1 = pd.Series(ls1)
+display(ser1)
+```
+- From dictionary
+```py
+dict1 = {"A":"aja","B":'bata',1:"one",2:"two"}
+ser2 = pd.Series(dict1)
+display(ser2)
+```
+## **2. DataFrame**
+
+A **DataFrame** is a two-dimensional, tabular data structure in Pandas. It consists of rows and columns, where:
+- Rows are indexed (labeled with numbers by default).
+- Columns have labels (names) and can store different data types.
+
+
+
+### **Creating a DataFrame**
+You can create a DataFrame from various data structures, such as:
+- Python dictionaries
+```py
+import pandas as pd 
+stud_info = {
+    "name": ["Khadijat","Oluwadahunsi",
+             "Halimat","Friday","Ayo"],
+    "age":[9,7,12,5,10],
+    "favourite food":["biscuit","eba",
+                      "rice","Eba","Amala"]
+
+}
+
+df1 = pd.DataFrame(stud_info)
+display(df1)
+```
+- Lists of lists
+```py
+l3 = [["Khadijat",9,"biscuit"],
+      ["Oluwadahunsi",3,"eba"]]
+df2 = pd.DataFrame(l3,columns=["name","age","food"])
+display(df2)
+```
+- NumPy arrays
+```py
+num_1_100 = np.arange(1,101).reshape(20,5)
+num_1_100
+df3 = pd.DataFrame(num_1_100)
+display(df3)
+```
+- Existing files (e.g., CSV, Excel) (a whole topic on its own)
+
+
+
+
+## **Data Loading in Pandas**
+
+### **1. CSV Files**
+
+* Use the `read_csv()` function in pandas to read `.csv`, `.txt`, or `.tsv` files into a DataFrame.
+* By default, pandas assumes that the data is **comma-delimited (`sep=","`)**.
+* For other delimiters:
+
+  * Use `sep="\t"` for tab-separated data.
+  * Use `sep=";"` for semicolon-separated data.
+  * Use any other string as needed, e.g. `sep="|"` for pipe-separated files.
+* `header:` You can use the `header` argument to specify which row should be used as column headers.
+- `skiprows:` skips specific rows at the start when reading a file. You can also pass a list of row indices to skip:
+- `skipfooter:` skips a specified number of lines from the bottom of the file. It requires the `engine='python'` argument though
+- `usecols:` selects specific columns to load.
+- `nrows:` limits the number of rows read into the DataFrame. It's useful for previewing large datasets
+-  `na_values: ` specifies additional strings to recognize as `NaN`.
+-  `index_col:` sets a specific column (or multiple columns) as the index
+- etc....explore more
+
+
+### **2. Excel Files**
+
+* Use the `read_excel()` function in pandas to read `.xls` or `.xlsx` files into a DataFrame.
+* You must have **`openpyxl`** (for `.xlsx`) or **`xlrd`** (for older `.xls`) installed.
+* Some important arguments include:
+
+  * `sheet_name:` specify the sheet to load (name, index, or list of sheets).
+  * `usecols:` load only specific columns.
+  * `skiprows:` skip certain rows from the top.
+  * `nrows:` limit the number of rows read.
+  * `header:` set which row to use as column headers.
+  * `index_col:` choose a column to be used as index.
+  * `na_values:` specify custom missing value indicators.
+* etc... explore more
+
+
+### **3. Clipboard Data**
+
+* Use the `read_clipboard()` function to read data copied to your clipboard*directly into a DataFrame.
+* It’s useful for quickly importing tables from webpages, Excel, or other sources without saving them to a file.
+* By default, pandas assumes tab-separated data (`sep='\t'`).
+* You can specify other delimiters using the `sep` argument.
+
+
+
+# **DATA LOADING (CONT'D)**
+### **4. Loading data from mysql directly into pandas**
+- step 1:
+    + Install sqlalchemy
+    + install pymysql
+```py
+! pip install sqlalchemy
+! pip install pymysql
+```
+Importing engine creation class
+
+```py
+from sqlalchemy import create_engine 
+```
+
+### setting up your sql engine
+- reqirements
+    - **`username`** (we all used root, can you still remember?)
+    - **`password`** (The password you created during sql class)
+
+
+Let's hide our password by saving it environment variable
+- Press window button + S
+- Type edit environment variable
+- Click on edit environment variable
+- Under Environment variable, click new
+- Enter any name you want (let it be a valid python variable name) in `variable name`
+- Enter your sql password in `variable value`
+- Press OK till end
+
+### Use os module to bring the password into your notebook
+- Use getenv function in os modele to fetch the password you saved in your environment variable (the arguement it takes is the variable name you used in `'edit environment variable'` in the step above). If it doesnt work restart your system.
+- if you have "@" or any other special character in your password that may have conflict with sql create engine syntax, parse it with urlib.parse.quote 
+
+```py
+import os 
+password = os.getenv("sql_psw")
+# parsing pwd
+from urllib.parse import quote
+password = quote(password)
+# seting up the engine
+from sqlalchemy import create_engine
+eng = create_engine(
+    f"mysql+pymysql://root:{password}@localhost/today_class"
+)
+```
+
+
+### Proceeding to Pandas
+- Use pd.read_sql or pd.read_sql_query to fetch data from your mysql database
+
+```py
+import pandas as pd 
+data = pd.read_sql(
+    """
+
+select * from
+today_class.gns_exam_rec
+
+
+""",con=eng
+)
+data
+```
+
+Explore more on other data file.....
+
+
+## Exporting your data in pandas
+
+
+* You can export your DataFrame to various file formats using Series and DataFrame method. Common ones include:
+
+  * `to_csv()` --> exports to CSV file.
+  * `to_exce l()` --> exports to Excel file
+  * `to_clipboard()`--> copies the DataFrame to your clipboard.
+  * `to_sql()` → writes the DataFrame to a **SQL database table**.
+* Use arguments like `index=False` to avoid exporting the index and `na_rep='N/A'` to specify missing value representations.
+* etc... explore more
+
+
+
