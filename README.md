@@ -573,17 +573,57 @@ Tuples are zero-indexed. You can access the element the same way you access that
 
 Just like string, you can do some operation with tuple  like concatenation, replication, membership check
 
+- concatenation
+```py
+b = (1,5,True,"meat")
+c = ("fat","item7")
+c+ b
+```
+- replication
+```py
+b = (1,5,True,"meat")
+c = ("fat","item7")
+c * 4
+```
+- membership check
+```py
+b = (1,5,True,"meat")
+5 in b
+```
+
 
 ## Tuple Methods
 Tuples have only two built-in methods due to their immutability:  
 
 count(): Counts the occurrences of an element.
+```py
+bb = ("rice","bread","yam","rice","egg")
+bb.count("rice")
+```
 
 index(): Finds the index of the first occurrence of an element.
+
+```py
+bb = ("rice","bread","yam","rice","egg")
+bb.index("rice")
+```
 
 ## Unpacking the Elements of Tuples
 You can assign the elements of tuple to a new variable by simply unpacking them individually or in groups
 
+```py
+cc = (2,7)
+x,y = cc
+print(x)
+print(y)
+tt = ("rice","bread","yam","rice","egg")
+e,f,*j = tt
+print(e)
+print(f)
+print(j)
+*k,m,g = tt 
+print(k,m,g)
+```
 
 ## Lists in Python  
 Lists are one of the most commonly used data structures in Python. They are mutable, ordered collections that can hold a variety of data types. In other words, A list is an ordered collection of items (also called elements) enclosed in square brackets [ ]
@@ -602,6 +642,15 @@ Apply the same principle from string and tuple!!!
 
 ## Modifying Lists
 You can update elements of list in place through list methods or index address
+```py
+gg = ["rice","bread","yam","rice","egg"]
+print(gg)
+gg[0] = "beans"
+print(gg)
+gg[-2:] = ["ice cream"]
+print(gg)
+```
+
 
 ## List Operations  
 
