@@ -1416,6 +1416,24 @@ display(df3)
 -  `index_col:` sets a specific column (or multiple columns) as the index
 - etc....explore more
 
+```py
+import pandas as pd 
+game = pd.read_csv(
+    r"C:\Users\Dell\Desktop\bt\vgchartz-2024.csv",
+    # header=1,
+    # skiprows=5,
+    # skiprows=[4,8,11,56],
+    # skipfooter=10,
+    # engine="python",
+    # nrows=5
+    # na_values="PS3",
+    index_col=["title"]
+
+
+)
+game 
+```
+
 
 ### **2. Excel Files**
 
