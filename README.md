@@ -676,6 +676,46 @@ Similar to that of string and tuple. You can concatenate, replicate and check fo
 | reverse  | Reverse *IN PLACE*.                                                                                                                                                                                                                                                                                                                                                            |
 | sort     | Sort the list in ascending order and return None.  The sort is in-place (i.e. the list itself is modified) and stable (i.e. the order of two equal elements is maintained).  If a key function is given, apply it once to each list item and sort them, ascending or descending, according to their function values.  The reverse flag can be set to sort in descending order. |
 
+- append, insert, extend
+```py
+gg = ["rice","bread","yam","rice","egg"]
+print(gg)
+gg.append("Semo")
+print(gg)
+gg.insert(1,"vegetable")
+print(gg)
+hh = ["dodo","tea","eba"]
+gg.append(hh)
+gg.extend(hh)
+print(gg)
+```
+- sort, reverse, pop, remove, clear
+```py
+gg = ["rice","bread","yam","rice","egg"]
+# use this for copy to avoid unexpected behaviouer 
+ui = gg[:]
+print(ui)
+gg.clear()
+print(gg)
+p = ui.pop()
+print(p)
+print(ui)
+ui.remove("rice")
+print(ui)
+ui.reverse()
+print(ui)
+# In case you dont want to reverse the list in place
+list(reversed(ui))
+
+rsv = ["apple","Axe","pig","POT","mat"]
+print(rsv)
+# By default python prioritize capital letter 
+# overwrite it by usuing key= str.lower in sort method 
+# By default sorting is in ascending order 
+# You can change it by using reverse=True in sort method 
+rsv.sort(key=str.lower,reverse=True)
+print(rsv)
+```
 
 ## Sets in Python
 
