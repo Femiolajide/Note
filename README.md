@@ -14,7 +14,7 @@
     - [try & except](#try-and-except-clauses)
     - [Common error](#common-exceptions-errors-in-python)
 
-3. [DATA STRUCTURE](#tuples-in-python)
+3. [DATA STRUCTURE](#data-structure)
     - [Tuple](#tuples-in-python)
     - [List](#lists-in-python)
     - [Set](#sets-in-python)
@@ -535,6 +535,10 @@ You can handle multiple exceptions using multiple except blocks.
 `else`: Runs if no exception occurs.  
 
 `finally`: Always executes, whether an exception occurs or not.  
+
+
+## Data Structure
+
 
 ## Tuples in Python
 
