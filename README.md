@@ -1450,6 +1450,27 @@ game
   * `na_values:` specify custom missing value indicators.
 * etc... explore more
 
+```py
+import pandas as pd 
+
+gdp_per_cap = pd.read_excel(
+    r"C:\Users\Dell\Desktop\bt\DOC-20250806-WA0007..xls",
+    # skiprows=3,
+    # sheet_name="Metadata - Countries",
+    # sheet_name=2,
+    # sheet_name=None,
+    # usecols=
+    
+)
+gdp_per_cap
+
+fgcl = pd.read_excel(
+    r"C:\Users\Dell\Desktop\bt\Workbooks\bt\FGCI.xlsx",
+    header=1,
+    usecols="c:d"
+)
+fgcl
+```
 
 ### **3. Clipboard Data**
 
