@@ -908,42 +908,54 @@ zip(iterable1, iterable2, ...)
 
 |      Symbol      | Meaning                                                       |                                             
 | :--------------: | :------------------------------------------------------------ | 
-|        `.`       | Matches any character except newl
-|        `^`       | Matches the start of a string.                                |                           
-|        `$`       | Matches the end of a string.                        
-|        `*`       | Matches 0 or more repetitions of previous RE (greedy
-|        `+`       | Matches 1 or more repetitions (greedy).                   |                              
-|        `?`       | Matches 0 or 1 of previous RE (greedy).                   |                                         
-| `*?`, `+?`, `??` | Non-greedy versions.                                          |                                       
-|      `{m,n}`     | Matches between m and n repetitions.                      |                                        
-|     `{m,n}?`     | Non-greedy version of above.                                  |                     
+|        `.`       | Matches any character except newline              
 |       `[]`       | Matches any **one character inside brackets (e.g. `[a-z]`). |                                            
 |      `[^ ]`      | Matches any character not inside brackets.                |                                            
 |       `()`       | Groups pattern; can capture text for reuse.                   |
 | `\|` | Acts as OR operator |                                    
-|     `(?:...)`    | Non-capturing group.                                          |                                       
-|     `(?=...)`    | Positive lookahead (must follow).                             |                                         
-|     `(?!...)`    | Negative lookahead (must not follow).                         |                                      
-|    `(?<=...)`    | Positive lookbehind (must precede).                           |                                       
-|    `(?<!...)`    | Negative lookbehind.                                          |                                      
-
----
+                                      
 
 ### **Special Sequences**
 
 | Sequence | Description                           |
 | :------: | :------------------------------------ |
+|   `\d`   | Any digit = `[0-9]`.                |
+|   `\D`   | Any non-digit =  `[^0-9]`                 |
+|   `\s`   | Any whitespace (`space, \t, \n`). |
+|   `\S`   | Any non-whitespace.               |
+|   `\w`   | Any alphanumeric or underscore = `[A-Za-z0-9_]`  |
+|   `\W`   | Any non-word character = `[^A-Za-z0-9_]`           |
+|   `\\`   | Literal backslash.                    |
+
+### Quantifiers
+
+|      Symbol      | Meaning                                                       |                                             
+| :--------------: | :------------------------------------------------------------ | 
+
+|        `*`       | Matches 0 or more repetitions of previous RE (greedy
+|        `+`       | Matches 1 or more repetitions (greedy).                   |                              
+|        `?`       | Matches 0 or 1 of previous RE (greedy).                   |                                         
+| `*?`, `+?`, `??` | Non-greedy versions.                                          |                                       
+|      `{m,n}`     | Matches between m and n repetitions.                      |                                        
+|     `{m,n}?`     | Non-greedy version of above.                                  |    
+---
+
+### Assertion
+
+|      Symbol      | Meaning                                                       |                                             
+| :--------------: | :------------------------------------------------------------ | 
 |   `\A`   | Start of string only.                 |
 |   `\Z`   | End of string only.                   |
 |   `\b`   | Word boundary.                        |
 |   `\B`   | Non-word boundary.                    |
-|   `\d`   | Any digit `[0-9]`.                |
-|   `\D`   | Any non-digit.                    |
-|   `\s`   | Any whitespace (`space, \t, \n`). |
-|   `\S`   | Any non-whitespace.               |
-|   `\w`   | Any alphanumeric or underscore.   |
-|   `\W`   | Any non-word character.           |
-|   `\\`   | Literal backslash.                    |
+|        `^`       | Matches the start of a string.                                |                           
+|        `$`       | Matches the end of a string.                        
+|     `(?:...)`    | Non-capturing group.                                          |                                      
+|     `(?=...)`    | Positive lookahead (must follow).                             |                                         
+|     `(?!...)`    | Negative lookahead (must not follow).                         |                                      
+|    `(?<=...)`    | Positive lookbehind (must precede).                           |                                       
+|    `(?<!...)`    | Negative lookbehind.                                          |
+
 
 ---
 
