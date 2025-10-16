@@ -1211,6 +1211,72 @@ lambda arguments: expression
 3. Avoid using too many arguments in a single function to maintain readability.
 4. Add doc string a withnd annotation.
 
+### Full example
+
+Given the quadratic expression: $ax^2 + bx + c = 0$, and its corresponding quadratic formula:
+
+ $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
+
+ where:
+
+ $a$ represents the coefficient of $x^2$, $b$ represents the coefficient of $x$, and $c$ represents the constant (the last term in the expression).
+
+$ Discriminant (D) = b^2 - 4ac$
+
+
+`Note that quadratic equation has no real solution if D < 0`
+
+**Task:**
+
+Write a python function that can solve quadratic equation
+
+**Solution:**
+
+```py
+
+def qd_fun(a:float|int,
+           b:float|int,
+           c:float|int) -> str:
+    
+    """This function is designed to 
+    solve quadratic equation
+    
+    Parameters
+    -----------------------
+        a: int, float
+
+        coefficient of x squared
+
+        b: int, float
+
+        coefficient of x
+
+        c: int, float
+
+        the constant
+        
+    Returns
+    ----------------
+        str
+
+        This function will retun the two values of x
+        if the solution exists otherwise it will retun 
+        `no solution`"""
+    # representing discriminant
+    D = b**2 - 4*a*c
+    if D < 0:
+        res = "No solution"
+        return res
+    else:
+        import math
+        implementing the quadratic formula
+        x1 = (-b + math.sqrt(b**2 - 4*a*c))/(2*a)
+        x2 = (-b - math.sqrt(b**2 - 4*a*c))/(2*a)
+        res = f"x = {x1} or x = {x2}"
+        return res
+
+```
+
 # Creating your own Python Module
 
 A **module** is a file containing Python code, such as functions, variables, or classes, that can be reused in other scripts. Modules allow you to organize your code into separate files for better structure and reusabilit
