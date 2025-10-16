@@ -928,8 +928,8 @@ zip(iterable1, iterable2, ...)
 |   `\\`   | Literal backslash.                    |
 
 ### Quantifiers
-| Quantifier | Description                           |
-| :------: | :------------------------------------ |
+| Quantifier | Description                                                                  |
+| :------: | :----------------------------------------------------------------------------- |
 
 |        `*`       | Matches 0 or more repetitions of previous RE (greedy |
 |        `+`       | Matches 1 or more repetitions (greedy).                   |                              
