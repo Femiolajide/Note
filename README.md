@@ -1213,9 +1213,12 @@ lambda arguments: expression
 
 ### Full example
 
-Given the quadratic expression: $ax^2 + bx + c = 0$, and its corresponding quadratic formula:
 
- $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
+Given the quadratic expression:![$ax^2 + bx + c = 0$](https://latex.codecogs.com/svg.latex?E=mc^2), and its corresponding quadratic formula:
+
+
+ ![ $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$](https://latex.codecogs.com/svg.latex?E=mc^2)
+
 
  where:
 
