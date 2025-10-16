@@ -1217,9 +1217,7 @@ lambda arguments: expression
 Given the quadratic expression: <b>ax<sup>2</sup> + bx + c = 0</b>, and its corresponding quadratic formula:
 </p>
 
-<p>
-<b>x = (-b &plusmn; &radic;(b<sup>2</sup> - 4ac)) / 2a</b>
-</p>
+![alt text](image.png)
 
 <p>
 where:
