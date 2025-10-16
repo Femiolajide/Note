@@ -28,10 +28,12 @@
 5. [REGULAR EXPRESSION](#regular-expressions-re-for-string-manipulayion)
     - [RE chars](#common-special-characters)
     - [Special sequence](#special-sequences)
+    - [Quantifiers](#quantifiers)
+    - [Assertion](#assertion)
     - [re functions](#main-functions)
     - [re flags](#common-flags)
 
-6. [FUNCTION](#functions-in-python)
+6. [FUNCTION](#functions-in-python-1)
     - [def](#defining-a-function)
     - [return](#the-return-statement)
     - [Sope](#variable-scope)
@@ -53,6 +55,8 @@
     - [Data creation](#pandas-data-structures)
     - [Data Loading](#data-loading-in-pandas)
     - [Exporting](#exporting-your-data-in-pandas)
+
+9. [STATISIICAL ANALYSIS](#statistical-analysis)
 
 
 # Brief Introduction to Python
@@ -1501,6 +1505,11 @@ display(df3)
 -  `na_values: ` specifies additional strings to recognize as `NaN`.
 -  `index_col:` sets a specific column (or multiple columns) as the index
 - etc....explore more
+run this
+```py
+print(pd.read_csv.__doc__)
+```
+
 
 ```py
 import pandas as pd 
@@ -1535,6 +1544,11 @@ game
   * `index_col:` choose a column to be used as index.
   * `na_values:` specify custom missing value indicators.
 * etc... explore more
+run this
+```py
+print(pd.read_csv.__doc__)
+```
+
 
 ```py
 import pandas as pd 
@@ -1635,17 +1649,86 @@ data
 Explore more on other data file.....
 
 
+
 ## Exporting your data in pandas
 
 
 * You can export your DataFrame to various file formats using Series and DataFrame method. Common ones include:
 
   * `to_csv()` --> exports to CSV file.
-  * `to_exce l()` --> exports to Excel file
+  * `to_excel()` --> exports to Excel file
   * `to_clipboard()`--> copies the DataFrame to your clipboard.
-  * `to_sql()` → writes the DataFrame to a **SQL database table**.
+
 * Use arguments like `index=False` to avoid exporting the index and `na_rep='N/A'` to specify missing value representations.
 * etc... explore more
 
 
 
+# **Statistical Analysis**
+  
+In simple terms, statistics is the science of learning from data. It helps us identify patterns, test hypotheses, and draw meaningful conclusions based on numerical evidence.
+
+### **Types of data/variable/scale of measurements in statistics**
+
+Understanding data types is important in statistical analysis because the choice of statistical tests, measures of central tendency, and measures of dispersion depends on the type of data being analyzed. Data is classified into: 
+1. **Categorical** (Data that are in groups)
+    - `Nomimal` (Data that consist of categories or labels that have no inherent order or ranking. It is purely qualitative and used for classification). E.g.
+        - Gender (Male, Female)
+        - Color (White, blue, red ...)
+        - Political party (PDP, APC, LP ...) etc...
+    - `Ordinal` (Data that consist of categories that have a meaningful order, but the differences between them are not uniform or measurabl). E.g.
+        - Class of degree (First class, second class upper, second class lower, third class, pass)
+        - Educational level (primary, secondary, tertiary)
+        - Pain Level in Patients (Mild, Moderate, Severe) etc...
+2. **Continuos/metric** (numeric data where differences between data points are meaningful and measurable) e.g age, height, temperature etc...
+
+## Summary stats
+
+### Measure of average/central tendency
+Think of average values as how people and objects behave 
+in general.
+
+Selecting the appropriate measure of average/central tendency (Mean, Median, or Mode) is important in statistical analysis. Conventionally, each measure should be accompanied by an appropriate measure of dispersion to better understand the spread of data.
+
+**Take note of these about average and dispersion:**
+- The mode is used for nominal variables.
+- For ordinal variables, we can calculate both the mode and the median.
+- For metric variables, we have the mode, the median, and the mean.
+- For a metric variable that is perfectly normally distributed, the mean, median and mode equals.
+- Huge gap between mean and median can suggest outliers in your data
+- Mean is sensitive to outliers (sensitive to extreme values), while the mode and median are not. So, use median instead if there are outliers in your data.
+- Serious people specify which average value they used.
+- Measures of variation/dispersion complement our information on the average; the smaller the variation, the more meaningful the average value is.
+- The range is the difference between maximum and minimum of a variable, it is very sensitive to outliers.
+- The standard deviation can be interpreted as the average deviation of all values from the mean. The variance is the squared standard deviation. For metric variables, both values
+can be calculated in a meaningful way. Note that sd is in the same scale as mean
+- The interquartile range gives information about the area in which the middle 50% of the values are located. It can be used with both metric and ordinal data
+- The coefficient of variation is applied to analyze in which variable people or objects are more consistent, it is applied with metric data
+- In statistical report, mean (M) and standard deviation (SD) goes together while median and interquartile range (IRQ) goes together
+
+### Measures of distribution (Continuos data)
+- **Skewness:** Measures asymmetry of the data distribution. 
+    - A large negative skew indicates that the data are left-skewed (long tail on the left)
+    - A positive value would indicate right skewness (long tail on the left).
+    - Acceptable range is between -1 to 1 (anything beyond may be suspicious of presence of outliers)
+    - You can also use density plot or histogram to inspect it
+
+
+- **Jarque-Bera stats:** is a statistical test that checks whether the data follow a normal distribution (based on skewness and kurtosis)
+    - The p-value for the Jarque-Bera test indicate if data is normally distributed or not
+        - p-val < 0.05 --> data is not normally distributed
+        - p-val > 0.05 --> data is normally distributed
+- **Other formal normality test**
+    - K-S test
+    - Shipro-Wilk
+    - Anderson Darling 
+
+- **Percentiles:** These indicate the value below which a given percentage of observations fall. For example, if the 25th percentile (Q1) of a variable such as age is 32, it means that 25% of the observations have ages less than 32....
+
+>**Note:** You can check most of these using describe function in descriptive stats package in statsmodels stats
+
+### Measures of distribution (Categorical data)
+- Use **Frequency Distribution** 
+    - It shows how often each value occurs
+    - You can check the proportion of occurence too
+> You can check this using value_count Series method in pandas (For proportion, use the argument, normalize=True)
