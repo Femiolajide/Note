@@ -1213,18 +1213,27 @@ lambda arguments: expression
 
 ### Full example
 
+<p>
+Given the quadratic expression: <b>ax<sup>2</sup> + bx + c = 0</b>, and its corresponding quadratic formula:
+</p>
 
-Given the quadratic expression:![$ax^2 + bx + c = 0$](https://latex.codecogs.com/png.latex?x%5E2), and its corresponding quadratic formula:
+<p>
+<b>x = (-b &plusmn; &radic;(b<sup>2</sup> - 4ac)) / 2a</b>
+</p>
 
+<p>
+where:
+</p>
 
- ![ $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$](https://latex.codecogs.com/png.latex?x%5E2)
+<ul>
+  <li><b>a</b> represents the coefficient of <b>x<sup>2</sup></b></li>
+  <li><b>b</b> represents the coefficient of <b>x</b></li>
+  <li><b>c</b> represents the constant (the last term in the expression)</li>
+</ul>
 
-
- where:
-
- $a$ represents the coefficient of $x^2$, $b$ represents the coefficient of $x$, and $c$ represents the constant (the last term in the expression).
-
-$ Discriminant (D) = b^2 - 4ac$
+<p>
+<b>Discriminant (D) = b<sup>2</sup> - 4ac</b>
+</p>
 
 
 `Note that quadratic equation has no real solution if D < 0`
