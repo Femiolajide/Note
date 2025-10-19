@@ -1982,3 +1982,215 @@ Check for Reverse-Scored Items
    - Some items may be phrased negatively (e.g., I feel useless).  
    - Before aggregation, reverse the scale (e.g., a score of 1 becomes 4, a score of 2 becomes 3, etc.).
 
+
+# **STATS TESTS**
+**Test of Association: Correlation Analysis**
+
+Correlation analysis measures the trength and direction of the relationship between two variables. It helps determine if changes in one variable are associated with changes in another, but it does not imply causation.
+
+**Key Concept: Correlation Is Not Causation**
+
+- Correlation tells us if two variables move together, but it does not prove that one variable causes the other.
+- Example: Ice cream sales and drowning incidents may be positively correlated, but hot weather is the true cause of both.
+
+---
+
+**Types of Correlation Tests**
+
+| Correlation Type | When to Use? | Assumptions |
+|------------------|-----------------|----------------|
+| Pearson’s Correlation (r) | For normally distributed, continuous data. | - Both variables should be continuous.  <br> - Relationship should be linear. <br> - No extreme outliers. <br> - Data should be normally distributed. |
+| Spearman’s Rank Correlation (rho) | For non-normal data or ordinal data. | - Variables should be at least ordinal. <br> - Does not require linearity. <br> - Can handle outliers. |
+
+
+---
+
+**Interpretation of Correlation Coefficients**
+
+**The correlation coefficient ranges from -1 to +1:**
+
+| Correlation Value (r, ρ(rho)) | Strength of Relationship |
+|------------------|----------------------|
+| 0.00 to ±0.19 | Very weak or no correlation |
+| ±0.20 to ±0.39 | Weak correlation |
+| ±0.40 to ±0.59 | Moderate correlation |
+| ±0.60 to ±0.79 | Strong correlation |
+| ±0.80 to ±1.00 | Very strong correlation |
+
+- Positive (+) correlation: Both variables increase or decrease together.
+- Negative (-) correlation: One variable increases while the other decreases.
+- Zero correlation (0.00): No relationship between the variables.
+
+**Example Interpretation:**
+- If r = 0.75, it means a strong positive correlation.
+- If ρ = -0.45, it means a moderate negative correlation.
+
+---
+
+**Interpreting the p-value**
+
+The p-value tells us if the correlation is statistically significant
+
+| p-value | Interpretation |
+|------------|------------------|
+| p < 0.05 | Significant correlation (reject the null hypothesis) |
+| p ≥ 0.05 | No significant correlation (fail to reject the null hypothesis) |
+
+**Example:**
+
+- If r = 0.62, p = 0.02, we conclude that there is a strong positive correlation, and it is statistically significant.
+- If ρ = -0.20, p = 0.30, we conclude that there is a weak negative correlation, but it is not statistically significant.
+
+---
+
+## Correlation in Terms of Research Objectives, Questions, and Hypotheses
+
+**Research Objective**
+
+Research objectives often explore whether a relationship exists between two variables.
+
+**Example Objective:**
+
+- "To examine the relationship between students' study time and academic performance."
+
+**Research Question**
+
+Research questions are derived from objectives and focus on specific associations.
+
+**Example Question:**
+
+- "Is there a significant relationship between students' study time and their academic performance?"
+
+**Research Hypothesis**
+
+Hypothesis states the expected relationship between two variables.
+
+| Type | Hypothesis Example |
+|------------|----------------------|
+| Null Hypothesis (H₀) | "There is no significant relationship between study time and academic performance." |
+| Alternative Hypothesis (H₁) | "There is a significant positive relationship between study time and academic performance." |
+
+**Note**
+
+- Before performing correlation analysis, it is important to visualise the relationship between the two variables using a scatter plot.
+
+- After generating the scatter plot, examine the pattern and spread of data points to interpret the strength and nature of the correlation.
+
+
+| Observation | Implication |
+|---------------|---------------|
+| Data points spread all over the place | Suggests a very low correlation or no relationship. |
+| Data points form a narrow cigar-shaped pattern | Indicates a strong correlation. The more tightly packed the points, the stronger the relationship. |
+| Straight-line pattern | Suggests a linear relationship, suitable for Pearson’s correlation. |
+| Curved pattern (U-shaped or S-shaped trend) | Suggests a non-linear relationship, meaning Pearson’s correlation may not be appropriate. Consider using Spearman’s rank correlation instead. |
+
+
+
+
+
+
+
+
+**APA-Style Interpretation of Correlation Results**
+
+Assuming a Pearson correlation analysis was conducted to examine the relationship between students' study time (hours per week) and academic performance (exam scores), and the results showed:
+
+- r = .474, p < .05  
+
+**Interpretation in APA Format**
+
+> A Pearson correlation analysis was conducted to examine the relationship between students' study time and academic performance. Results revealed a moderate positive correlation between study time and exam scores, (r = .474, p < .05), indicating that students who spent more time studying tended to have higher academic performance. Given that the p-value is less than .05, the null hypothesis was rejected, suggesting that the relationship is statistically significant.
+
+
+
+
+## Student’s t-Test for Hypothesis Testing
+
+
+The Student’s t-test (or simply t-test) is a parametric statistical test used to compare means and test hypotheses about population parameters.  
+
+There are three main types of t-tests:
+1. One-sample t-test – Compares the mean of a single sample with a known or hypothetical value.
+2. Independent samples t-test – Compares the means of two independent groups.
+3. Paired t-test – Compares the means of two related (paired) samples.
+
+---
+
+## 1. One-Sample t-Test
+The one-sample t-test is used to compare the mean of a sample to a specific value.
+
+### Example Scenario
+A study was conducted to determine if the mean age of senior secondary school students in Ibadan North Local Government is 15 years.
+
+### Hypothesis:
+- H₀ (Null Hypothesis): The mean age of students is equal to 15 years.
+- Hₐ (Alternative Hypothesis): The mean age of students is not equal to 15 years.
+
+### Assumptions:
+1. The sample is a random and independent selection of students.
+2. The age distribution in the population is approximately normal.
+
+### Hypothetical Results:
+A random sample of n = 50 students was selected. The sample mean age was 15.8 years (SD = 1.2). A one-sample t-test was conducted to compare the mean age of students to 15 years.  
+
+Results:  
+- t(49) = 4.73, p < .001  
+
+### APA-Formatted Report:
+>A one-sample t-test was conducted to determine whether the mean age of senior secondary school students in Ibadan North differed from 15 years. The results indicated a statistically significant difference in mean age, t(49) = 4.73, p < .001, suggesting that the students’ mean age (M = 15.8, SD = 1.2) was significantly higher than 15 years.  Therefore the null hypothesis is not accepted
+
+---
+
+## 2. Independent Samples t-Test
+The independent samples t-test compares the means of two independent groups.
+
+### Example Scenario
+A researcher investigated whether male and female students differ in their mathematics test scores.
+
+### Hypothesis:
+- H₀: The mean math scores of male and female students are equal.
+- Hₐ: The mean math scores of male and female students are different.
+
+### Assumptions:
+1. The two groups are independent (i.e., different students for each group).
+2. The dependent variable (math scores) is normally distributed.
+3. The two groups have equal variances (tested with Levene’s test).
+
+### Hypothetical Results:
+A sample of 30 male and 30 female students was analyzed. The mean math score for males was 72.5 (SD = 9.4), and for females, it was 68.2 (SD = 7.8).  
+
+A Levene’s test for equality of variances was not significant (p = .203), indicating that equal variances could be assumed. The independent samples t-test yielded the following result:  
+
+- t(58) = 2.04, p = .046  
+
+### APA-Formatted Report:
+>An independent samples t-test was conducted to compare mathematics test scores between male and female students. The results showed a significant difference in scores, F(2,207) = 2.04, p = .046, with male students (M = 72.5, SD = 9.4) scoring higher than female students (M = 68.2, SD = 7.8).  
+
+---
+
+## 3. Paired t-Test
+The paired t-test (also called dependent t-test) is used when the same individuals or matched pairs are tested before and after an intervention.
+
+### Example Scenario
+A company conducted a training programme to improve employees' job performance scores. Performance was measured before and after the training.
+
+### Hypothesis:
+- H₀: The mean job performance scores before and after training are equal.
+- Hₐ: The mean job performance scores before and after training are different.
+
+### Assumptions:
+1. The differences between paired observations are normally distributed.
+2. The pairs represent matched observations (same employees before and after training)
+
+### Hypothetical Results:
+A group of 25 employees completed the training programme. Their mean job performance score before training was 65.4 (SD = 10.2), and after training, it was 75.8 (SD = 9.1).  
+
+A paired t-test was conducted:  
+
+- t(24) = 5.62, p < .001  
+
+### APA-Formatted Report:
+>A paired t-test was conducted to compare job performance scores before and after training. The results indicated a significant increase in performance scores after training, t(24) = 5.62, p < .001. Employees performed better after training (M = 75.8, SD = 9.1) than before training (M = 65.4, SD = 10.2), suggesting that the training programme was effective.   
+
+---
+
