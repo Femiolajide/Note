@@ -1668,6 +1668,18 @@ Explore more on other data file.....
   
 In simple terms, statistics is the science of learning from data. It helps us identify patterns, test hypotheses, and draw meaningful conclusions based on numerical evidence.
 
+## **Variable**
+
+In research and data analysis, variables are characteristics or attributes that can take on different values among individuals, objects, or situations.
+They are what we measure, control, or observe in a study.
+
+
+**Types**
+
+- Dependent Variable (response Variable, Outcome Variable, Explained Variable):	The main variable you are trying to understand or predict. Its value depends on other variables.	Students’ test scores in a study on teaching methods
+
+- Independent Variable (	predictor, explanatory) 	The variable that influences or predicts the dependent variable.	Teaching method (e.g., traditional vs. online)
+
 ### **Types of data/variable/scale of measurements in statistics**
 
 Understanding data types is important in statistical analysis because the choice of statistical tests, measures of central tendency, and measures of dispersion depends on the type of data being analyzed. Data is classified into: 
