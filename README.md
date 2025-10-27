@@ -1,3 +1,5 @@
+This is <span style="color:blue">blue text</span> and this is <span style="color:red">red text</span>.
+
 
 # TABLE OF CONTENT
 1. [BASICS](#brief-introduction-to-python)
