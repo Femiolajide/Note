@@ -1,4 +1,6 @@
 
+
+
 # TABLE OF CONTENT
 1. [BASICS](#brief-introduction-to-python)
     - [Imtroduction](#brief-introduction-to-python)
