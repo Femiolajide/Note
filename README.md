@@ -1663,6 +1663,57 @@ Explore more on other data file.....
 * etc... explore more
 
 
+##  Exploring Your Data
+Before you work on any analysis, it’s important to explore and understand your dataset. 
+- Check the shape of the dataset ( to see the number of rows and columns) → df.shape
+- View all column names→ df.columns
+- Inspect the index (row labels) → df.index
+- Manipulate column and index names using list comprehension → df.columns = [col.strip().lower() for col in df.columns]
+- Rename specific columns or index names → df.rename(columns={'old_name': 'new_name'})
+- Select one or more columns → df['column_name'] or df[['col1', 'col2']]
+- Check the number of unique entries in a column → df['column_name'].nunique()
+- View all unique entries in a column → df['column_name'].unique()
+- Count missing (null) values in each column → df.isnull().sum()
+- Check data types of all columns → df.dtypes
+- Check full info -> df.info()
+- Check first five rows - > df.head()
+- Check last five rows - > df.tail()
+
+## Fixing and Interacting with Your Data
+After exploring your dataset, the next step is to clean and prepare it for analysis. 
+- Remove null (missing) values→ df.dropna()
+- Fill null values with a specific value→ df.fillna(value)
+- Check for duplicate rows
+→ df.duplicated()
+- Remove duplicate rows→ df.drop_duplicates()
+- Change data type of a column→ df['column_name'] = df['column_name'].astype('float')
+- Rename columns or index→ df.rename(columns={'old_name': 'new_name'}, inplace=True)
+
+- Delete one or more columns→ df.drop(['col1', 'col2'], axis=1, inplace=True)
+- Sort dataset by column or index→ df.sort_index()
+- Rearrange column order → df = df[['col3', 'col1', 'col2']]
+
+
+## Filtering
+
+Filtering allows you to separate sheep from goat 
+- Filter by column(s) or index df.filter()
+- Filter by content (conditional filtering)
+	- Tie your wrapper well here!!! 
+
+## Sorting
+Sorting helps you arrange your dataset logically for easier interpretation and analysis.
+- Sort by content (values)
+	- Sort rows by a single column: df.sort_values(by='score', ascending=False)
+	- Sort by multiple columns: df.sort_values(by=['class', 'score'], ascending=[True, False])
+- Convert to categorical for custom (ordinal) sorting
+	- Sometimes, sorting alphabetically isn’t meaningful — for instance, sorting months or education levels.
+	- You can define a categorical order to control how sorting behaves:
+
+
+
+
+
 
 # **Statistical Analysis**
   
