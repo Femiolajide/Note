@@ -1671,7 +1671,7 @@ Before you work on any analysis, it’s important to explore and understand your
 - View all column names→ df.columns
 - Inspect the index (row labels) → df.index
 - Manipulate column and index names using list comprehension → df.columns = [col.strip().lower() for col in df.columns]
-- Rename specific columns or index names → df.rename(columns={'old_name': 'new_name'})
+- Rename columns or index names → df.columns.name = "name" or df.index.name = "name"
 - Select one or more columns → df['column_name'] or df[['col1', 'col2']]
 - Check the number of unique entries in a column → df['column_name'].nunique()
 - View all unique entries in a column → df['column_name'].unique()
