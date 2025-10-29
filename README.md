@@ -1,5 +1,10 @@
+<span style="color: rgb(120, 192, 48);">
+- Count missing (null) values in each column → df.isnull().sum()
+- Check data types of all columns → df.dtypes
+kjb hj      gggg
+</span>
 
-# TABLE OF CONTENT
+## TABLE OF CONTENT
 1. [BASICS](#brief-introduction-to-python)
     - [Imtroduction](#brief-introduction-to-python)
     - [Variable](#variable-naming-conventions-in-python)
@@ -797,7 +802,7 @@ Accessing Values  ------>   Use the key to retrieve the corresponding value. Jus
 | values     | Return an object providing a view on the dict's values.                                                                                                                                                                                                                                                 |
 
 
-> [!TIPS]
+>[!NOTE]
 > All these data structure can be converted from one to the othere using their class
 
 
