@@ -1,5 +1,29 @@
 
+read basic stats [^1]
 
+[^1]: Check int
+
+## ade {# 8}
+
+==bad==
+- [x] a
+- [] b
+- [] c
+- [x] d
+
+<ins>
+    this is underline
+</ins>
+
+`py import`
+
+hgg
+gjhg
+
+>[!NOTE]
+> You are good
+>[!TIPS]
+>add comments
 
 # TABLE OF CONTENT
 1. [BASICS](#brief-introduction-to-python)
