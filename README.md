@@ -797,9 +797,8 @@ Accessing Values  ------>   Use the key to retrieve the corresponding value. Jus
 | values     | Return an object providing a view on the dict's values.                                                                                                                                                                                                                                                 |
 
 
-
-**NOTE**
-- `All these data structure can be converted from one to the othere using their class`
+> [!TIPS]
+> All these data structure can be converted from one to the othere using their class
 
 
 ## Range Function, For Loop, and While Loop in Python
@@ -814,8 +813,8 @@ range(start, stop, step)
 - stop: The number at which the sequence ends (exclusive).  
 - step (optional): The difference between each number in the sequence. Defaults to 1.  
 
-
-``Note that range() does not generate a list or other python data structure we have covered by default; it produces a range object. Convert it to a list using list(range()) if needed.``
+>[!NOTE]
+> range() does not generate a list or other python data structure we have covered by default; it produces a range object. Convert it to a list using list(range()) if needed.
 
 ## For Loop
 The for loop in Python is used to iterate over a sequence (e.g., list, tuple, string, or range).
