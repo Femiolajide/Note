@@ -32,8 +32,10 @@
     - [Assertion](#assertion)
     - [re functions](#main-functions)
     - [re flags](#common-flags)
+6. [DATETIME](#introduction-to datetime-in-python) 
 
-6. [FUNCTION](#functions-in-python-1)
+
+7. [FUNCTION](#functions-in-python-1)
     - [def](#defining-a-function)
     - [return](#the-return-statement)
     - [Sope](#variable-scope)
@@ -44,19 +46,19 @@
     - [Best practices](#best-practices-with-functions)
     - [Creating module](#creating-your-own-python-module)
 
-7. [Numpy into](#very-breif-intro-to-numpy)
+8. [Numpy into](#very-breif-intro-to-numpy)
     - [Intro](#very-breif-intro-to-numpy)
     - [Crating array](#creating-arrays)
     - [Slicing](#slicing)
     - [Shaping](#common-data-shaping-funtions-in-numpy)
     - [Math & Stats Funcs](#common-arithmetic-and-statistical-funtions-in-numpy)
 
-8. [PANDAS](#introduction-to-pandas)
+9. [PANDAS](#introduction-to-pandas)
     - [Data creation](#pandas-data-structures)
     - [Data Loading](#data-loading-in-pandas)
     - [Exporting](#exporting-your-data-in-pandas)
 
-9. [STATISIICAL ANALYSIS](#statistical-analysis)
+10. [STATISIICAL ANALYSIS](#statistical-analysis)
 
 
 # Brief Introduction to Python
@@ -992,6 +994,170 @@ run this code
 import re
 print(re__doc__)
 ```
+
+
+# Introduction to datetime in python
+
+The datetime module in python has classes for manipulating dates and times. It allows you to create, format, and perform operations on date and time objects easily.
+
+---
+
+## Creating a date object
+To work with dates, you need to import the `datetime` class from the `datetime` module:
+```python
+from datetime import date
+```
+
+Or, just import the whole module 
+
+```python
+ import datetime as dt
+``` 
+You can create a date object in several ways:
+
+```python
+# Create a date object
+today = dt.date.today()
+print(today)  # e.g., 2025-11-11
+
+# Create a specific date
+date1= dt.date(1998, 7, 15)
+print(date1)  # 1998-07-15
+```
+
+---
+
+##  Common Attributes of a `date` Object
+| Attribute | Description | Example |
+|------------|--------------|----------|
+| `.year` | Returns the year of the date object | `today.year → 2025` |
+| `.month` | Returns the month as an integer (1–12) | `today.month → 11` |
+| `.day` | Returns the day of the month | `today.day → 11` |
+
+Example: run this code 
+```python
+print(today.year)   
+print(today.month)  
+print(today.day)    
+```
+
+---
+
+##  Common Methods of a `date` Object
+
+| Method | Description | Example |
+|---------|--------------|----------|
+| `.weekday()` | Returns the day of the week (Monday = 0, Sunday = 6) | `today.weekday() ` |
+| `.isoweekday()` | Returns the ISO weekday (Monday = 1, Sunday = 7) | `today.isoweekday()` |
+| `.isoformat()` | Returns the date as a string in ISO format (YYYY-MM-DD) | `today.isoformat()` |
+| `.ctime()` | Returns a string representing the date in a readable format | `today.ctime()  |
+| `date.fromtimestamp(ts)` | Creates a date object from a timestamp | `date.fromtimestamp(1696425600)` |
+| `.strftime(format)` | Returns a formatted string of the date | `today.strftime('%A, %d %B %Y')  |
+
+Example:
+```python
+print(today.strftime("%A, %d %B %Y"))
+```
+
+## Creating a `datetime` Object
+- Create Current Date and Time
+
+```python
+now = dt.datetime.now()
+print(now)
+```
+-  Create a Specific Date and Time
+
+```python
+my_dt = dt.datetime(2025, 10, 4, 14, 35, 22)
+print(my_dt)
+```
+
+---
+
+## Common Attributes of a `datetime` Object
+
+| Attribute | Description | Example |
+|------------|--------------|----------|
+| `.year` | Returns the year | `now.year  |
+| `.month` | Returns the month | `now.month |
+| `.day` | Returns the day of the month | `now.day |
+| `.hour` | Returns the hour (0–23) | `now.hour |
+| `.minute` | Returns the minute (0–59) | `now.minute  |
+| `.second` | Returns the second (0–59) | `now.second  |
+| `.microsecond` | Returns the microsecond (0–999999) | `now.microsecond |
+
+Example:
+```python
+print(now.year, now.month, now.day)
+print(now.hour, now.minute, now.second)
+```
+
+---
+
+## Common Methods of a `datetime` Object
+
+| Method | Description | Example |
+|---------|--------------|----------|
+| `.now()` | Returns the current local date and time | `datetime.now()` |
+| `.today()` | Returns the current local date and time (same as `now()`) | `datetime.today()` |
+| `.utcnow()` | Returns the current UTC date and time | `datetime.utcnow()` |
+| `.date()` | Returns only the date portion | `now.date()  |
+| `.time()` | Returns only the time portion | `now.time()  |
+| `.timestamp()` | Returns POSIX timestamp (seconds since epoch) | `now.timestamp()` |
+| `.weekday()` | Returns the day of week (Monday = 0, Sunday = 6) | `now.weekday()` |
+| `.isoweekday()` | Returns the ISO weekday (Monday = 1, Sunday = 7) | `now.isoweekday()` |
+| `.isoformat()` | Returns date-time as ISO formatted string | `now.isoformat()  |
+| `.strftime(format)` | Formats the datetime into a readable string | `now.strftime('%A, %d %B %Y %I:%M %p')` |
+| `.strptime(date_string, format)` | Convert a readable string to datetime object | `now.strftime('%A, %d %B %Y %I:%M %p')` |
+| `datetime.fromtimestamp(ts)` | Creates a datetime object from a timestamp | `datetime.fromtimestamp(1696425600)` |
+
+##  Datetime Arithmetic/Timedelta 
+
+You can perform addition or subtraction using **`timedelta`** objects.
+
+```python
+from datetime import timedelta
+
+# Add 7 days
+next_week = now + timedelta(days=7)
+print(next_week)
+
+# Subtract 2 hours
+two_hours_ago = now - timedelta(hours=2)
+print(two_hours_ago)
+```
+
+## Datetime Formating
+### General 
+
+| Directive | Meaning |
+|-----------|---------|
+| %a        | Weekday as locale’s abbreviated name. |
+| %A        | Weekday as locale’s full name. |
+| %w        | Weekday as a decimal number, where 0 is Sunday and 6 is Saturday. |
+| %d        | Day of the month as a zero-padded decimal number. |
+| %b        | Month as locale’s abbreviated name. |
+| %B        | Month as locale’s full name. |
+| %m        | Month as a zero-padded decimal number. |
+| %y        | Year without century as a zero-padded decimal number. |
+| %Y        | Year with century as a decimal number. |
+| %H        | Hour (24-hour clock) as a zero-padded decimal number. |
+| %I        | Hour (12-hour clock) as a zero-padded decimal number. |
+| %p        | Locale’s equivalent of either AM or PM. |
+| %M        | Minute as a zero-padded decimal number. |
+| %S        | Second as a zero-padded decimal number. |
+| %j        | Day of the year as a zero-padded decimal number. |
+| %U        | Week number of the year (Sunday as the first day of the week). |
+| %W        | Week number of the year (Monday as the first day of the week). |
+| %c        | Locale’s appropriate date and time representation. |
+| %x        | Locale’s appropriate date representation. |
+| %X        | Locale’s appropriate time representation. |
+| %%        | A literal % character. |
+___
+Read more on datetime in python[^1]
+[^1]: https://docs.python.org/3/search.html?q=Datetime
+
 
 # Functions in Python
 
