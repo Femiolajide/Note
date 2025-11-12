@@ -1,0 +1,2891 @@
+<!DOCTYPE html><html><head>
+      <title>README</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\Dell\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.20\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h2 id="table-of-content">TABLE OF CONTENT </h2>
+<ol>
+<li>
+<p><a href="#brief-introduction-to-python">BASICS</a></p>
+<ul>
+<li><a href="#brief-introduction-to-python">Imtroduction</a></li>
+<li><a href="#variable-naming-conventions-in-python">Variable</a></li>
+<li><a href="#comments-in-python">Comment</a></li>
+<li><a href="#data-types-in-python">Datatypes</a></li>
+<li><a href="#strings-in-python">String</a></li>
+<li><a href="#numbers-and-math-in-python">Number</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#control-flow-and-exception-handling-in-python">CONTROL</a></p>
+<ul>
+<li><a href="#if-statement">ifs</a></li>
+<li><a href="#elif-statement">elif</a></li>
+<li><a href="#try-and-except-clauses">try &amp; except</a></li>
+<li><a href="#common-exceptions-errors-in-python">Common error</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#data-structure">DATA STRUCTURE</a></p>
+<ul>
+<li><a href="#tuples-in-python">Tuple</a></li>
+<li><a href="#lists-in-python">List</a></li>
+<li><a href="#sets-in-python">Set</a></li>
+<li><a href="#python-dictionaries">Dictionary</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#range-function-for-loop-and-while-loop-in-python">LOOPING</a></p>
+<ul>
+<li><a href="#for-loop">for</a></li>
+<li><a href="#while-loop">while</a></li>
+<li><a href="#common-loop-control-statements">control in loop</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#regular-expressions-re-for-string-manipulayion">REGULAR EXPRESSION</a></p>
+<ul>
+<li><a href="#common-special-characters">RE chars</a></li>
+<li><a href="#special-sequences">Special sequence</a></li>
+<li><a href="#quantifiers">Quantifiers</a></li>
+<li><a href="#assertion">Assertion</a></li>
+<li><a href="#main-functions">re functions</a></li>
+<li><a href="#common-flags">re flags</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#introduction-to-datetime-in-python">DATETIME</a></p>
+</li>
+<li>
+<p><a href="#functions-in-python-1">FUNCTION</a></p>
+</li>
+<li>
+<p><a href="#functions-in-python-1">FUNCTION</a></p>
+<ul>
+<li><a href="#defining-a-function">def</a></li>
+<li><a href="#the-return-statement">return</a></li>
+<li><a href="#variable-scope">Sope</a></li>
+<li><a href="#function-with-parameters">Parameters</a></li>
+<li><a href="#order-of-arguments">Order</a></li>
+<li><a href="#docstrings-in-functions">Docstring</a></li>
+<li><a href="#lambda-functions">lambda</a></li>
+<li><a href="#best-practices-with-functions">Best practices</a></li>
+<li><a href="#creating-your-own-python-module">Creating module</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#very-breif-intro-to-numpy">NUMPY INTO</a></p>
+<ul>
+<li><a href="#very-breif-intro-to-numpy">Intro</a></li>
+<li><a href="#creating-arrays">Crating array</a></li>
+<li><a href="#slicing">Slicing</a></li>
+<li><a href="#common-data-shaping-funtions-in-numpy">Shaping</a></li>
+<li><a href="#common-arithmetic-and-statistical-funtions-in-numpy">Math &amp; Stats Funcs</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#introduction-to-pandas">PANDAS</a></p>
+<ul>
+<li><a href="#pandas-data-structures">Data creation</a></li>
+<li><a href="#data-loading-in-pandas">Data Loading</a></li>
+<li><a href="#exporting-your-data-in-pandas">Exporting</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#statistical-analysis">STATISIICAL ANALYSIS</a></p>
+</li>
+</ol>
+<h1 id="brief-introduction-to-python">Brief Introduction to Python </h1>
+<p>Python is a general-purpose programming language. It is known for its simplicity and readability, making it one of the most popular programming languages today. Python was created by <strong>Guido van Rossum</strong> and was first released in 1991.</p>
+<h2 id="key-features">Key Features: </h2>
+<ol>
+<li>It's open-source</li>
+<li>Extensive library support for tasks like data analysis, machine learning, web development etc...</li>
+<li>Its syntax is simple and resembles everyday English.</li>
+<li>It has large active community that provides extensive resources and support.</li>
+<li>Works on Windows, macOS, Linux, and more.</li>
+</ol>
+<h1 id="running-python-code">Running Python Code </h1>
+<p>You can run Python code in different ways:</p>
+<ol>
+<li>
+<p><strong>Interactive Mode</strong>:</p>
+<ul>
+<li>Use a terminal or command prompt to type Python commands directly.</li>
+<li>Example: Type <code>python</code> in the terminal and then type <code>print("Hello")</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Using an IDE</strong>:</p>
+<ul>
+<li>Use Integrated Development Environments (IDEs) like VS Code, PyCharm,  Jupyter Notebook etc...</li>
+</ul>
+</li>
+<li>
+<p><strong>Online Platforms</strong>:</p>
+<ul>
+<li>Platforms like Google Colab and Replit allow you to run Python code in your browser.</li>
+</ul>
+</li>
+</ol>
+<h1 id="simplicity-of-python-syntax">Simplicity of Python Syntax </h1>
+<p>Python is known for its clean and readable syntax, making it beginner-friendly and efficient for coding. To highlight this simplicity, let’s compare the famous "Hello, World!" program in Python with a few other programming languages.</p>
+<h3 id="comparison">Comparison </h3>
+<p>We'll look at how we can print "Hello, World!" to the screen in the following programing language so that you can appreciate the simplicity of python language and not run away as we proceed!!!:</p>
+<ol>
+<li>Python</li>
+<li>C</li>
+<li>Java</li>
+<li>JavaScript</li>
+<li>C++</li>
+</ol>
+<p><strong>1. In python:</strong></p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Hello World!"</span><span class="token punctuation">)</span>
+</code></pre><hr>
+<p><strong>2. In C:</strong></p>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+
+<span class="token keyword keyword-int">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Hello, World!\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre><hr>
+<p><strong>3. In Java:</strong></p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">HelloWorld</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello, World!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><hr>
+<p><strong>4. In javascript:</strong></p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">"Hello, World!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><hr>
+<p><strong>5. c++:</strong></p>
+<pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+
+<span class="token keyword keyword-int">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Hello, World!"</span> <span class="token operator">&lt;&lt;</span> std<span class="token double-colon punctuation">::</span>endl<span class="token punctuation">;</span>
+    <span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><hr>
+<h1 id="functions-in-python">Functions in Python </h1>
+<p>Think of it as some special keyword designed to perform certain operation on objects. Python has a lot of built-in functions like print(), int(), sum(),<br>
+max(), min(), all(), any(), sorted(), reversed(), help() etc...</p>
+<h1 id="variable-naming-conventions-in-python">Variable Naming Conventions in Python </h1>
+<p>A <strong>variable</strong> is a name that refers to a value stored in memory. Proper naming conventions make code easier to read and maintain.</p>
+<h3 id="key-points-about-variables">Key Points About Variables: </h3>
+<ol>
+<li>Variables are created when you assign a value to a name using <code>=</code>.</li>
+<li>Python is <strong>dynamically typed</strong>, meaning you don't need to declare the type of a variable.</li>
+<li>Variable names are <strong>case-sensitive</strong>. In fact, Python is generally <strong>case-sensitive</strong> unlike excel and SQL
+<ul>
+<li><code>myVar</code> and <code>myvar</code> are treated as two different variables.</li>
+</ul>
+</li>
+</ol>
+<h1 id="naming-conventions-snake-case-vs-camel-case">Naming Conventions: Snake Case vs. Camel Case </h1>
+<h3 id="1-snake-case">1. Snake Case </h3>
+<p>All lowercase with words separated by underscores (<code>_</code>).</p>
+<p><strong>Example</strong>:</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>my_variable <span class="token operator">=</span> <span class="token number">10</span>
+user_age <span class="token operator">=</span> <span class="token number">25</span>
+
+</code></pre><h3 id="2-camel-case">2. Camel Case </h3>
+<p>tarts with lowercase and combined with words starting in uppercase.</p>
+<p><strong>Example</strong>:</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>myVariable <span class="token operator">=</span> <span class="token number">10</span>
+userAge <span class="token operator">=</span> <span class="token number">25</span>
+</code></pre><h1 id="rules-for-naming-variables-in-python">Rules for Naming Variables in Python </h1>
+<ol>
+<li>
+<p><strong>Start with a Letter or Underscore (<code>_</code>)</strong>:<br>
+alid: <code>my_var</code>, <code>_hidden</code>.<br>
+nvalid: <code>1st_var</code> (cannot start with a digit).</p>
+</li>
+<li>
+<p><strong>Use Letters, Digits, and Underscores (<code>_</code>) Only</strong>:<br>
+Valid: <code>var1</code>, <code>some_var</code>.<br>
+valid: <code>my-v</code> (hyphen is not allowed).</p>
+</li>
+<li>
+<p><strong>Avoid Python Keywords</strong>:<br>
+Invalid: <code>if = 10</code>, <code>while = 5</code> (Python keywords cannot be used as variable names).</p>
+</li>
+<li>
+<p><strong>No Spaces</strong>:<br>
+Invalid: <code>my var = 5</code> (use underscores instead: <code>my_var = 5</code>).</p>
+</li>
+<li>
+<p><strong>NOTE:</strong><br>
+Interestingly, Pythone can allow you to use function name as a variable  name, but the trade- there is that you will not be able to use that function again except you claer it off Python memory by restarting the kenel or deleting it using <code>del</code> keyword</p>
+</li>
+</ol>
+<p><strong>I want you to define the following variable and run the code:</strong></p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>x <span class="token operator">=</span> <span class="token number">10</span>  
+my_var <span class="token operator">=</span> <span class="token string">"Python"</span>  
+1st_var <span class="token operator">=</span> <span class="token number">20</span>  
+<span class="token keyword keyword-if">if</span> <span class="token operator">=</span> <span class="token string">"hello"</span>  
+<span class="token keyword keyword-print">print</span> <span class="token operator">=</span> <span class="token number">85</span>
+</code></pre><h1 id="comments-in-python">Comments in Python </h1>
+<p>Comments are used to explain code and make it more readable. Comennts are indicated by starting with <code>#</code>. You use it to temporarily freeze your code too.</p>
+<p><strong>Example</strong></p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code>a <span class="token operator">=</span> <span class="token number">6</span> <span class="token comment"># Assigning 6 to a</span>
+<span class="token comment"># multiplying a by 2</span>
+a <span class="token operator">*</span> <span class="token number">2</span>
+</code></pre><h1 id="data-types-in-python">Data Types in Python </h1>
+<p>Data types define the type of value a variable holds. Python is a dynamicallyped language, meaning the data type is determined automatically when you assign a value to a variable. Data types are important in the sense that they define what operations can be performed on the data.</p>
+<h1 id="types">Types </h1>
+<h2 id="1-numeric-types">1. Numeric Types </h2>
+<p><strong><code>int</code></strong>: Whole numbers (e.g., <code>1</code>, <code>42</code>, <code>- **</code>float<code>**: Numbers with decimal points (e.g., </code>3.14<code>, </code>-5`).</p>
+<h2 id="2-sequence-types">2. Sequence Types </h2>
+<p><strong><code>str</code></strong>: Strings, or sequences of characters (e.g., <code>"hello"</code>, <code>'world'</code>).<br>
+*<code>list</code>**: Ordered, mutable collections (e.g., <code>[1, 2, 3]</code>).<br>
+<strong><code>tuple</code></strong>: Ordered, immutable collections (e.g., <code>(1, 2, 3)</code>) etc....</p>
+<h2 id="3-set-types">3. Set Types </h2>
+<p>*<code>set</code><strong>: Unordered collections of unique elements (e.g., <code>{1, 2, 3}</code>).<br>
+<code>frozenset</code></strong>: Immutable version of a set.</p>
+<h2 id="4-mapping-type">4. Mapping Type </h2>
+<p><strong><code>dict</code></strong>: Key-lue pairs (e.g., <code>{"name": "Alice", "age": 25}</code>).</p>
+<h2 id="5-boolean-type">5. Boolean Type </h2>
+<p><strong><code>bool</code></strong>: Represents <code>True</code> or <code>False</code>.</p>
+<h1 id="how-to-check-data-types">How to Check Data Types </h1>
+<p>Python provides the <code>type()</code> function to check the data type of a variable.</p>
+<h1 id="strings-in-python">Strings in Python </h1>
+<p>A string is a sequence of characters enclosed in quotes. Strings are one of the most commonly used data types in Python.</p>
+<h2 id="characteristics-of-strings">Characteristics of Strings </h2>
+<ol>
+<li>Strings can be enclosed in single quotes (<code>'</code>), double quotes (<code>"</code>), or triple quotes (<code>'''</code> or <code>"""</code>).</li>
+<li>Strings are <strong>immutable</strong>, meaning their content cannot be changed after creation.</li>
+<li>Strings are ordered, allowing you to access specific characters using indexing.</li>
+</ol>
+<h2 id="examples-of-strings">Examples of Strings: </h2>
+<p><code>'Hello'</code><br>
+<code>"World"</code><br>
+<code>'''Python is awesome'''</code></p>
+<h1 id="accessing-characters-in-strings">Accessing Characters in Strings </h1>
+<p>Python strings are <strong>indexed</strong> and support both positive and negative indexing.</p>
+<h2 id="positive-indexing">Positive Indexing: </h2>
+<p>Starts from 0.<br>
+Example: In <code>"Python"</code>, <code>P</code> is at index <code>0</code>, <code>y</code> is at index <code>1</code>, and so on.</p>
+<h2 id="negative-indexing">Negative Indexing: </h2>
+<p>Starts from 1.<br>
+Example: In <code>"Python"</code>, <code>n</code> is at index <code>1</code>, <code>o</code> is at <code>-2</code>, and so on.</p>
+<h1 id="string-slicing">String Slicing </h1>
+<p>Slicing allows you to extract a subset of a string. The syntax is:</p>
+<p>string[start🔚step]</p>
+<ul>
+<li><strong>start</strong>: The starting index (inclusive). Defaults to <code>0</code>.</li>
+<li><strong>end</strong>: The ending index (exclusive). Defaults to the length of the string.</li>
+<li><strong>step</strong>: The interval between indices. Defaults to <code>1</code>.</li>
+</ul>
+<h2 id="string-concatenation-and-replication">String Concatenation and Replication </h2>
+<ul>
+<li>Two or more strings can be joined together using <code>+</code> For instane, "boy" + "girl" = "boygirl"</li>
+<li>Strings can be repeated in two or more times using <code>*</code> For instane, "boy" * 2 = "boyboy"</li>
+</ul>
+<h2 id="membership-check">Membership check </h2>
+<p>You can check if a substring is in a string or not.</p>
+<ul>
+<li>Something like this:
+<ul>
+<li>"a" in "Farming"</li>
+<li>"c" not in "Machine"</li>
+</ul>
+</li>
+</ul>
+<h1 id="some-string-methods">Some String Methods </h1>
+<p>Python provides several built-in methods to work with strings. Methods are functions applied to objects</p>
+<h2 id="commonly-used-methods">Commonly Used Methods: </h2>
+<ol>
+<li><strong><code>lower()</code></strong>: Converts all characters to lowercase.</li>
+<li><strong><code>upper()</code></strong>: Converts all characters to uppercase.</li>
+<li><strong><code>strip([string])</code></strong>: Removes leading and trailing whitespace or other strings.</li>
+<li><strong><code>replace(old, new)</code></strong>: Replaces all occurrences of <code>old</code> with <code>new</code>.</li>
+<li><strong><code>find(substring)</code></strong>: Returns the index of the first occurrence of a substring and return <code>-1</code> if none is found.</li>
+<li><strong><code>index(substring)</code></strong>: Behaves like finde but throws error if none is found.</li>
+<li><strong><code>capitalize()</code></strong>: Converts the first characters to uppercase.</li>
+<li><strong><code>title()</code></strong>: Converts the first characters of each word to uppercase.</li>
+<li><strong><code>startswith(substring)</code> and <code>endswith(substring)</code></strong>: Check if the string starts or ends with the specified substring.</li>
+</ol>
+<p>Explore More!</p>
+<h2 id="string-immutability">STRING IMMUTABILITY </h2>
+<p>Strings in Python are immutable, meaning their content cannot be changed after they are created. You can only change them by updating them.</p>
+<h2 id="handling-new-lines-and-tab-in-string">Handling New Lines and Tab in String </h2>
+<p><code>\</code> is a special character in python. It's use for escaping and it functions as special character in strings as well<br>
+'\n' -------&gt; newline<br>
+'\t' -------&gt; tab</p>
+<h1 id="raw-string">Raw String </h1>
+<p>use r'string' to indicte that you are interested in all the content in a string</p>
+<h1 id="tripple-quotation-string">Tripple Quotation String </h1>
+<p>Tripple quotation string preserve all the caracters in a string including white spaces</p>
+<h2 id="numbers-and-math-in-python">NUMBERS AND MATH IN PYTHON </h2>
+<h2 id="float-and-integer-data-types">Float and Integer Data Types </h2>
+<p>Integers (int) are whole numbers, which can be positive, negative, or zero. For example, 10, -7, and 0 are integers.<br>
+Floating-point numbers (float) represent numbers with a fractional part, such as 3.14, -2.0, or 0.5.  You can determine the type of a number using the type() function</p>
+<h2 id="conversion-between-float-integer-and-string">Conversion Between Float, Integer, and String </h2>
+<p>Python allows datatype conversion between floats, integers, and strings using built-in functions:</p>
+<ul>
+<li>
+<p>int(): Converts a value to an integer by truncating the fractional part. For instance, int(4.99) will return 4.</p>
+</li>
+<li>
+<p>float(): Converts a value to a floating-point number. For example, float(3) will return 3.0.</p>
+</li>
+<li>
+<p>str(): Converts a value to a string. For instance, str(42) will return '42'.</p>
+</li>
+</ul>
+<p>Note that you can cast from string too to integer or float as long as their string representation is valid. You can't convert a string version of float to integer but you can convert string version of integer to float</p>
+<h2 id="arithmetic-operations-and-expressions">Arithmetic Operations and Expressions </h2>
+<p>Use <code>+</code> for addition, <code>-</code> for subtraction, <code>*</code> for multiplication, and <code>/</code> for division.<br>
+Use <code>//</code> for floor division (which reduce the result to an integer i.e. withouth the fractional part) and <code>%</code> for the remainder (<code>modulus division</code>).<br>
+Use <code>**</code> for exponentiation (raising to a power).</p>
+<p>Python follows the order of operations when evaluating arithmetic expressions. This order is summarized by the acronym PEMDAS:</p>
+<p><strong>P</strong> stands for parentheses: operations inside parentheses are performed first.<br>
+<strong>E</strong> stands for exponentiation: powers are evaluated next.<br>
+<strong>MD</strong> stands for multiplication and division: these are evaluated from left to right.<br>
+<strong>AS</strong> stands for addition and subtraction: these are evaluated last, also from left to right.</p>
+<h2 id="math-functions">Math Functions </h2>
+<p>Python provides useful built-in functions and the math module for performing advanced mathematical calculations:</p>
+<ul>
+<li>
+<p>The math.sqrt() function calculates the square root of a number.</p>
+</li>
+<li>
+<p>The math.ceil() function rounds a number up to the nearest integer.</p>
+</li>
+<li>
+<p>The math.floor() function rounds a number down to the nearest integer.</p>
+</li>
+<li>
+<p>The math.factorial() function calculates the factorial of a number.<br>
+etc...</p>
+</li>
+</ul>
+<p>Python also has general-purpose functions for numbers:</p>
+<ul>
+<li>The round() function rounds a number to the specified number of decimal places. For instance, round(3.14159, 2) will return 3.14.</li>
+<li>The abs() function returns the absolute value of a number. For example, abs(-5) will return 5.</li>
+</ul>
+<p><code>Note that you have to import math module before you can use its function or you can import a specific function from math module.</code></p>
+<h2 id="string-interpolation-f-strings">String Interpolation (f-Strings) </h2>
+<p>String interpolation allows you to embed variables and expressions directly within strings. There are many ways to format strings in Python but the most modern and esiest way  is by using f-strings (formatted string literals).</p>
+<p>An f-string is created by prefixing the string with f or F.</p>
+<p>Place variables or expressions inside curly braces {} to interpolate them.</p>
+<p>You can also format numbers within f-strings (e.g., controlling decimal places, coma thousand seperator, zero padding, percentages) etc....</p>
+<h2 id="the-eval-function-in-python">The eval() Function in Python </h2>
+<p>The eval() function in Python is a built-in function that evaluates a string as a Python expression. It can execute any valid Python code embedded in the string and return the result of the evaluation.</p>
+<p>Be careful with it while using user input though!!!</p>
+<h2 id="user-input">User Input </h2>
+<p>You can take input from the user using the input() function. The input is always returned as a string, so you need to convert it to an integer or float if you want to perform numeric operations.</p>
+<h1 id="control-flow-and-exception-handling-in-python">Control Flow and Exception Handling in Python </h1>
+<h2 id="conditional-operators-in-python">Conditional Operators in Python </h2>
+<p>Conditional operators in Python are used to compare two values or expressions, returning a Boolean value: either True or False. They form the foundation of decision-making in programming.</p>
+<ol>
+<li>
+<p><code>==</code> (Equal to): This operator checks if two values are equal. If they are, it returns True; otherwise, it returns False.</p>
+</li>
+<li>
+<p><code>!=</code> (Not equal to): This operator checks if two values are not equal. If they are not equal, it returns True; otherwise, it returns False.</p>
+</li>
+<li>
+<p><code>&lt;</code> (Less than):<br>
+This operator checks if the value on the left is less than the value on the right.</p>
+</li>
+<li>
+<p><code>&gt;</code> (Greater than): This operator checks if the value on the left is greater than the value on the right.</p>
+</li>
+<li>
+<p><code>&lt;=</code> (Less than or equal to): This operator checks if the value on the left is less than or equal to the value on the right.</p>
+</li>
+<li>
+<p><code>&gt;=</code> (Greater than or equal to): This operator checks if the value on the left is greater than or equal to the value on the right.</p>
+</li>
+</ol>
+<p>These operators are important for writing <code>if</code> statements, loops, and other decision-making code in Python. Each comparison evaluates to True or False, which determines the flow of the program.</p>
+<h2 id="logical-operators-and-or-not-with-boolean-comparison">Logical Operators (and, or, not) with Boolean Comparison </h2>
+<p>Logical operators allow you to combine multiple conditions.<br>
+How Logical Operators Work:</p>
+<ul>
+<li>
+<p><code>and</code>: Returns True if all conditions are true.</p>
+</li>
+<li>
+<p><code>or</code>: Returns True if at least one condition is true.</p>
+</li>
+<li>
+<p><code>not</code>: Negates a Boolean value (returns the opposite).</p>
+</li>
+</ul>
+<h2 id="order-of-logical-operators">Order of Logical Operators </h2>
+<p>Logical operators follow this order of precedence:</p>
+<ol>
+<li>not</li>
+<li>and</li>
+<li>or</li>
+</ol>
+<h2 id="if-statement">if Statement </h2>
+<p>The if statement allows your program to execute a block of code only when a specific condition is true. Once you declare if statement, you must end it with colon <code>:</code>, then the next line of code must be indented.<br>
+Something like this:</p>
+<p>if condition:<br>
+&nbsp; &nbsp; &nbsp; &nbsp;Code to execute if condition is true</p>
+<p><em><strong><code>Take note of the indentation after if condition</code></strong></em></p>
+<h2 id="else-statement">else Statement </h2>
+<p>The else statement defines a block of code to execute when the if condition is false.</p>
+<p>Something like this:</p>
+<p>if condition:<br>
+&nbsp; &nbsp; &nbsp; &nbsp;Code if condition is true<br>
+else:<br>
+&nbsp; &nbsp; &nbsp; &nbsp;Code if condition is false</p>
+<h2 id="elif-statement">elif Statement </h2>
+<p>The elif (short for "else if") statement checks additional conditions when the previous if or elif conditions are false.</p>
+<p>Something like this:</p>
+<p>if condition1:<br>
+&nbsp; &nbsp; &nbsp; &nbsp;Code if condition1 is true<br>
+elif condition2:<br>
+&nbsp; &nbsp; &nbsp; &nbsp;Code if condition2 is true<br>
+else:<br>
+&nbsp; &nbsp; &nbsp; &nbsp;Code if none of the conditions are true</p>
+<h2 id="nested-if-statements">Nested if Statements </h2>
+<p>Nested if statements are if conditions inside another if. They are used to check multiple levels of conditions.<br>
+Something like this:</p>
+<p>if condition1:<br>
+&nbsp; &nbsp; &nbsp; &nbsp;if condition2:<br>
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;Code if both conditions are true</p>
+<h1 id="exception-handling">Exception Handling </h1>
+<p>An exception is an error that occurs during the execution of a program, disrupting its normal flow. Unlike syntax errors, exceptions occur while the program is running.</p>
+<h2 id="common-exceptions-errors-in-python">Common Exceptions (Errors) in Python </h2>
+<p>Here are some common exceptions you might encounter:</p>
+<ol>
+<li>
+<p>ZeroDivisionError: Raised when you divide by zero.</p>
+</li>
+<li>
+<p>ValueError: Raised when a function gets an invalid argument.</p>
+</li>
+<li>
+<p>TypeError: Raised when an operation is performed on incompatible types.</p>
+</li>
+<li>
+<p>IndexError: Raised when accessing an invalid index in a list.</p>
+</li>
+</ol>
+<h2 id="try-and-except-clauses">try and except Clauses </h2>
+<p>To beg python to pardon your exceptions error so that you code does not crash, you can use try and except clauses. The code inside the try block runs first. If an exception occurs, the code in the except block is executed.<br>
+Something like this structure (take note of the indent):</p>
+<p><code>try</code>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp;Code that may raise an exception<br>
+except ExceptionType:<br>
+&nbsp; &nbsp; &nbsp; &nbsp;Code to handle the exception</p>
+<h2 id="handling-multiple-exceptions">Handling Multiple Exceptions </h2>
+<p>You can handle multiple exceptions using multiple except blocks.</p>
+<h2 id="using-else-and-finally-with-try">Using else and finally with try </h2>
+<p><code>else</code>: Runs if no exception occurs.</p>
+<p><code>finally</code>: Always executes, whether an exception occurs or not.</p>
+<h2 id="data-structure">Data Structure </h2>
+<h2 id="tuples-in-python">Tuples in Python </h2>
+<p>Tuples are one of Python's fundamental data structures, used to store collections of items. Tuples can contain elements of different data types (e.g., integers, strings, floats).</p>
+<h4 id="creating-tuples">Creating Tuples </h4>
+<p>Tuple can be created by simply using parethesis.<br>
+something like this:<br>
+a = ()</p>
+<p>Confirm the datatype of a</p>
+<h4 id="single-element-tuple">Single-Element Tuple </h4>
+<p>You must include a trailing comma when creating a tuple with a single element; otherwise, it will be treated as a regular value.</p>
+<h2 id="accessing-tuple-elements">Accessing Tuple Elements </h2>
+<p>Tuples are zero-indexed. You can access the element the same way you access that of a string. You can even access a range of elements using slicing:</p>
+<h2 id="characteristics-of-tuples">Characteristics of Tuples </h2>
+<ul>
+<li>
+<p>Just like string, tuples cannot be modified after creation (e.g., no addition, deletion, or changing of elements). This immutability makes them faster and safer for fixed data.</p>
+</li>
+<li>
+<p>Elements in a tuple have a fixed order. You can access elements using their index.</p>
+</li>
+<li>
+<p>Tuples can contain duplicate elements.</p>
+</li>
+<li>
+<p>Tuples can store elements of different data types (e.g., numbers, strings, other tuples).</p>
+</li>
+</ul>
+<h2 id="tuple-operations">Tuple Operations </h2>
+<p>Just like string, you can do some operation with tuple  like concatenation, replication, membership check</p>
+<ul>
+<li>concatenation</li>
+</ul>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code>b <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token boolean">True</span><span class="token punctuation">,</span><span class="token string">"meat"</span><span class="token punctuation">)</span>
+c <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">"fat"</span><span class="token punctuation">,</span><span class="token string">"item7"</span><span class="token punctuation">)</span>
+c<span class="token operator">+</span> b
+</code></pre><ul>
+<li>replication</li>
+</ul>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code>b <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token boolean">True</span><span class="token punctuation">,</span><span class="token string">"meat"</span><span class="token punctuation">)</span>
+c <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">"fat"</span><span class="token punctuation">,</span><span class="token string">"item7"</span><span class="token punctuation">)</span>
+c <span class="token operator">*</span> <span class="token number">4</span>
+</code></pre><ul>
+<li>membership check</li>
+</ul>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code>b <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token boolean">True</span><span class="token punctuation">,</span><span class="token string">"meat"</span><span class="token punctuation">)</span>
+<span class="token number">5</span> <span class="token keyword keyword-in">in</span> b
+</code></pre><h2 id="tuple-methods">Tuple Methods </h2>
+<p>Tuples have only two built-in methods due to their immutability:</p>
+<p>count(): Counts the occurrences of an element.</p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code>bb <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">"rice"</span><span class="token punctuation">,</span><span class="token string">"bread"</span><span class="token punctuation">,</span><span class="token string">"yam"</span><span class="token punctuation">,</span><span class="token string">"rice"</span><span class="token punctuation">,</span><span class="token string">"egg"</span><span class="token punctuation">)</span>
+bb<span class="token punctuation">.</span>count<span class="token punctuation">(</span><span class="token string">"rice"</span><span class="token punctuation">)</span>
+</code></pre><p>index(): Finds the index of the first occurrence of an element.</p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code>bb <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">"rice"</span><span class="token punctuation">,</span><span class="token string">"bread"</span><span class="token punctuation">,</span><span class="token string">"yam"</span><span class="token punctuation">,</span><span class="token string">"rice"</span><span class="token punctuation">,</span><span class="token string">"egg"</span><span class="token punctuation">)</span>
+bb<span class="token punctuation">.</span>index<span class="token punctuation">(</span><span class="token string">"rice"</span><span class="token punctuation">)</span>
+</code></pre><h2 id="unpacking-the-elements-of-tuples">Unpacking the Elements of Tuples </h2>
+<p>You can assign the elements of tuple to a new variable by simply unpacking them individually or in groups</p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code>cc <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">)</span>
+x<span class="token punctuation">,</span>y <span class="token operator">=</span> cc
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span>
+tt <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">"rice"</span><span class="token punctuation">,</span><span class="token string">"bread"</span><span class="token punctuation">,</span><span class="token string">"yam"</span><span class="token punctuation">,</span><span class="token string">"rice"</span><span class="token punctuation">,</span><span class="token string">"egg"</span><span class="token punctuation">)</span>
+e<span class="token punctuation">,</span>f<span class="token punctuation">,</span><span class="token operator">*</span>j <span class="token operator">=</span> tt
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>f<span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>j<span class="token punctuation">)</span>
+<span class="token operator">*</span>k<span class="token punctuation">,</span>m<span class="token punctuation">,</span>g <span class="token operator">=</span> tt 
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>k<span class="token punctuation">,</span>m<span class="token punctuation">,</span>g<span class="token punctuation">)</span>
+</code></pre><h2 id="lists-in-python">Lists in Python </h2>
+<p>Lists are one of the most commonly used data structures in Python. They are mutable, ordered collections that can hold a variety of data types. In other words, A list is an ordered collection of items (also called elements) enclosed in square brackets [ ]</p>
+<h2 id="characteristics-of-lists">Characteristics of Lists </h2>
+<ul>
+<li>
+<p>The order of elements is preserved, and each element has an index starting from 0.</p>
+</li>
+<li>
+<p>Lists can be modified (e.g., add, remove, or change elements), that is, unlike string and tuple, lists are mutable</p>
+</li>
+<li>
+<p>Lists can store elements of different data types.</p>
+</li>
+<li>
+<p>Lists can contain duplicate elements.</p>
+</li>
+</ul>
+<h2 id="accessing-list-elements">Accessing List Elements </h2>
+<p>Apply the same principle from string and tuple!!!</p>
+<h2 id="modifying-lists">Modifying Lists </h2>
+<p>You can update elements of list in place through list methods or index address</p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code>gg <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"rice"</span><span class="token punctuation">,</span><span class="token string">"bread"</span><span class="token punctuation">,</span><span class="token string">"yam"</span><span class="token punctuation">,</span><span class="token string">"rice"</span><span class="token punctuation">,</span><span class="token string">"egg"</span><span class="token punctuation">]</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>gg<span class="token punctuation">)</span>
+gg<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"beans"</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>gg<span class="token punctuation">)</span>
+gg<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">:</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"ice cream"</span><span class="token punctuation">]</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>gg<span class="token punctuation">)</span>
+</code></pre><h2 id="list-operations">List Operations </h2>
+<p>Similar to that of string and tuple. You can concatenate, replicate and check for membership</p>
+<h2 id="list-methods">List Methods </h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Method</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">append</td>
+<td style="text-align:left">Append object to the end of the list.</td>
+</tr>
+<tr>
+<td style="text-align:left">clear</td>
+<td style="text-align:left">Remove all items from list.</td>
+</tr>
+<tr>
+<td style="text-align:left">copy</td>
+<td style="text-align:left">Return a shallow copy of the list.</td>
+</tr>
+<tr>
+<td style="text-align:left">count</td>
+<td style="text-align:left">Return number of occurrences of value.</td>
+</tr>
+<tr>
+<td style="text-align:left">extend</td>
+<td style="text-align:left">Extend list by appending elements fiterable.</td>
+</tr>
+<tr>
+<td style="text-align:left">index</td>
+<td style="text-align:left">Return first index of value.  Raises ValueError if the value is not present.</td>
+</tr>
+<tr>
+<td style="text-align:left">insert</td>
+<td style="text-align:left">Insert object before index.</td>
+</tr>
+<tr>
+<td style="text-align:left">pop</td>
+<td style="text-align:left">Remove and return item at index (default last).  Raises IndexError if list is empty or index is out of range.</td>
+</tr>
+<tr>
+<td style="text-align:left">remove</td>
+<td style="text-align:left">Remove first occurrence of value.  Raises ValueError if the value is not present.</td>
+</tr>
+<tr>
+<td style="text-align:left">reverse</td>
+<td style="text-align:left">Reverse <em>IN PLACE</em>.</td>
+</tr>
+<tr>
+<td style="text-align:left">sort</td>
+<td style="text-align:left">Sort the list in ascending order and return None.  The sort is in-place (i.e. the list itself is modified) and stable (i.e. the order of two equal elements is maintained).  If a key function is given, apply it once to each list item and sort them, ascending or descending, according to their function values.  The reverse flag can be set to sort in descending order.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>append, insert, extend</li>
+</ul>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code>gg <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"rice"</span><span class="token punctuation">,</span><span class="token string">"bread"</span><span class="token punctuation">,</span><span class="token string">"yam"</span><span class="token punctuation">,</span><span class="token string">"rice"</span><span class="token punctuation">,</span><span class="token string">"egg"</span><span class="token punctuation">]</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>gg<span class="token punctuation">)</span>
+gg<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">"Semo"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>gg<span class="token punctuation">)</span>
+gg<span class="token punctuation">.</span>insert<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token string">"vegetable"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>gg<span class="token punctuation">)</span>
+hh <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"dodo"</span><span class="token punctuation">,</span><span class="token string">"tea"</span><span class="token punctuation">,</span><span class="token string">"eba"</span><span class="token punctuation">]</span>
+gg<span class="token punctuation">.</span>append<span class="token punctuation">(</span>hh<span class="token punctuation">)</span>
+gg<span class="token punctuation">.</span>extend<span class="token punctuation">(</span>hh<span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>gg<span class="token punctuation">)</span>
+</code></pre><ul>
+<li>sort, reverse, pop, remove, clear</li>
+</ul>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code>gg <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"rice"</span><span class="token punctuation">,</span><span class="token string">"bread"</span><span class="token punctuation">,</span><span class="token string">"yam"</span><span class="token punctuation">,</span><span class="token string">"rice"</span><span class="token punctuation">,</span><span class="token string">"egg"</span><span class="token punctuation">]</span>
+<span class="token comment"># use this for copy to avoid unexpected behaviouer </span>
+ui <span class="token operator">=</span> gg<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>ui<span class="token punctuation">)</span>
+gg<span class="token punctuation">.</span>clear<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>gg<span class="token punctuation">)</span>
+p <span class="token operator">=</span> ui<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>ui<span class="token punctuation">)</span>
+ui<span class="token punctuation">.</span>remove<span class="token punctuation">(</span><span class="token string">"rice"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>ui<span class="token punctuation">)</span>
+ui<span class="token punctuation">.</span>reverse<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>ui<span class="token punctuation">)</span>
+<span class="token comment"># In case you dont want to reverse the list in place</span>
+<span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">reversed</span><span class="token punctuation">(</span>ui<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+rsv <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"apple"</span><span class="token punctuation">,</span><span class="token string">"Axe"</span><span class="token punctuation">,</span><span class="token string">"pig"</span><span class="token punctuation">,</span><span class="token string">"POT"</span><span class="token punctuation">,</span><span class="token string">"mat"</span><span class="token punctuation">]</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>rsv<span class="token punctuation">)</span>
+<span class="token comment"># By default python prioritize capital letter </span>
+<span class="token comment"># overwrite it by usuing key= str.lower in sort method </span>
+<span class="token comment"># By default sorting is in ascending order </span>
+<span class="token comment"># You can change it by using reverse=True in sort method </span>
+rsv<span class="token punctuation">.</span>sort<span class="token punctuation">(</span>key<span class="token operator">=</span><span class="token builtin">str</span><span class="token punctuation">.</span>lower<span class="token punctuation">,</span>reverse<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>rsv<span class="token punctuation">)</span>
+</code></pre><h2 id="sets-in-python">Sets in Python </h2>
+<p>Sets in Python are a type of collection that store unique, unordered, and mutable elements. They are commonly used when you need to eliminate duplicates or perform mathematical set operations like union, intersection, difference etc....</p>
+<h3 id="characteristics-of-sets">Characteristics of Sets </h3>
+<p>The elements in a set do not have a defined order.</p>
+<p>Sets automatically remove duplicate values.<br>
+You can add or remove elements from a set, but the set itself is unordered.<br>
+Sets can store elements of different data types.<br>
+Since sets are unordered, elements cannot be accessed using an index.</p>
+<h2 id="set-operations-and-methods">Set Operations and Methods </h2>
+<p>Sets support mathematical operations like union, intersection, difference, etc symmetric difference.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Method</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">add</td>
+<td style="text-align:left">Add an element to a set.  This has no effect if the element is already present.</td>
+</tr>
+<tr>
+<td style="text-align:left">clear</td>
+<td style="text-align:left">Remove all elements from this set.</td>
+</tr>
+<tr>
+<td style="text-align:left">copy</td>
+<td style="text-align:left">Return a shallow copy of a set.</td>
+</tr>
+<tr>
+<td style="text-align:left">difference</td>
+<td style="text-align:left">Return a new set with elements in the set (let's say set A) that are not in the others ((let's say set B)). You can also use <code>-</code> operator <strong>e.g (A - B)</strong>.</td>
+</tr>
+<tr>
+<td style="text-align:left">difference_update</td>
+<td style="text-align:left">Update the set, removing elements found in others.</td>
+</tr>
+<tr>
+<td style="text-align:left">discard</td>
+<td style="text-align:left">Remove an element from a set if it is a member.  Unlike set.remove(), the discard() method does not raise an exception when an element is missing from the set.</td>
+</tr>
+<tr>
+<td style="text-align:left">intersection</td>
+<td style="text-align:left">Return a new set with elements common to the set and all others You can also use <code>&amp;</code> operator <strong>e.g (A &amp; B)</strong>.</td>
+</tr>
+<tr>
+<td style="text-align:left">intersection_update</td>
+<td style="text-align:left">Update the set, keeping only elements found in it and all others.</td>
+</tr>
+<tr>
+<td style="text-align:left">isdisjoint</td>
+<td style="text-align:left">Return True if two sets have a null intersection.</td>
+</tr>
+<tr>
+<td style="text-align:left">issubset</td>
+<td style="text-align:left">Report whether another set contains this set.</td>
+</tr>
+<tr>
+<td style="text-align:left">issuperset</td>
+<td style="text-align:left">Report whether this set contains another set.</td>
+</tr>
+<tr>
+<td style="text-align:left">pop</td>
+<td style="text-align:left">Remove and return an arbitrary set element.  Raises KeyError if the set is empty.</td>
+</tr>
+<tr>
+<td style="text-align:left">remove</td>
+<td style="text-align:left">Remove an element from a set; it must be a member.  If the element is not a member, raise a KeyError.</td>
+</tr>
+<tr>
+<td style="text-align:left">symmetric_difference</td>
+<td style="text-align:left">Return a new set with elements in either the set or other but not both You can also use <code>^</code> operator <strong>e.g (A ^ B)</strong>.</td>
+</tr>
+<tr>
+<td style="text-align:left">symmetric_difference_update</td>
+<td style="text-align:left">Update the set, keeping only elements found in either set, but not in both.</td>
+</tr>
+<tr>
+<td style="text-align:left">union</td>
+<td style="text-align:left">Return a new set with elements from the set and all others You can also use <code>|</code> operator <strong>e.g (A | B)</strong>.</td>
+</tr>
+<tr>
+<td style="text-align:left">update</td>
+<td style="text-align:left">Update the set, adding elements from all others.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="python-dictionaries">Python Dictionaries </h2>
+<p>A dictionary in Python is a collection of key-value pairs. Each key in the dictionary is unique, and it is used to store and retrieve data efficiently.</p>
+<p><strong>Characteristics of Dictionaries</strong></p>
+<ul>
+<li>
+<p>Unordered: Dictionaries do not maintain the order of elements (prior to Python 3.7). However, from Python 3.7 onwards, dictionaries maintain insertion order. In other words, a dictionary is an unordered, mutable collection of key-value pairs enclosed in curly braces {}</p>
+</li>
+<li>
+<p>Mutable: You can add, remove, or modify key-value pairs.</p>
+</li>
+<li>
+<p>Unique Keys: No duplicate keys are allowed. If a key is repeated, the last value will overwrite the previous one.</p>
+</li>
+<li>
+<p>Efficient Lookup: Keys allow fast data retrieval.</p>
+</li>
+</ul>
+<h3 id="accessing-and-modifying-elements">Accessing and Modifying Elements </h3>
+<p>Accessing Values  ------&gt;   Use the key to retrieve the corresponding value. Just like we do in list, tuple and strings but this one, you make use of key as your index.</p>
+<h3 id="some-useful-dictionary-methods">Some Useful Dictionary Methods </h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Method</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">clear</td>
+<td style="text-align:left">Remove all items from the dict.</td>
+</tr>
+<tr>
+<td style="text-align:left">copy</td>
+<td style="text-align:left">Return a shallow copy of the dict.</td>
+</tr>
+<tr>
+<td style="text-align:left">fromkeys</td>
+<td style="text-align:left">Create a new dictionary with keys from iterable and values set to value.</td>
+</tr>
+<tr>
+<td style="text-align:left">get</td>
+<td style="text-align:left">Return the value for key if key is in the dictionary, else default.</td>
+</tr>
+<tr>
+<td style="text-align:left">items</td>
+<td style="text-align:left">Return a set-like object providing a view on the dict's items.</td>
+</tr>
+<tr>
+<td style="text-align:left">keys</td>
+<td style="text-align:left">Return a set-like object providing a view on the dict's keys.</td>
+</tr>
+<tr>
+<td style="text-align:left">pop</td>
+<td style="text-align:left">D.pop(k[,d]) -&gt; v, remove specified key and return the corresponding value.  If the key is not found, return the default if given; otherwise, raise a KeyError.</td>
+</tr>
+<tr>
+<td style="text-align:left">popitem</td>
+<td style="text-align:left">Remove and return a (key, value) pair as a 2-tuple.  Pairs are returned in LIFO (last-in, first-out) order. Raises KeyError if the dict is empty.</td>
+</tr>
+<tr>
+<td style="text-align:left">setdefault</td>
+<td style="text-align:left">Insert key with a value of default if key is not in the dictionary.  Return the value for key if key is in the dictionary, else default.</td>
+</tr>
+<tr>
+<td style="text-align:left">update</td>
+<td style="text-align:left">D.update([E, ]**F) -&gt; None.  Update D from mapping/iterable E and F. If E is present and has a .keys() method, then does:  for k in E.keys(): D[k] = E[k] If E is present and lacks a .keys() method, then does:  for k, v in E: D[k] = v In either case, this is followed by: for k in F:  D[k] = F[k]</td>
+</tr>
+<tr>
+<td style="text-align:left">values</td>
+<td style="text-align:left">Return an object providing a view on the dict's values.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!NOTE]<br>
+All these data structure can be converted from one to the othere using their class</p>
+</blockquote>
+<h2 id="range-function-for-loop-and-while-loop-in-python">Range Function, For Loop, and While Loop in Python </h2>
+<h3 id="range-function">range() Function </h3>
+<p>The range() function generates a sequence of numbers. It’s often used in loops for iteration.</p>
+<p>Syntax:</p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token builtin">range</span><span class="token punctuation">(</span>start<span class="token punctuation">,</span> stop<span class="token punctuation">,</span> step<span class="token punctuation">)</span>  
+</code></pre><ul>
+<li>start (optional): The number to start the sequence from. Defaults to 0.</li>
+<li>stop: The number at which the sequence ends (exclusive).</li>
+<li>step (optional): The difference between each number in the sequence. Defaults to 1.</li>
+</ul>
+<blockquote>
+<p>[!NOTE]<br>
+range() does not generate a list or other python data structure we have covered by default; it produces a range object. Convert it to a list using list(range()) if needed.</p>
+</blockquote>
+<h2 id="for-loop">For Loop </h2>
+<p>The for loop in Python is used to iterate over a sequence (e.g., list, tuple, string, or range).</p>
+<h2 id="nested-for-loop">Nested For Loop </h2>
+<p>A for loop inside another for loop.</p>
+<h2 id="while-loop">While Loop </h2>
+<p>The while loop continues to execute as long as the condition is True.</p>
+<p>TAKE NOTE OF THESE EXPRESSIONS IN PYTHON!!!</p>
+<p><code>x += 1</code> -------&gt; x = x + 1 (that is, you increase variable x by 1)<br>
+<code>x -= 1</code> -------&gt; x = x - 1 (that is, you decrease variable x by 1)<br>
+<code>x *= 1</code> -------&gt; x = x * 1 (that is, you multiply variable x by 1)<br>
+<code>x /= 1</code> -------&gt; x = x / 1 (that is, you divide variable x by 1)...etc</p>
+<h4 id="common-loop-control-statements">Common Loop Control Statements </h4>
+<p><code>break</code> -------&gt;	Exits the loop prematurely.<br>
+<code>continue</code> -------&gt; Skips the current iteration and moves to the next.<br>
+<code>pass</code> -------&gt; Does nothing (used as a placeholder in the code block).</p>
+<h2 id="python-comprehensions">Python Comprehensions </h2>
+<p>Python comprehensions provide a concise and efficient way to create sequences like lists, dictionaries, and sets. They are often used as a shorter alternative to traditional loops for generating these structures.</p>
+<h3>List Comprehension</h3>
+<p>Syntax</p>
+<p>[<strong>expression</strong> for <strong>item</strong> in <strong>iterable</strong> if <strong>condition</strong>]</p>
+<p><strong>expression</strong>: The operation or value to include in the list.<br>
+<strong>item</strong>: Variable representing the element from the iterable.<br>
+<strong>iterable</strong>: The data to loop through (e.g., list, range, etc.).<br>
+<strong>condition</strong> (optional): A filter applied to items in the iterable.</p>
+<h2 id="dictionary-comprehension">Dictionary Comprehension </h2>
+<p>Just like list comprehension</p>
+<p>Syntax</p>
+<p>{key_expression: value_expression for item in iterable if condition}</p>
+<h2 id="set-comprehension">Set Comprehension </h2>
+<p>Syntax<br>
+{expression for item in iterable if condition}</p>
+<p>It is similar to the rest</p>
+<h2 id="generator-expressions">Generator Expressions </h2>
+<p>Syntax<br>
+Similar to list comprehension but uses parentheses () instead of square brackets [].</p>
+<p>Key Difference:</p>
+<p>List comprehensions create the entire list in memory, while generator expressions generate items on demand (memory-efficient).</p>
+<h2 id="enumerate-in-loops">Enumerate in Loops </h2>
+<p>The enumerate() function adds a counter to an iterable and returns it as an enumerate object, which can be used in loops.</p>
+<p>Syntax<br>
+enumerate(<strong>iterable</strong>, <strong>start</strong>=0)</p>
+<p><strong>iterable</strong>: The sequence to enumerate.<br>
+<strong>start</strong>: The starting value of the counter (default is 0).</p>
+<h2 id="python-zip-function">Python zip() Function </h2>
+<p>The zip() function in Python is used to combine two or more iterables (e.g., lists, tuples, strings) into a single iterable of tuples. Each tuple contains one element from each of the input iterables, grouped together based on their corresponding positions.</p>
+<h3 id="characteristics-of-zip">Characteristics of zip() </h3>
+<p>Creates an Iterator: The result of zip() is an iterator. To see the combined elements, you must convert it to a list, tuple, or another iterable.<br>
+Stops at the Shortest Iterable: If the input iterables have different lengths, zip() stops when the shortest iterable is exhausted.</p>
+<p>Syntax<br>
+zip(iterable1, iterable2, ...)</p>
+<h2 id="regular-expressions-re-for-string-manipulayion">Regular Expressions (re) for String Manipulayion </h2>
+<ul>
+<li><code>re</code> provides pattern matching and text searching similar to Perl.</li>
+<li>Regular expressions are built from ordinary and special characters.</li>
+<li>Ordinary characters (e.g. <code>A</code>, <code>a</code>, <code>1</code>) simply match themselves.</li>
+</ul>
+<h3 id="common-special-characters">Common Special Characters </h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Symbol</th>
+<th style="text-align:left">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>.</code></td>
+<td style="text-align:left">Matches any character except newline</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>[]</code></td>
+<td style="text-align:left">Matches any **one character inside brackets (e.g. <code>[a-z]</code>).</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>[^ ]</code></td>
+<td style="text-align:left">Matches any character not inside brackets.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>()</code></td>
+<td style="text-align:left">Groups pattern; can capture text for reuse.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>|</code></td>
+<td style="text-align:left">Acts as OR operator</td>
+</tr>
+</tbody>
+</table>
+<h3 id="special-sequences"><strong>Special Sequences</strong> </h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Sequence</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>\d</code></td>
+<td style="text-align:left">Any digit = <code>[0-9]</code>.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\D</code></td>
+<td style="text-align:left">Any non-digit =  <code>[^0-9]</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\s</code></td>
+<td style="text-align:left">Any whitespace (<code>space, \t, \n</code>).</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\S</code></td>
+<td style="text-align:left">Any non-whitespace.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\w</code></td>
+<td style="text-align:left">Any alphanumeric or underscore = <code>[A-Za-z0-9_]</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\W</code></td>
+<td style="text-align:left">Any non-word character = <code>[^A-Za-z0-9_]</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\\</code></td>
+<td style="text-align:left">Literal backslash.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quantifiers">Quantifiers </h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Quantifier</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>*</code></td>
+<td style="text-align:left">Matches 0 or more repetitions of previous RE (greedy</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>+</code></td>
+<td style="text-align:left">Matches 1 or more repetitions (greedy).</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>?</code></td>
+<td style="text-align:left">Matches 0 or 1 of previous RE (greedy).</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>*?</code>, <code>+?</code>, <code>??</code></td>
+<td style="text-align:left">Non-greedy versions.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>{m,n}</code></td>
+<td style="text-align:left">Matches between m and n repetitions.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>{m,n}?</code></td>
+<td style="text-align:left">Non-greedy version of above.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="assertion">Assertion </h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Symbol</th>
+<th style="text-align:left">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>\A</code></td>
+<td style="text-align:left">Start of string only.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\Z</code></td>
+<td style="text-align:left">End of string only.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\b</code></td>
+<td style="text-align:left">Word boundary.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\B</code></td>
+<td style="text-align:left">Non-word boundary.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>^</code></td>
+<td style="text-align:left">Matches the start of a string.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>$</code></td>
+<td style="text-align:left">Matches the end of a string.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>(?:...)</code></td>
+<td style="text-align:left">Non-capturing group.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>(?=...)</code></td>
+<td style="text-align:left">Positive lookahead (must follow).</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>(?!...)</code></td>
+<td style="text-align:left">Negative lookahead (must not follow).</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>(?&lt;=...)</code></td>
+<td style="text-align:left">Positive lookbehind (must precede).</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>(?&lt;!...)</code></td>
+<td style="text-align:left">Negative lookbehind.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="main-functions"><strong>Main Functions</strong> </h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Function</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>match()</code></td>
+<td style="text-align:left">Checks for a match at the beginning of a string.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>fullmatch()</code></td>
+<td style="text-align:left">Matches the entire string.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>search()</code></td>
+<td style="text-align:left">Finds the first occurrence anywhere in the string.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>findall()</code></td>
+<td style="text-align:left">Returns all matches as a list.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>finditer()</code></td>
+<td style="text-align:left">Returns an iterator of Match objects.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>split()</code></td>
+<td style="text-align:left">Splits string by occurrences of pattern.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>sub()</code></td>
+<td style="text-align:left">Replaces pattern matches with new text.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>compile()</code></td>
+<td style="text-align:left">Compiles RE into a reusable pattern object.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="common-flags"><strong>Common Flags</strong> </h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Flag</th>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>re.I</code></td>
+<td style="text-align:left">IGNORECASE</td>
+<td style="text-align:left">Case-insensitive matching.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>re.S</code></td>
+<td style="text-align:left">DOTALL</td>
+<td style="text-align:left"><code>.</code> matches newline too.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>re.X</code></td>
+<td style="text-align:left">VERBOSE</td>
+<td style="text-align:left">Ignore spaces and comments in pattern.</td>
+</tr>
+</tbody>
+</table>
+<p>Explore more in re module.....</p>
+<p>run this code</p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token keyword keyword-import">import</span> re
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>re__doc__<span class="token punctuation">)</span>
+</code></pre><h1 id="introduction-to-datetime-in-python">Introduction to datetime in python </h1>
+<p>The datetime module in python has classes for manipulating dates and times. It allows you to create, format, and perform operations on date and time objects easily.</p>
+<hr>
+<h2 id="creating-a-date-object">Creating a date object </h2>
+<p>To work with dates, you need to import the <code>datetime</code> class from the <code>datetime</code> module:</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-from">from</span> datetime <span class="token keyword keyword-import">import</span> date
+</code></pre><p>Or, just import the whole module</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code> <span class="token keyword keyword-import">import</span> datetime <span class="token keyword keyword-as">as</span> dt
+</code></pre><p>You can create a date object in several ways:</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># Create a date object</span>
+today <span class="token operator">=</span> dt<span class="token punctuation">.</span>date<span class="token punctuation">.</span>today<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>today<span class="token punctuation">)</span>  
+
+<span class="token comment"># Create a specific date</span>
+date1<span class="token operator">=</span> dt<span class="token punctuation">.</span>date<span class="token punctuation">(</span><span class="token number">1998</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>date1<span class="token punctuation">)</span>  
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>today<span class="token punctuation">)</span>  <span class="token comment"># e.g., 2025-11-11</span>
+
+<span class="token comment"># Create a specific date</span>
+date1<span class="token operator">=</span> dt<span class="token punctuation">.</span>date<span class="token punctuation">(</span><span class="token number">1998</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>date1<span class="token punctuation">)</span>  <span class="token comment"># 1998-07-15</span>
+
+</code></pre><hr>
+<h2 id="common-attributes-of-a-date-object">Common Attributes of a <code>date</code> Object </h2>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.year</code></td>
+<td>Returns the year of the date object</td>
+<td><code>today.year → 2025</code></td>
+</tr>
+<tr>
+<td><code>.month</code></td>
+<td>Returns the month as an integer (1–12)</td>
+<td><code>today.month → 11</code></td>
+</tr>
+<tr>
+<td><code>.day</code></td>
+<td>Returns the day of the month</td>
+<td><code>today.day → 11</code></td>
+</tr>
+</tbody>
+</table>
+<p>Example: run this code</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>today<span class="token punctuation">.</span>year<span class="token punctuation">)</span>   
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>today<span class="token punctuation">.</span>month<span class="token punctuation">)</span>  
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>today<span class="token punctuation">.</span>day<span class="token punctuation">)</span>    
+</code></pre><hr>
+<h2 id="common-methods-of-a-date-object">Common Methods of a <code>date</code> Object </h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.weekday()</code></td>
+<td>Returns the day of the week (Monday = 0, Sunday = 6)</td>
+<td><code>today.weekday() </code></td>
+</tr>
+<tr>
+<td><code>.isoweekday()</code></td>
+<td>Returns the ISO weekday (Monday = 1, Sunday = 7)</td>
+<td><code>today.isoweekday()</code></td>
+</tr>
+<tr>
+<td><code>.isoformat()</code></td>
+<td>Returns the date as a string in ISO format (YYYY-MM-DD)</td>
+<td><code>today.isoformat()</code></td>
+</tr>
+<tr>
+<td><code>.ctime()</code></td>
+<td>Returns a string representing the date in a readable format</td>
+<td>`today.ctime()</td>
+</tr>
+<tr>
+<td><code>date.fromtimestamp(ts)</code></td>
+<td>Creates a date object from a timestamp</td>
+<td><code>date.fromtimestamp(1696425600)</code></td>
+</tr>
+<tr>
+<td><code>.strftime(format)</code></td>
+<td>Returns a formatted string of the date</td>
+<td>`today.strftime('%A, %d %B %Y')</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>today<span class="token punctuation">.</span>strftime<span class="token punctuation">(</span><span class="token string">"%A, %d %B %Y"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre><h2 id="creating-a-datetime-object">Creating a <code>datetime</code> Object </h2>
+<ul>
+<li>Create Current Date and Time</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>now <span class="token operator">=</span> dt<span class="token punctuation">.</span>datetime<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>now<span class="token punctuation">)</span>
+</code></pre><ul>
+<li>Create a Specific Date and Time</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>my_dt <span class="token operator">=</span> dt<span class="token punctuation">.</span>datetime<span class="token punctuation">(</span><span class="token number">2025</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">14</span><span class="token punctuation">,</span> <span class="token number">35</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>my_dt<span class="token punctuation">)</span>
+</code></pre><hr>
+<h2 id="common-attributes-of-a-datetime-object">Common Attributes of a <code>datetime</code> Object </h2>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.year</code></td>
+<td>Returns the year</td>
+<td>`now.year</td>
+</tr>
+<tr>
+<td><code>.month</code></td>
+<td>Returns the month</td>
+<td>`now.month</td>
+</tr>
+<tr>
+<td><code>.day</code></td>
+<td>Returns the day of the month</td>
+<td>`now.day</td>
+</tr>
+<tr>
+<td><code>.hour</code></td>
+<td>Returns the hour (0–23)</td>
+<td>`now.hour</td>
+</tr>
+<tr>
+<td><code>.minute</code></td>
+<td>Returns the minute (0–59)</td>
+<td>`now.minute</td>
+</tr>
+<tr>
+<td><code>.second</code></td>
+<td>Returns the second (0–59)</td>
+<td>`now.second</td>
+</tr>
+<tr>
+<td><code>.microsecond</code></td>
+<td>Returns the microsecond (0–999999)</td>
+<td>`now.microsecond</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>now<span class="token punctuation">.</span>year<span class="token punctuation">,</span> now<span class="token punctuation">.</span>month<span class="token punctuation">,</span> now<span class="token punctuation">.</span>day<span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>now<span class="token punctuation">.</span>hour<span class="token punctuation">,</span> now<span class="token punctuation">.</span>minute<span class="token punctuation">,</span> now<span class="token punctuation">.</span>second<span class="token punctuation">)</span>
+</code></pre><hr>
+<h2 id="common-methods-of-a-datetime-object">Common Methods of a <code>datetime</code> Object </h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.now()</code></td>
+<td>Returns the current local date and time</td>
+<td><code>datetime.now()</code></td>
+</tr>
+<tr>
+<td><code>.today()</code></td>
+<td>Returns the current local date and time (same as <code>now()</code>)</td>
+<td><code>datetime.today()</code></td>
+</tr>
+<tr>
+<td><code>.utcnow()</code></td>
+<td>Returns the current UTC date and time</td>
+<td><code>datetime.utcnow()</code></td>
+</tr>
+<tr>
+<td><code>.date()</code></td>
+<td>Returns only the date portion</td>
+<td>`now.date()</td>
+</tr>
+<tr>
+<td><code>.time()</code></td>
+<td>Returns only the time portion</td>
+<td>`now.time()</td>
+</tr>
+<tr>
+<td><code>.timestamp()</code></td>
+<td>Returns POSIX timestamp (seconds since epoch)</td>
+<td><code>now.timestamp()</code></td>
+</tr>
+<tr>
+<td><code>.weekday()</code></td>
+<td>Returns the day of week (Monday = 0, Sunday = 6)</td>
+<td><code>now.weekday()</code></td>
+</tr>
+<tr>
+<td><code>.isoweekday()</code></td>
+<td>Returns the ISO weekday (Monday = 1, Sunday = 7)</td>
+<td><code>now.isoweekday()</code></td>
+</tr>
+<tr>
+<td><code>.isoformat()</code></td>
+<td>Returns date-time as ISO formatted string</td>
+<td>`now.isoformat()</td>
+</tr>
+<tr>
+<td><code>.strftime(format)</code></td>
+<td>Formats the datetime into a readable string</td>
+<td><code>now.strftime('%A, %d %B %Y %I:%M %p')</code></td>
+</tr>
+<tr>
+<td><code>.strptime(date_string, format)</code></td>
+<td>Convert a readable string to datetime object</td>
+<td><code>now.strftime('%A, %d %B %Y %I:%M %p')</code></td>
+</tr>
+<tr>
+<td><code>datetime.fromtimestamp(ts)</code></td>
+<td>Creates a datetime object from a timestamp</td>
+<td><code>datetime.fromtimestamp(1696425600)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="timedeltadatetime-arithmetic">Timedelta/Datetime Arithmetic </h2>
+<p>You can perform addition or subtraction using <strong><code>timedelta</code></strong> objects.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-from">from</span> datetime <span class="token keyword keyword-import">import</span> timedelta
+
+<span class="token comment"># Add 7 days</span>
+next_week <span class="token operator">=</span> now <span class="token operator">+</span> timedelta<span class="token punctuation">(</span>days<span class="token operator">=</span><span class="token number">7</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>next_week<span class="token punctuation">)</span>
+
+<span class="token comment"># Subtract 2 hours</span>
+two_hours_ago <span class="token operator">=</span> now <span class="token operator">-</span> timedelta<span class="token punctuation">(</span>hours<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>two_hours_ago<span class="token punctuation">)</span>
+</code></pre><h2 id="datetime-formating">Datetime Formating </h2>
+<table>
+<thead>
+<tr>
+<th>Directive</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%a</td>
+<td>Weekday as locale’s abbreviated name.</td>
+</tr>
+<tr>
+<td>%A</td>
+<td>Weekday as locale’s full name.</td>
+</tr>
+<tr>
+<td>%w</td>
+<td>Weekday as a decimal number, where 0 is Sunday and 6 is Saturday.</td>
+</tr>
+<tr>
+<td>%d</td>
+<td>Day of the month as a zero-padded decimal number.</td>
+</tr>
+<tr>
+<td>%b</td>
+<td>Month as locale’s abbreviated name.</td>
+</tr>
+<tr>
+<td>%B</td>
+<td>Month as locale’s full name.</td>
+</tr>
+<tr>
+<td>%m</td>
+<td>Month as a zero-padded decimal number.</td>
+</tr>
+<tr>
+<td>%y</td>
+<td>Year without century as a zero-padded decimal number.</td>
+</tr>
+<tr>
+<td>%Y</td>
+<td>Year with century as a decimal number.</td>
+</tr>
+<tr>
+<td>%H</td>
+<td>Hour (24-hour clock) as a zero-padded decimal number.</td>
+</tr>
+<tr>
+<td>%I</td>
+<td>Hour (12-hour clock) as a zero-padded decimal number.</td>
+</tr>
+<tr>
+<td>%p</td>
+<td>Locale’s equivalent of either AM or PM.</td>
+</tr>
+<tr>
+<td>%M</td>
+<td>Minute as a zero-padded decimal number.</td>
+</tr>
+<tr>
+<td>%S</td>
+<td>Second as a zero-padded decimal number.</td>
+</tr>
+<tr>
+<td>%j</td>
+<td>Day of the year as a zero-padded decimal number.</td>
+</tr>
+<tr>
+<td>%U</td>
+<td>Week number of the year (Sunday as the first day of the week).</td>
+</tr>
+<tr>
+<td>%W</td>
+<td>Week number of the year (Monday as the first day of the week).</td>
+</tr>
+<tr>
+<td>%c</td>
+<td>Locale’s appropriate date and time representation.</td>
+</tr>
+<tr>
+<td>%x</td>
+<td>Locale’s appropriate date representation.</td>
+</tr>
+<tr>
+<td>%X</td>
+<td>Locale’s appropriate time representation.</td>
+</tr>
+<tr>
+<td>%%</td>
+<td>A literal % character.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>Read more on datetime in pytho documentation<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
+<h1 id="functions-in-python-1">Functions in Python </h1>
+<p>A function is a reusable block of code designed to perform a specific task. Functions allow us to organize code into smaller, manageable parts, making it more readable, reusable, and efficient.</p>
+<h2 id="types-of-functions-in-python">Types of Functions in Python: </h2>
+<ol>
+<li>
+<p><strong>Built-in Functions</strong>:</p>
+<ul>
+<li>Predefined in Python (e.g., <code>print()</code>, <code>len()</code>, <code>sum()</code>).</li>
+</ul>
+</li>
+<li>
+<p><strong>User-defined Functions</strong>:</p>
+<ul>
+<li>Created by the programmer using the <code>def</code> keyword.</li>
+</ul>
+<h1>Defining a Function</h1>
+</li>
+</ol>
+<p>Use the <code>def</code> keyword to define a function. The basic syntax is:</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-def">def</span> <span class="token function">function_name</span><span class="token punctuation">(</span>parameters<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># Function body</span>
+   
+</code></pre><h1 id="the-return-statement">The <code>return</code> Statement </h1>
+<p>The <code>return</code> statement is used to send a result back to the caller. Without it, the function returns <code>None</code>.</p>
+<p><em><strong>Syntax</strong></em>:</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-def">def</span> <span class="token function">function_name</span><span class="token punctuation">(</span>parameters<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># Perform some operations</span>
+    <span class="token keyword keyword-return">return</span> result
+</code></pre><h1 id="variable-scope">Variable Scope </h1>
+<p>Scope determines where a variable can be accessed in your program. There are two types:</p>
+<ol>
+<li>
+<p><strong>Local Scope</strong>:</p>
+<ul>
+<li>Variables declared inside a function are accessible only within that function.</li>
+</ul>
+</li>
+<li>
+<p><strong>Global Scope</strong>:</p>
+<ul>
+<li>Variables declared outside any function are accessible throughout the program.</li>
+</ul>
+</li>
+</ol>
+<h1 id="function-with-parameters">Function with Parameters </h1>
+<p>Functions can accept input values (parameters) to perform tasks dynamically. The values provided to the parameters are called <strong>arguments</strong>.</p>
+<p><em><strong>Syntax</strong></em>:</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-def">def</span> <span class="token function">function_name</span><span class="token punctuation">(</span>param1<span class="token punctuation">,</span> param2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># Use parameters in the function</span>
+    <span class="token keyword keyword-return">return</span> result
+</code></pre><h1 id="default-parameters">Default Parameters </h1>
+<p>A function can have default parameter values. If no argument is provided for that parameter, the default value is used.</p>
+<p><em><strong>Syntax</strong></em>:</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-def">def</span> <span class="token function">function_name</span><span class="token punctuation">(</span>param1<span class="token operator">=</span>value1<span class="token punctuation">,</span> param2<span class="token operator">=</span>value2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># Function body</span>
+</code></pre><h1 id="arbitrary-positional-arguments-args">Arbitrary Positional Arguments (<code>*args</code>) </h1>
+<p>The <code>*args</code> parameter allows you to pass a variable number of positional arguments to a function. These arguments are collected into a tuple.</p>
+<h3 id="syntax"><strong>Syntax</strong>: </h3>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-def">def</span> <span class="token function">function_name</span><span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">)</span><span class="token punctuation">:</span>
+   check <span class="token builtin">type</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span>
+</code></pre><h1 id="arbitrary-keyword-arguments-kwargs">Arbitrary Keyword Arguments (<code>**kwargs</code>) </h1>
+<p>The <code>**kwargs</code> parameter allows you to pass a variable number of keyword arguments to a function. These arguments are collected into a dictionary.</p>
+<h3 id="syntax-1"><em><strong>Syntax</strong></em>: </h3>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-def">def</span> <span class="token function">function_name</span><span class="token punctuation">(</span><span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    check <span class="token builtin">type</span><span class="token punctuation">(</span>kargs<span class="token punctuation">)</span>
+
+</code></pre><h1 id="combining-args-and-kwargs">Combining <code>*args</code> and <code>**kwargs</code> </h1>
+<p>You can use both <code>*args</code> and <code>**kwargs</code> in the same function. This allows you to handle an unknown number of positional and keyword arguments.</p>
+<p><em><strong>Syntax</strong></em>:</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-def">def</span> <span class="token function">function_name</span><span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># args is a tuple, kwargs is a dictionary</span>
+</code></pre><h1 id="order-of-function-arguments-in-python">Order of Function Arguments in Python </h1>
+<p>In Python, function arguments must follow a specific order when defining and calling a function.</p>
+<h3 id="order-of-arguments"><strong>Order of Arguments</strong>: </h3>
+<ol>
+<li><strong>Positional Arguments</strong>: Regular arguments passed in the correct order.</li>
+<li><strong>Default Arguments</strong>: Arguments with default values.</li>
+<li><strong>Arbitrary Positional Arguments (<code>*args</code>)</strong>: Collects extra positional arguments into a tuple.</li>
+<li><strong>Keyword-only Arguments (<code>kw=</code>)</strong>: Keyword <strong>must</strong> be declared.</li>
+<li><strong>Arbitrary Keyword Arguments (<code>**kwargs</code>)</strong>: Collects extra keyword arguments into a dictionary.</li>
+</ol>
+<p><em><strong>Syntax</strong></em>:</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-def">def</span> <span class="token function">function_name</span><span class="token punctuation">(</span>positional<span class="token punctuation">,</span> default<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># Function body</span>
+</code></pre><h1 id="docstrings-in-functions">Docstrings in Functions </h1>
+<p>A <strong>docstring</strong> (short for "documentation string") is a special kind of string that describes the purpose and behavior of a function, class, or module. It is written as the first statement inside the function and is enclosed in triple quotes (<code>'''</code> or <code>"""</code>).</p>
+<h3 id="purpose-of-docstrings"><strong>Purpose of Docstrings</strong>: </h3>
+<ol>
+<li>To explain what the function does.</li>
+<li>To describe the parameters and return values.</li>
+<li>To provide usage examples sometimes.</li>
+</ol>
+<h3 id="format-of-docstrings">Format of Docstrings </h3>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token keyword keyword-def">def</span> <span class="token function">function_name</span><span class="token punctuation">(</span>arguments<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<span class="token triple-quoted-string string">"""
+Description of what the function does.
+Description of the arguments, if any.
+Description of the return value(s), if any.
+Description of errors raised, if any.
+Optional extra notes or examples of usage.
+"""</span>
+</code></pre><p><strong>Syntax</strong>:</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-def">def</span> <span class="token function">function_name</span><span class="token punctuation">(</span>parameters<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""
+    A brief description of the function.
+
+    Args:
+        param1 (type): Description of param1.
+        param2 (type): Description of param2.
+
+    Returns:
+        type: Description of the return value.
+    """</span>
+    <span class="token comment"># Function body</span>
+</code></pre><h3 id="google-style-docstrings">Google-style Docstrings </h3>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token keyword keyword-def">def</span> <span class="token function">function</span><span class="token punctuation">(</span>arg_1<span class="token punctuation">,</span> arg_2<span class="token operator">=</span><span class="token number">42</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+<span class="token string">""</span>"Description of what the function does<span class="token punctuation">.</span> 
+
+Args<span class="token punctuation">:</span> 
+    arg_1 <span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Description of arg_1 that can <span class="token keyword keyword-break">break</span> onto the <span class="token builtin">next</span> line <span class="token keyword keyword-if">if</span>     needed<span class="token punctuation">.</span> 
+    arg_2 <span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> optional<span class="token punctuation">)</span><span class="token punctuation">:</span> Write optional when an argument has a default value<span class="token punctuation">.</span> 
+
+Returns<span class="token punctuation">:</span> 
+    <span class="token builtin">bool</span><span class="token punctuation">:</span> Optional description of the <span class="token keyword keyword-return">return</span> value Extra lines are <span class="token keyword keyword-not">not</span> indented<span class="token punctuation">.</span> 
+    
+Raises<span class="token punctuation">:</span> 
+    ValueError<span class="token punctuation">:</span> Include <span class="token builtin">any</span> error types that the function intentionally raises<span class="token punctuation">.</span> 
+
+Notes<span class="token punctuation">:</span> 
+    More info you want to add<span class="token punctuation">.</span>
+
+</code></pre><h3 id="numpydoc-style-docstrings">Numpydoc-style Docstrings </h3>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token keyword keyword-def">def</span> <span class="token function">function</span><span class="token punctuation">(</span>arg_1<span class="token punctuation">,</span> arg_2<span class="token operator">=</span><span class="token number">42</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+<span class="token triple-quoted-string string">"""
+Description of what the function does.
+
+Parameters
+----------
+arg_1 : expected type of arg_1
+Description of arg_1.
+arg_2 : int, optional
+Write optional when an argument has a default value.
+Default=42.
+
+Returns
+-------
+The type of the return value
+Can include a description of the return value.
+
+
+    
+Raises
+---------
+Include any error types that the function intentionally raises. 
+
+Notes
+----------
+More info you want to add.
+
+"""</span>
+
+</code></pre><h1 id="lambda-functions">Lambda Functions </h1>
+<p>A <strong>lambda function</strong> is a small, anonymous function defined using the <code>lambda</code> keyword. It can have any number of arguments but only one expression.</p>
+<p><em><strong>Syntax</strong></em>:</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-lambda">lambda</span> arguments<span class="token punctuation">:</span> expression
+</code></pre><h3 id="best-practices-with-functions"><em><strong>Best Practices with Functions</strong></em>: </h3>
+<ol>
+<li>Always follow the argument order: <code>positional</code> ---&gt;  <code>default</code> ---&gt; <code>*args</code> ---&gt; <code>**kwargs</code>.</li>
+<li>Use meaningful names for <code>*args</code> and <code>**kwargs</code> when possible:
+<ul>
+<li>Example: <code>*numbers</code>, <code>**details</code>.</li>
+</ul>
+</li>
+<li>Avoid using too many arguments in a single function to maintain readability.</li>
+<li>Add doc string a withnd annotation.</li>
+</ol>
+<h3 id="full-example">Full example </h3>
+<p>
+Given the quadratic expression: <b>ax<sup>2</sup> + bx + c = 0</b>, and its corresponding quadratic formula:
+</p>
+<p><img src="image.png" alt="alt text"></p>
+<p>
+where:
+</p>
+<ul>
+  <li><b>a</b> represents the coefficient of <b>x<sup>2</sup></b></li>
+  <li><b>b</b> represents the coefficient of <b>x</b></li>
+  <li><b>c</b> represents the constant (the last term in the expression)</li>
+</ul>
+<p>
+<b>Discriminant (D) = b<sup>2</sup> - 4ac</b>
+</p>
+<p><code>Note that quadratic equation has no real solution if D &lt; 0</code></p>
+<p><strong>Task:</strong></p>
+<p>Write a python function that can solve quadratic equation</p>
+<p><strong>Solution:</strong></p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token keyword keyword-def">def</span> <span class="token function">qd_fun</span><span class="token punctuation">(</span>a<span class="token punctuation">:</span><span class="token builtin">float</span><span class="token operator">|</span><span class="token builtin">int</span><span class="token punctuation">,</span>
+           b<span class="token punctuation">:</span><span class="token builtin">float</span><span class="token operator">|</span><span class="token builtin">int</span><span class="token punctuation">,</span>
+           c<span class="token punctuation">:</span><span class="token builtin">float</span><span class="token operator">|</span><span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">str</span><span class="token punctuation">:</span>
+    
+    <span class="token triple-quoted-string string">"""This function is designed to 
+    solve quadratic equation
+    
+    Parameters
+    -----------------------
+        a: int, float
+
+        coefficient of x squared
+
+        b: int, float
+
+        coefficient of x
+
+        c: int, float
+
+        the constant
+        
+    Returns
+    ----------------
+        str
+
+        This function will retun the two values of x
+        if the solution exists otherwise it will retun 
+        `no solution`"""</span>
+    <span class="token comment"># representing discriminant</span>
+    D <span class="token operator">=</span> b<span class="token operator">**</span><span class="token number">2</span> <span class="token operator">-</span> <span class="token number">4</span><span class="token operator">*</span>a<span class="token operator">*</span>c
+    <span class="token keyword keyword-if">if</span> D <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
+        res <span class="token operator">=</span> <span class="token string">"No solution"</span>
+        <span class="token keyword keyword-return">return</span> res
+    <span class="token keyword keyword-else">else</span><span class="token punctuation">:</span>
+        <span class="token keyword keyword-import">import</span> math
+        implementing the quadratic formula
+        x1 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token operator">-</span>b <span class="token operator">+</span> math<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span>b<span class="token operator">**</span><span class="token number">2</span> <span class="token operator">-</span> <span class="token number">4</span><span class="token operator">*</span>a<span class="token operator">*</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token operator">*</span>a<span class="token punctuation">)</span>
+        x2 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token operator">-</span>b <span class="token operator">-</span> math<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span>b<span class="token operator">**</span><span class="token number">2</span> <span class="token operator">-</span> <span class="token number">4</span><span class="token operator">*</span>a<span class="token operator">*</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token operator">*</span>a<span class="token punctuation">)</span>
+        res <span class="token operator">=</span> <span class="token string-interpolation"><span class="token string">f"x = </span><span class="token interpolation"><span class="token punctuation">{</span>x1<span class="token punctuation">}</span></span><span class="token string"> or x = </span><span class="token interpolation"><span class="token punctuation">{</span>x2<span class="token punctuation">}</span></span><span class="token string">"</span></span>
+        <span class="token keyword keyword-return">return</span> res
+
+</code></pre><h1 id="creating-your-own-python-module">Creating your own Python Module </h1>
+<p>A <strong>module</strong> is a file containing Python code, such as functions, variables, or classes, that can be reused in other scripts. Modules allow you to organize your code into separate files for better structure and reusabilit</p>
+<h3 id="steps-to-create-a-module"><strong>Steps to Create a Module</strong>: </h3>
+<ol>
+<li>Write your functions or variables in a <code>.py</code> file.</li>
+<li>Save the file with a meaningful name (e.g., <code>my_module.py</code>).</li>
+<li>Import the module into another script using the <code>import</code> statement.</li>
+</ol>
+<h3 id="example"><strong>Example</strong>: </h3>
+<ol>
+<li>Create a file called <code>math_operations.py</code> with the following content:</li>
+</ol>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-def">def</span> <span class="token function">add</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""Adds two numbers."""</span>
+    <span class="token keyword keyword-return">return</span> a <span class="token operator">+</span> b
+
+<span class="token keyword keyword-def">def</span> <span class="token function">subtract</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""Subtracts the second number from the first."""</span>
+    <span class="token keyword keyword-return">return</span> a <span class="token operator">-</span> b
+</code></pre><p>You then import it and start using it</p>
+<h1 id="very-breif-intro-to-numpy">Very Breif Intro to NumPy </h1>
+<p>NumPy (Numerical Python) is a powerful Python library for numerical computing. It provides support for:</p>
+<ul>
+<li>Multi-dimensional arrays and matrices.</li>
+<li>Mathematical functions for operations on arrays etc....</li>
+<li>Alternative to Python List: NumPy Array</li>
+<li>Calculations over entire arrays</li>
+<li>Easy and Fast</li>
+<li>Perform element-wise operations without loops.</li>
+<li>Easily integrates with other libraries like pandas, matplotlib etc...</li>
+</ul>
+<h3 id="installing-numpy"><strong>Installing NumPy</strong>: </h3>
+<p>To install NumPy, use the following command:</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>pip install numpy
+</code></pre><h1 id="creating-numpy-arrays">Creating NumPy Arrays </h1>
+<p>The core of NumPy is the <code>ndarray</code>, a multi-dimensional array object.</p>
+<h3 id="creating-arrays"><strong>Creating Arrays</strong>: </h3>
+<ul>
+<li><strong>From a Python List</strong></li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-import">import</span> numpy <span class="token keyword keyword-as">as</span> np
+array <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+</code></pre><ul>
+<li><strong>Using NumPy Functions</strong>
+<ul>
+<li>np.zeros(shape): Creates an array of zeros.</li>
+<li>np.ones(shape): Creates an array of ones.</li>
+<li>np.arange(start, stop, step): Creates a range of numbers.</li>
+<li>np.linspace(start, stop, num): Creates evenly spaced numbers....etc</li>
+</ul>
+</li>
+</ul>
+<p><strong>Note:</strong> NumPy arrays: contain only one type etc...</p>
+<p>Note that as we can have list of lists, we can have more than one dimensional array too.</p>
+<h1 id="indexing-and-slicing-in-numpy">Indexing and Slicing in NumPy </h1>
+<p>You can access elements in a NumPy array using indexing and slicing.</p>
+<h3 id="indexing">Indexing </h3>
+<ul>
+<li>Access elements using their index (0-based).</li>
+<li>For multi-dimensional arrays, use <code>array[[level(in hiher dim]),row, column]</code>.</li>
+</ul>
+<h3 id="slicing">Slicing </h3>
+<p>Use the syntax <code>start:stop:step</code> to slice an array.</p>
+<p><strong>Example</strong></p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code>arr2d <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">84</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>arr2d<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>arr2d<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>arr2d<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>arr2d<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre><h3 id="common-data-shaping-funtions-in-numpy">Common Data Shaping Funtions in Numpy </h3>
+<ul>
+<li>reshape()</li>
+<li>flatten()</li>
+<li>transpose() ....etc</li>
+</ul>
+<h3 id="common-arithmetic-and-statistical-funtions-in-numpy">Common Arithmetic and Statistical Funtions in Numpy </h3>
+<ul>
+<li>add(a, b)</li>
+<li>subtract(a, b)</li>
+<li>multiply(a, b)</li>
+<li>divide(a, b)</li>
+<li>mean()</li>
+<li>median()</li>
+<li>std()</li>
+<li>var()</li>
+<li>sum()</li>
+<li>min()</li>
+<li>max()</li>
+<li>cumsum()</li>
+<li>cumprod()...etc</li>
+</ul>
+<h1 id="introduction-to-pandas">Introduction to Pandas </h1>
+<p>Pandas is a powerful and flexible Python library for data manipulation and analysis. It provides two main data structures: <strong>Series</strong> and <strong>DataFrame</strong>, which are built on top of NumPy arrays.</p>
+<h3 id="key-features-of-pandas"><strong>Key Features of Pandas</strong> </h3>
+<ul>
+<li>Provides Series and DataFrame for data manipulation.</li>
+<li>Works seamlessly with structured data from sources like CSV, Excel, SQL databases, and more.</li>
+<li>Provides tools for filtering, sorting, grouping, merging, and reshaping data.</li>
+<li>Easily integrates with other data science libraries like NumPy, Matplotlib etc...</li>
+</ul>
+<h3 id="installing-pandas"><strong>Installing Pandas</strong> </h3>
+<p>To install Pandas, run the following command:</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>pip install pandas 
+</code></pre><hr>
+<h1 id="pandas-data-structures">Pandas Data Structures </h1>
+<p>Pandas provides two primary data structures for working with data:</p>
+<h2 id="1-series"><strong>1. Series</strong> </h2>
+<ul>
+<li>A one-dimensional labeled array capable of holding data of any type (integer, float, string, etc.).</li>
+<li>Similar to a column in a spreadsheet or a 1D NumPy array but with labels (indices).</li>
+</ul>
+<h3 id="creating-a-series"><strong>Creating a Series</strong> </h3>
+<ul>
+<li>From list</li>
+</ul>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token keyword keyword-import">import</span> pandas <span class="token keyword keyword-as">as</span> pd
+ls1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"Amala"</span><span class="token punctuation">,</span><span class="token boolean">True</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">34.65</span><span class="token punctuation">,</span><span class="token string">"beans"</span><span class="token punctuation">]</span>
+ser1 <span class="token operator">=</span> pd<span class="token punctuation">.</span>Series<span class="token punctuation">(</span>ls1<span class="token punctuation">)</span>
+display<span class="token punctuation">(</span>ser1<span class="token punctuation">)</span>
+</code></pre><ul>
+<li>From dictionary</li>
+</ul>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code>dict1 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"A"</span><span class="token punctuation">:</span><span class="token string">"aja"</span><span class="token punctuation">,</span><span class="token string">"B"</span><span class="token punctuation">:</span><span class="token string">'bata'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token string">"one"</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">:</span><span class="token string">"two"</span><span class="token punctuation">}</span>
+ser2 <span class="token operator">=</span> pd<span class="token punctuation">.</span>Series<span class="token punctuation">(</span>dict1<span class="token punctuation">)</span>
+display<span class="token punctuation">(</span>ser2<span class="token punctuation">)</span>
+</code></pre><h2 id="2-dataframe"><strong>2. DataFrame</strong> </h2>
+<p>A <strong>DataFrame</strong> is a two-dimensional, tabular data structure in Pandas. It consists of rows and columns, where:</p>
+<ul>
+<li>Rows are indexed (labeled with numbers by default).</li>
+<li>Columns have labels (names) and can store different data types.</li>
+</ul>
+<h3 id="creating-a-dataframe"><strong>Creating a DataFrame</strong> </h3>
+<p>You can create a DataFrame from various data structures, such as:</p>
+<ul>
+<li>Python dictionaries</li>
+</ul>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token keyword keyword-import">import</span> pandas <span class="token keyword keyword-as">as</span> pd 
+stud_info <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"Khadijat"</span><span class="token punctuation">,</span><span class="token string">"Oluwadahunsi"</span><span class="token punctuation">,</span>
+             <span class="token string">"Halimat"</span><span class="token punctuation">,</span><span class="token string">"Friday"</span><span class="token punctuation">,</span><span class="token string">"Ayo"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">"age"</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">12</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">"favourite food"</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">"biscuit"</span><span class="token punctuation">,</span><span class="token string">"eba"</span><span class="token punctuation">,</span>
+                      <span class="token string">"rice"</span><span class="token punctuation">,</span><span class="token string">"Eba"</span><span class="token punctuation">,</span><span class="token string">"Amala"</span><span class="token punctuation">]</span>
+
+<span class="token punctuation">}</span>
+
+df1 <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>stud_info<span class="token punctuation">)</span>
+display<span class="token punctuation">(</span>df1<span class="token punctuation">)</span>
+</code></pre><ul>
+<li>Lists of lists</li>
+</ul>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code>l3 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">"Khadijat"</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token string">"biscuit"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">[</span><span class="token string">"Oluwadahunsi"</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token string">"eba"</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+df2 <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>l3<span class="token punctuation">,</span>columns<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">"name"</span><span class="token punctuation">,</span><span class="token string">"age"</span><span class="token punctuation">,</span><span class="token string">"food"</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+display<span class="token punctuation">(</span>df2<span class="token punctuation">)</span>
+</code></pre><ul>
+<li>NumPy arrays</li>
+</ul>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code>num_1_100 <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">101</span><span class="token punctuation">)</span><span class="token punctuation">.</span>reshape<span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span>
+num_1_100
+df3 <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>num_1_100<span class="token punctuation">)</span>
+display<span class="token punctuation">(</span>df3<span class="token punctuation">)</span>
+</code></pre><ul>
+<li>Existing files (e.g., CSV, Excel) (a whole topic on its own)</li>
+</ul>
+<h2 id="data-loading-in-pandas"><strong>Data Loading in Pandas</strong> </h2>
+<h3 id="1-csv-files"><strong>1. CSV Files</strong> </h3>
+<ul>
+<li>
+<p>Use the <code>read_csv()</code> function in pandas to read <code>.csv</code>, <code>.txt</code>, or <code>.tsv</code> files into a DataFrame.</p>
+</li>
+<li>
+<p>By default, pandas assumes that the data is <strong>comma-delimited (<code>sep=","</code>)</strong>.</p>
+</li>
+<li>
+<p>For other delimiters:</p>
+<ul>
+<li>Use <code>sep="\t"</code> for tab-separated data.</li>
+<li>Use <code>sep=";"</code> for semicolon-separated data.</li>
+<li>Use any other string as needed, e.g. <code>sep="|"</code> for pipe-separated files.</li>
+</ul>
+</li>
+<li>
+<p><code>header:</code> You can use the <code>header</code> argument to specify which row should be used as column headers.</p>
+</li>
+</ul>
+<ul>
+<li><code>skiprows:</code> skips specific rows at the start when reading a file. You can also pass a list of row indices to skip:</li>
+<li><code>skipfooter:</code> skips a specified number of lines from the bottom of the file. It requires the <code>engine='python'</code> argument though</li>
+<li><code>usecols:</code> selects specific columns to load.</li>
+<li><code>nrows:</code> limits the number of rows read into the DataFrame. It's useful for previewing large datasets</li>
+<li><code>na_values: </code> specifies additional strings to recognize as <code>NaN</code>.</li>
+<li><code>index_col:</code> sets a specific column (or multiple columns) as the index</li>
+<li>etc....explore more<br>
+run this</li>
+</ul>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">.</span>__doc__<span class="token punctuation">)</span>
+</code></pre><pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token keyword keyword-import">import</span> pandas <span class="token keyword keyword-as">as</span> pd 
+game <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span>
+    <span class="token string">r"C:\Users\Dell\Desktop\bt\vgchartz-2024.csv"</span><span class="token punctuation">,</span>
+    <span class="token comment"># header=1,</span>
+    <span class="token comment"># skiprows=5,</span>
+    <span class="token comment"># skiprows=[4,8,11,56],</span>
+    <span class="token comment"># skipfooter=10,</span>
+    <span class="token comment"># engine="python",</span>
+    <span class="token comment"># nrows=5</span>
+    <span class="token comment"># na_values="PS3",</span>
+    index_col<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">"title"</span><span class="token punctuation">]</span>
+
+
+<span class="token punctuation">)</span>
+game 
+</code></pre><h3 id="2-excel-files"><strong>2. Excel Files</strong> </h3>
+<ul>
+<li>
+<p>Use the <code>read_excel()</code> function in pandas to read <code>.xls</code> or <code>.xlsx</code> files into a DataFrame.</p>
+</li>
+<li>
+<p>You must have <strong><code>openpyxl</code></strong> (for <code>.xlsx</code>) or <strong><code>xlrd</code></strong> (for older <code>.xls</code>) installed.</p>
+</li>
+<li>
+<p>Some important arguments include:</p>
+<ul>
+<li><code>sheet_name:</code> specify the sheet to load (name, index, or list of sheets).</li>
+<li><code>usecols:</code> load only specific columns.</li>
+<li><code>skiprows:</code> skip certain rows from the top.</li>
+<li><code>nrows:</code> limit the number of rows read.</li>
+<li><code>header:</code> set which row to use as column headers.</li>
+<li><code>index_col:</code> choose a column to be used as index.</li>
+<li><code>na_values:</code> specify custom missing value indicators.</li>
+</ul>
+</li>
+<li>
+<p>etc... explore more<br>
+run this</p>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">.</span>__doc__<span class="token punctuation">)</span>
+</code></pre><pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token keyword keyword-import">import</span> pandas <span class="token keyword keyword-as">as</span> pd 
+
+gdp_per_cap <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_excel<span class="token punctuation">(</span>
+    <span class="token string">r"C:\Users\Dell\Desktop\bt\DOC-20250806-WA0007..xls"</span><span class="token punctuation">,</span>
+    <span class="token comment"># skiprows=3,</span>
+    <span class="token comment"># sheet_name="Metadata - Countries",</span>
+    <span class="token comment"># sheet_name=2,</span>
+    <span class="token comment"># sheet_name=None,</span>
+    <span class="token comment"># usecols=</span>
+    
+<span class="token punctuation">)</span>
+gdp_per_cap
+
+fgcl <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_excel<span class="token punctuation">(</span>
+    <span class="token string">r"C:\Users\Dell\Desktop\bt\Workbooks\bt\FGCI.xlsx"</span><span class="token punctuation">,</span>
+    header<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>
+    usecols<span class="token operator">=</span><span class="token string">"c:d"</span>
+<span class="token punctuation">)</span>
+fgcl
+</code></pre><h3 id="3-clipboard-data"><strong>3. Clipboard Data</strong> </h3>
+<ul>
+<li>Use the <code>read_clipboard()</code> function to read data copied to your clipboard*directly into a DataFrame.</li>
+<li>It’s useful for quickly importing tables from webpages, Excel, or other sources without saving them to a file.</li>
+<li>By default, pandas assumes tab-separated data (<code>sep='\t'</code>).</li>
+<li>You can specify other delimiters using the <code>sep</code> argument.</li>
+</ul>
+<h1 id="data-loading-contd"><strong>DATA LOADING (CONT'D)</strong> </h1>
+<h3 id="4-loading-data-from-mysql-directly-into-pandas"><strong>4. Loading data from mysql directly into pandas</strong> </h3>
+<ul>
+<li>step 1:
+<ul>
+<li>Install sqlalchemy</li>
+<li>install pymysql</li>
+</ul>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code>! pip install sqlalchemy
+! pip install pymysql
+</code></pre><p>Importing engine creation class</p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token keyword keyword-from">from</span> sqlalchemy <span class="token keyword keyword-import">import</span> create_engine 
+</code></pre><h3 id="setting-up-your-sql-engine">setting up your sql engine </h3>
+<ul>
+<li>reqirements
+<ul>
+<li><strong><code>username</code></strong> (we all used root, can you still remember?)</li>
+<li><strong><code>password</code></strong> (The password you created during sql class)</li>
+</ul>
+</li>
+</ul>
+<p>Let's hide our password by saving it environment variable</p>
+<ul>
+<li>Press window button + S</li>
+<li>Type edit environment variable</li>
+<li>Click on edit environment variable</li>
+<li>Under Environment variable, click new</li>
+<li>Enter any name you want (let it be a valid python variable name) in <code>variable name</code></li>
+<li>Enter your sql password in <code>variable value</code></li>
+<li>Press OK till end</li>
+</ul>
+<h3 id="use-os-module-to-bring-the-password-into-your-notebook">Use os module to bring the password into your notebook </h3>
+<ul>
+<li>Use getenv function in os modele to fetch the password you saved in your environment variable (the arguement it takes is the variable name you used in <code>'edit environment variable'</code> in the step above). If it doesnt work restart your system.</li>
+<li>if you have "@" or any other special character in your password that may have conflict with sql create engine syntax, parse it with urlib.parse.quote</li>
+</ul>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token keyword keyword-import">import</span> os 
+password <span class="token operator">=</span> os<span class="token punctuation">.</span>getenv<span class="token punctuation">(</span><span class="token string">"sql_psw"</span><span class="token punctuation">)</span>
+<span class="token comment"># parsing pwd</span>
+<span class="token keyword keyword-from">from</span> urllib<span class="token punctuation">.</span>parse <span class="token keyword keyword-import">import</span> quote
+password <span class="token operator">=</span> quote<span class="token punctuation">(</span>password<span class="token punctuation">)</span>
+<span class="token comment"># seting up the engine</span>
+<span class="token keyword keyword-from">from</span> sqlalchemy <span class="token keyword keyword-import">import</span> create_engine
+eng <span class="token operator">=</span> create_engine<span class="token punctuation">(</span>
+    <span class="token string-interpolation"><span class="token string">f"mysql+pymysql://root:</span><span class="token interpolation"><span class="token punctuation">{</span>password<span class="token punctuation">}</span></span><span class="token string">@localhost/today_class"</span></span>
+<span class="token punctuation">)</span>
+</code></pre><h3 id="proceeding-to-pandas">Proceeding to Pandas </h3>
+<ul>
+<li>Use pd.read_sql or pd.read_sql_query to fetch data from your mysql database</li>
+</ul>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token keyword keyword-import">import</span> pandas <span class="token keyword keyword-as">as</span> pd 
+data <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_sql<span class="token punctuation">(</span>
+    <span class="token triple-quoted-string string">"""
+
+select * from
+today_class.gns_exam_rec
+
+
+"""</span><span class="token punctuation">,</span>con<span class="token operator">=</span>eng
+<span class="token punctuation">)</span>
+data
+</code></pre><p>Explore more on other data file.....</p>
+<h2 id="exporting-your-data-in-pandas">Exporting your data in pandas </h2>
+<ul>
+<li>
+<p>You can export your DataFrame to various file formats using Series and DataFrame method. Common ones include:</p>
+<ul>
+<li><code>to_csv()</code> --&gt; exports to CSV file.</li>
+<li><code>to_excel()</code> --&gt; exports to Excel file</li>
+<li><code>to_clipboard()</code>--&gt; copies the DataFrame to your clipboard.</li>
+</ul>
+</li>
+<li>
+<p>Use arguments like <code>index=False</code> to avoid exporting the index and <code>na_rep='N/A'</code> to specify missing value representations.</p>
+</li>
+<li>
+<p>etc... explore more</p>
+</li>
+</ul>
+<h2 id="exploring-your-data">Exploring Your Data </h2>
+<p>Before you work on any analysis, it’s important to explore and understand your dataset.</p>
+<ul>
+<li>Check the shape of the dataset ( to see the number of rows and columns) → df.shape</li>
+<li>View all column names→ df.columns</li>
+<li>Inspect the index (row labels) → df.index</li>
+<li>Manipulate column and index names using list comprehension → df.columns = [col.strip().lower() for col in df.columns]</li>
+<li>Rename columns or index names → <a href="http://df.columns.name">df.columns.name</a> = "name" or <a href="http://df.index.name">df.index.name</a> = "name"</li>
+<li>Select one or more columns → df['column_name'] or df<a href="'col1', 'col2'.md">'col1', 'col2'</a></li>
+<li>Check the number of unique entries in a column → df['column_name'].nunique()</li>
+<li>View all unique entries in a column → df['column_name'].unique()</li>
+<li>Count missing (null) values in each column → df.isnull().sum()</li>
+<li>Check data types of all columns → df.dtypes</li>
+<li>Check full info -&gt; <a href="http://df.info">df.info</a>()</li>
+<li>Check first five rows - &gt; df.head()</li>
+<li>Check last five rows - &gt; df.tail()</li>
+</ul>
+<h2 id="fixing-and-interacting-with-your-data">Fixing and Interacting with Your Data </h2>
+<p>After exploring your dataset, the next step is to clean and prepare it for analysis.</p>
+<ul>
+<li>
+<p>Remove null (missing) values→ df.dropna()</p>
+</li>
+<li>
+<p>Fill null values with a specific value→ df.fillna(value)</p>
+</li>
+<li>
+<p>Check for duplicate rows<br>
+→ df.duplicated()</p>
+</li>
+<li>
+<p>Remove duplicate rows→ df.drop_duplicates()</p>
+</li>
+<li>
+<p>Change data type of a column→ df['column_name'] = df['column_name'].astype('float')</p>
+</li>
+<li>
+<p>Rename columns or index→ df.rename(columns={'old_name': 'new_name'}, inplace=True)</p>
+</li>
+<li>
+<p>Delete one or more columns→ df.drop(['col1', 'col2'], axis=1, inplace=True)</p>
+</li>
+<li>
+<p>Sort dataset by column or index→ df.sort_index()</p>
+</li>
+<li>
+<p>Rearrange column order → df = df<a href="'col3', 'col1', 'col2'.md">'col3', 'col1', 'col2'</a></p>
+</li>
+</ul>
+<h2 id="filtering">Filtering </h2>
+<p>Filtering allows you to separate sheep from goat</p>
+<ul>
+<li>Filter by column(s) or index df.filter()</li>
+<li>Filter by content (conditional filtering)
+<ul>
+<li>Tie your wrapper well here!!!</li>
+</ul>
+</li>
+</ul>
+<h2 id="sorting">Sorting </h2>
+<p>Sorting helps you arrange your dataset logically for easier interpretation and analysis.</p>
+<ul>
+<li>Sort by content (values)
+<ul>
+<li>Sort rows by a single column: df.sort_values(by='score', ascending=False)</li>
+<li>Sort by multiple columns: df.sort_values(by=['class', 'score'], ascending=[True, False])</li>
+</ul>
+</li>
+<li>Convert to categorical for custom (ordinal) sorting
+<ul>
+<li>Sometimes, sorting alphabetically isn’t meaningful — for instance, sorting months or education levels.</li>
+<li>You can define a categorical order to control how sorting behaves:</li>
+</ul>
+</li>
+</ul>
+<h1 id="statistical-analysis"><strong>Statistical Analysis</strong> </h1>
+<p>In simple terms, statistics is the science of learning from data. It helps us identify patterns, test hypotheses, and draw meaningful conclusions based on numerical evidence.</p>
+<h2 id="variable"><strong>Variable</strong> </h2>
+<p>In research and data analysis, variables are characteristics or attributes that can take on different values among individuals, objects, or situations.<br>
+They are what we measure, control, or observe in a study.</p>
+<p><strong>Types</strong></p>
+<ul>
+<li>
+<p>Dependent Variable (response Variable, Outcome Variable, Explained Variable):	The main variable you are trying to understand or predict. Its value depends on other variables.	Students’ test scores in a study on teaching methods</p>
+</li>
+<li>
+<p>Independent Variable (	predictor, explanatory) 	The variable that influences or predicts the dependent variable.	Teaching method (e.g., traditional vs. online)</p>
+</li>
+</ul>
+<h3 id="types-of-datavariablescale-of-measurements-in-statistics"><strong>Types of data/variable/scale of measurements in statistics</strong> </h3>
+<p>Understanding data types is important in statistical analysis because the choice of statistical tests, measures of central tendency, and measures of dispersion depends on the type of data being analyzed. Data is classified into:</p>
+<ol>
+<li><strong>Categorical</strong> (Data that are in groups)
+<ul>
+<li><code>Nomimal</code> (Data that consist of categories or labels that have no inherent order or ranking. It is purely qualitative and used for classification). E.g.
+<ul>
+<li>Gender (Male, Female)</li>
+<li>Color (White, blue, red ...)</li>
+<li>Political party (PDP, APC, LP ...) etc...</li>
+</ul>
+</li>
+<li><code>Ordinal</code> (Data that consist of categories that have a meaningful order, but the differences between them are not uniform or measurabl). E.g.
+<ul>
+<li>Class of degree (First class, second class upper, second class lower, third class, pass)</li>
+<li>Educational level (primary, secondary, tertiary)</li>
+<li>Pain Level in Patients (Mild, Moderate, Severe) etc...</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Continuos/metric</strong> (numeric data where differences between data points are meaningful and measurable) e.g age, height, temperature etc...</li>
+</ol>
+<h2 id="summary-stats">Summary stats </h2>
+<h3 id="measure-of-averagecentral-tendency">Measure of average/central tendency </h3>
+<p>Think of average values as how people and objects behave<br>
+in general.</p>
+<p>Selecting the appropriate measure of average/central tendency (Mean, Median, or Mode) is important in statistical analysis. Conventionally, each measure should be accompanied by an appropriate measure of dispersion to better understand the spread of data.</p>
+<p><strong>Take note of these about average and dispersion:</strong></p>
+<ul>
+<li>The mode is used for nominal variables.</li>
+<li>For ordinal variables, we can calculate both the mode and the median.</li>
+<li>For metric variables, we have the mode, the median, and the mean.</li>
+<li>For a metric variable that is perfectly normally distributed, the mean, median and mode equals.</li>
+<li>Huge gap between mean and median can suggest outliers in your data</li>
+<li>Mean is sensitive to outliers (sensitive to extreme values), while the mode and median are not. So, use median instead if there are outliers in your data.</li>
+<li>Serious people specify which average value they used.</li>
+<li>Measures of variation/dispersion complement our information on the average; the smaller the variation, the more meaningful the average value is.</li>
+<li>The range is the difference between maximum and minimum of a variable, it is very sensitive to outliers.</li>
+<li>The standard deviation can be interpreted as the average deviation of all values from the mean. The variance is the squared standard deviation. For metric variables, both values<br>
+can be calculated in a meaningful way. Note that sd is in the same scale as mean</li>
+<li>The interquartile range gives information about the area in which the middle 50% of the values are located. It can be used with both metric and ordinal data</li>
+<li>The coefficient of variation is applied to analyze in which variable people or objects are more consistent, it is applied with metric data</li>
+<li>In statistical report, mean (M) and standard deviation (SD) goes together while median and interquartile range (IRQ) goes together</li>
+</ul>
+<h3 id="measures-of-distribution-continuos-data">Measures of distribution (Continuos data) </h3>
+<ul>
+<li>
+<p><strong>Skewness:</strong> Measures asymmetry of the data distribution.</p>
+<ul>
+<li>A large negative skew indicates that the data are left-skewed (long tail on the left)</li>
+<li>A positive value would indicate right skewness (long tail on the left).</li>
+<li>Acceptable range is between -1 to 1 (anything beyond may be suspicious of presence of outliers)</li>
+<li>You can also use density plot or histogram to inspect it</li>
+</ul>
+</li>
+<li>
+<p><strong>Jarque-Bera stats:</strong> is a statistical test that checks whether the data follow a normal distribution (based on skewness and kurtosis)</p>
+<ul>
+<li>The p-value for the Jarque-Bera test indicate if data is normally distributed or not
+<ul>
+<li>p-val &lt; 0.05 --&gt; data is not normally distributed</li>
+<li>p-val &gt; 0.05 --&gt; data is normally distributed</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Other formal normality test</strong></p>
+<ul>
+<li>K-S test</li>
+<li>Shipro-Wilk</li>
+<li>Anderson Darling</li>
+</ul>
+</li>
+<li>
+<p><strong>Percentiles:</strong> These indicate the value below which a given percentage of observations fall. For example, if the 25th percentile (Q1) of a variable such as age is 32, it means that 25% of the observations have ages less than 32....</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> You can check most of these using describe function in descriptive stats package in statsmodels stats</p>
+</blockquote>
+<h3 id="measures-of-distribution-categorical-data">Measures of distribution (Categorical data) </h3>
+<ul>
+<li>Use <strong>Frequency Distribution</strong>
+<ul>
+<li>It shows how often each value occurs</li>
+<li>You can check the proportion of occurence too</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>You can check this using value_count Series method in pandas (For proportion, use the argument, normalize=True)</p>
+</blockquote>
+<h2 id="dealing-with-outliers"><strong>Dealing with Outliers</strong> </h2>
+<p>An outlier is a data point that is significantly different from other observations in a dataset. It is either much higher or much lower than most of the data. For example, a person earning #10 million per month while most earn between #50,000 and #200,000. They can affect statistical results and mislead interpretations if not properly handled. However, sometimes, outliers are errors, but they can also be important rare cases.</p>
+<h2 id="detecting-outliers">Detecting Outliers </h2>
+<ol>
+<li>Using the Interquartile Range (IQR) Method</li>
+</ol>
+<p>The IQR method helps detect outliers using the spread of the middle 50% of data.</p>
+<p><strong>STEPS:</strong></p>
+<ul>
+<li>
+<p>Find Q1 (First Quartile) = 25th percentile</p>
+</li>
+<li>
+<p>Find Q3 (Third Quartile) = 75th percentile</p>
+</li>
+<li>
+<p>Calculate IQR (Interquartile Range)</p>
+<p>IQR = Q3 - Q1</p>
+</li>
+<li>
+<p>Find the Outlier Boundaries</p>
+<ul>
+<li>
+<p>Lower Bound = Q1 - (1.5  IQR)</p>
+</li>
+<li>
+<p>Upper Bound = Q3 + (1.5  IQR)</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><code>Any data point outside these boundaries is an outlier</code></p>
+<ol start="2">
+<li><strong>Using a Box Plot</strong></li>
+</ol>
+<p>A box plot (or box-and-whisker plot) is a visual method to detect outliers.</p>
+<ul>
+<li>The box shows Q1, Q3, and the median.</li>
+<li>The "whiskers" extend to the minimum and maximum within the 1.5 × IQR range.</li>
+<li>Any point beyond the whiskers is an outlier</li>
+</ul>
+<p>How to Interpret a Box Plot:</p>
+<ul>
+<li>If a dot appears far away from the box, it is an outlier</li>
+<li>If the box is asymmetrical, the data is skewed</li>
+<li>If the middle line in the box is exactly or close to the midle, the data implies normal distribution</li>
+</ul>
+<p><strong>How to Handle Outliers</strong></p>
+<table>
+<thead>
+<tr>
+<th>Approach</th>
+<th>When to Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Keep the Outlier</td>
+<td>If it is a real and important data point (e.g., a rare event)</td>
+</tr>
+<tr>
+<td>Remove the Outlier</td>
+<td>If it is an error or not relevant to the study</td>
+</tr>
+<tr>
+<td>Transform the Data</td>
+<td>Apply log transformation to reduce the effect of extreme values</td>
+</tr>
+<tr>
+<td>Use Robust Statistics</td>
+<td>Use median instead of mean, or non-parametric tests that are not affected by outliers</td>
+</tr>
+</tbody>
+</table>
+<p>Read more on it in any stats or reseach methodology texts...</p>
+<h2 id="data-transformation">Data Transformation </h2>
+<p>In statistics, many tests assume that data is normally distributed (bell-shaped curve). However, real-world data is often skewed or not normal. When data is too skewed, we use data transformation to make it more normal or nearly normal. Normality is important because many statistical tests, like t-tests, ANOVA etc assume normal distribution.  If data is not normal, the results may be misleading.</p>
+<p><strong>Signs That Data is Not Normal:</strong></p>
+<ul>
+<li>Skewness: The data is too stretched on one side</li>
+<li>Shapiro-Wilk Test or Kolmogorov-Smirnov Test: These tests check if data is normal.</li>
+<li>Histogram,desity plot or Q-Q Plot: Graphs show whether data is symmetrical or skewed.</li>
+</ul>
+<hr>
+<p><strong>Common Data Transformation Techniques</strong></p>
+<p>Different transformations are used depending on the distribution shape of the data. The table below provides commonly used transformations:</p>
+<table>
+<thead>
+<tr>
+<th>Transformation</th>
+<th>Best for</th>
+<th>Limitations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Log Transformation</td>
+<td>Right-skewed data</td>
+<td>Cannot be applied to zero or negative values</td>
+</tr>
+<tr>
+<td>Square Root Transformation</td>
+<td>Right-skewed data</td>
+<td>Not suitable for negative values</td>
+</tr>
+<tr>
+<td>Square Transformation</td>
+<td>Left-skewed data</td>
+<td>Cannot be applied to negative values</td>
+</tr>
+<tr>
+<td>Reciprocal Transformation</td>
+<td>Makes small values larger and large values smaller</td>
+<td>Cannot be applied to zero or negative values</td>
+</tr>
+</tbody>
+</table>
+<p>Read more on it in any stats or reseach methodology texts...</p>
+<h2 id="research-objectives-research-questions-and-hypotheses-in-statistical-analysis">Research Objectives, Research Questions, and Hypotheses in Statistical Analysis </h2>
+<h2 id="understanding-research-objectives"><strong>Understanding Research Objectives</strong> </h2>
+<p>A research objective defines what a study aims to achieve. It provides a clear direction for data collection, analysis, and interpretation.</p>
+<p><strong>Research objectives can be:</strong></p>
+<ol>
+<li>Exploratory –&gt; To gain insights into a phenomenon.
+<ul>
+<li>Example: To explore factors affecting students' academic performance in Economics.</li>
+</ul>
+</li>
+<li>Descriptive –&gt; To describe characteristics or trends.
+<ul>
+<li>Example: To determine the average income of workers in Lagos State.</li>
+</ul>
+</li>
+<li>Analytical –&gt; To examine relationships between variables.
+<ul>
+<li>Example: To assess the effect of digital banking on customer satisfaction.</li>
+</ul>
+</li>
+<li>Causal –&gt; To investigate cause-and-effect relationships.
+<ul>
+<li>Example: To determine whether teaching methods impact student performance in Mathematics.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p><strong>Linking Research Objectives to Research Questions</strong></p>
+<p>Research questions are derived from research objectives. While objectives provide broad goals, research questions break them down into specific inquiries.</p>
+<p><strong>Example:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Research Objective</th>
+<th>Corresponding Research Question</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>To examine the relationship between study habits and students' academic performance.</td>
+<td>What is the relationship between study habits and students' academic performance?</td>
+</tr>
+<tr>
+<td>To assess the impact of online learning on students' engagement.</td>
+<td>Does online learning improve student engagement compared to traditional classrooms?</td>
+</tr>
+<tr>
+<td>To investigate the effects of marketing strategies on product sales.</td>
+<td>How do different marketing strategies influence product sales?</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>What is a Hypothesis?</strong></p>
+<p>A hypothesis is a testable statement about a population parameter. It is formulated for statistical testing and helps in drawing conclusions based on data.</p>
+<p>There are two main types of hypotheses:</p>
+<ol>
+<li><strong>Null Hypothesis (H₀)</strong></li>
+</ol>
+<ul>
+<li>The null hypothesis states that there is no effect, no relationship, or no difference between variables.</li>
+<li>It represents the status quo and is always tested statistically.</li>
+<li>If we reject H₀, we accept the alternative hypothesis.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<ul>
+<li>H₀: There is no significant relationship between exercise and weight loss.</li>
+<li>H₀: There is no significant difference in Mathematics performance between male and female students.</li>
+</ul>
+<ol start="2">
+<li><strong>Alternative Hypothesis (H₁ or Hₐ)</strong></li>
+</ol>
+<ul>
+<li>The alternative hypothesis states that there is a significant effect or relationship.</li>
+<li>If the statistical test provides enough evidence to reject H₀, we conclude that H₁ is likely true.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<ul>
+<li>Hₐ: There is a significant relationship between exercise and weight loss.</li>
+<li>Hₐ: There is a significant difference in Mathematics performance between male and female students.</li>
+</ul>
+<p><strong>When Can a Research Question Be Turned Into a Hypothesis?</strong></p>
+<p>Since hypotheses are strictly inferential, not all research questions can be converted into hypotheses. Only research questions involving statistical relationships or comparisons can become hypotheses.</p>
+<p><strong>Examples of Research Questions and Hypotheses</strong></p>
+<table>
+<thead>
+<tr>
+<th>Research Question</th>
+<th>Can it be turned into a Hypothesis?</th>
+<th>Possible Hypothesis (H₀ and Hₐ)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What is the average income of people in City A?</td>
+<td>No (Descriptive)</td>
+<td>Not applicable</td>
+</tr>
+<tr>
+<td>Is there a relationship between exercise and weight loss?</td>
+<td>Yes (Inferential)</td>
+<td>H₀: There is no significant relationship between exercise and weight loss.<br>Hₐ: There is a significant relationship between exercise and weight loss.</td>
+</tr>
+<tr>
+<td>Do male and female students perform differently in Mathematics?</td>
+<td>Yes (Inferential)</td>
+<td>H₀: There is no significant difference in Mathematics performance between male and female students.<br>Hₐ: There is a significant difference in Mathematics performance between male and female students.</td>
+</tr>
+<tr>
+<td>How do employees perceive remote work?</td>
+<td>No (Qualitative)</td>
+<td>Not applicable</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="p-value-and-statistical-significance">p-Value and Statistical Significance </h2>
+<p><strong>What is a p-Value?</strong></p>
+<p>The p-value (probability value) is a statistical measure that helps determine whether the observed data provides enough evidence to reject the null hypothesis (H₀). It represents the probability of obtaining the observed results (or more extreme results) if the null hypothesis were true.</p>
+<p><strong>Key Interpretations of p-Value:</strong></p>
+<ul>
+<li>p &lt; 0.05 → Statistically significant (reject H₀; strong evidence against H₀).</li>
+<li>p ≥ 0.05 → Not statistically significant (fail to reject H₀; insufficient evidence against H₀).</li>
+<li>p ≈ 0.01 or lower → Very strong evidence against H₀.</li>
+<li>p ≈ 0.10 or higher → Weak or no evidence against H₀.</li>
+</ul>
+<p><strong>What is Statistical Significance?</strong></p>
+<p>Statistical significance indicates that the results observed in a study are unlikely to have occurred by chance if the null hypothesis were true</p>
+<ul>
+<li>A statistically significant result suggests an effect or relationship exists</li>
+<li>The threshold (α = 0.05) is commonly used to determine significance, but it may vary depending on the study.</li>
+<li>A significant p-value suggests that the sample findings might be applicable to the population, but generalization depends on factors like sample size, randomness, study design.</li>
+</ul>
+<h2 id="example-1">Example </h2>
+<p>A New Pain Relief Drug Study</p>
+<p><strong>Research Question:</strong></p>
+<ul>
+<li>Does a new pain relief drug reduce pain levels more effectively than a placebo?</li>
+</ul>
+<p><strong>Hypothesis:</strong></p>
+<ul>
+<li>H₀: The new drug has no effect on pain reduction (same as placebo).</li>
+<li>H₁: The new drug significantly reduces pain compared to placebo.</li>
+</ul>
+<p><strong>Results:</strong></p>
+<ul>
+<li>After testing, the p-value is 0.03.</li>
+</ul>
+<p><strong>Interpretation:</strong></p>
+<ul>
+<li>Since p = 0.03 &lt; 0.05, we reject H₀ and conclude that the new drug significantly reduces pain compared to the placebo.</li>
+<li>Generalization: If the sample was large, random, and representative, we can reasonably generalize this finding to the larger population.</li>
+<li>However, a statistically significant result does not tell us how effective the drug is in practical terms, for that, we need to consider clinical significance.</li>
+</ul>
+<p><code>Explore more in any reseach methodology texts in your feild...</code></p>
+<h2 id="scales-in-questionnaires-and-measurement-of-variables"><strong>Scales in Questionnaires and Measurement of Variables</strong> </h2>
+<p>In surveys and psychological assessments, researchers use scales to measure variables such as self-esteem, depression, job satisfaction, and motivation.</p>
+<p>These scales provide quantitative measures for otherwise qualitative traits.</p>
+<p><strong>Aggregating Questionnaire Scales for Variable Measurement</strong></p>
+<p>When researchers collect responses using Likert-type scales, they need to aggregate multiple items to form a composite measure of a concept.</p>
+<p><strong>Example: Depression Scale (CES-D)</strong></p>
+<ul>
+<li>
+<p>The CES-D (Centre for Epidemiologic Studies Depression Scale) measures depression levels based on responses to multiple items.</p>
+</li>
+<li>
+<p><strong>Sample Questions (Likert Scale 0–3):</strong></p>
+<ol>
+<li>I felt down and depressed. (0 = Rarely, 3 = Most of the time)</li>
+<li>I had trouble concentrating. (0 = Rarely, 3 = Most of the time)</li>
+<li>I felt lonely. (0 = Rarely, 3 = Most of the time)</li>
+<li>I had difficulty sleeping. (0 = Rarely, 3 = Most of the time)</li>
+</ol>
+</li>
+</ul>
+<p><strong>Aggregation Method:</strong></p>
+<ul>
+<li>Sum all responses across the 20 items.</li>
+<li>Higher scores indicate higher levels of depression.</li>
+<li>Cut-off points may be used:
+<ul>
+<li>0–15: No depression</li>
+<li>16–30: Mild depression</li>
+<li>31 and above: Severe depression</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>Example: Self-Esteem Scale (Rosenberg Self-Esteem Scale)</strong></p>
+<ul>
+<li>Measures: A person's self-worth and self-respect</li>
+<li>Sample Questions (Likert Scale 1–4):
+<ol>
+<li>I feel that I have a number of good qualities. (1 = Strongly Disagree, 4 = Strongly Agree)</li>
+<li>I feel that I am a person of worth. (1 = Strongly Disagree, 4 = Strongly Agree)</li>
+<li>I am able to do things as well as most other people. (1 = Strongly Disagree, 4 = Strongly Agree)</li>
+<li>I take a positive attitude toward myself. (1 = Strongly Disagree, 4 = Strongly Agree)</li>
+</ol>
+</li>
+</ul>
+<p><strong>Aggregation Method:</strong></p>
+<ul>
+<li>Reverse-score negatively worded items.</li>
+<li>Compute the total score.</li>
+<li>Higher scores = Higher self-esteem.</li>
+</ul>
+<p><strong>Best Practices for Aggregating Questionnaire Data</strong></p>
+<p>Check for Reverse-Scored Items</p>
+<ul>
+<li>Some items may be phrased negatively (e.g., I feel useless).</li>
+<li>Before aggregation, reverse the scale (e.g., a score of 1 becomes 4, a score of 2 becomes 3, etc.).</li>
+</ul>
+<h1 id="stats-tests"><strong>STATS TESTS</strong> </h1>
+<p><strong>Test of Association: Correlation Analysis</strong></p>
+<p>Correlation analysis measures the trength and direction of the relationship between two variables. It helps determine if changes in one variable are associated with changes in another, but it does not imply causation.</p>
+<p><strong>Key Concept: Correlation Is Not Causation</strong></p>
+<ul>
+<li>Correlation tells us if two variables move together, but it does not prove that one variable causes the other.</li>
+<li>Example: Ice cream sales and drowning incidents may be positively correlated, but hot weather is the true cause of both.</li>
+</ul>
+<hr>
+<p><strong>Types of Correlation Tests</strong></p>
+<table>
+<thead>
+<tr>
+<th>Correlation Type</th>
+<th>When to Use?</th>
+<th>Assumptions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pearson’s Correlation (r)</td>
+<td>For normally distributed, continuous data.</td>
+<td>- Both variables should be continuous.  <br> - Relationship should be linear. <br> - No extreme outliers. <br> - Data should be normally distributed.</td>
+</tr>
+<tr>
+<td>Spearman’s Rank Correlation (rho)</td>
+<td>For non-normal data or ordinal data.</td>
+<td>- Variables should be at least ordinal. <br> - Does not require linearity. <br> - Can handle outliers.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>Interpretation of Correlation Coefficients</strong></p>
+<p><strong>The correlation coefficient ranges from -1 to +1:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Correlation Value (r, ρ(rho))</th>
+<th>Strength of Relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.00 to ±0.19</td>
+<td>Very weak or no correlation</td>
+</tr>
+<tr>
+<td>±0.20 to ±0.39</td>
+<td>Weak correlation</td>
+</tr>
+<tr>
+<td>±0.40 to ±0.59</td>
+<td>Moderate correlation</td>
+</tr>
+<tr>
+<td>±0.60 to ±0.79</td>
+<td>Strong correlation</td>
+</tr>
+<tr>
+<td>±0.80 to ±1.00</td>
+<td>Very strong correlation</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Positive (+) correlation: Both variables increase or decrease together.</li>
+<li>Negative (-) correlation: One variable increases while the other decreases.</li>
+<li>Zero correlation (0.00): No relationship between the variables.</li>
+</ul>
+<p><strong>Example Interpretation:</strong></p>
+<ul>
+<li>If r = 0.75, it means a strong positive correlation.</li>
+<li>If ρ = -0.45, it means a moderate negative correlation.</li>
+</ul>
+<hr>
+<p><strong>Interpreting the p-value</strong></p>
+<p>The p-value tells us if the correlation is statistically significant</p>
+<table>
+<thead>
+<tr>
+<th>p-value</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p &lt; 0.05</td>
+<td>Significant correlation (reject the null hypothesis)</td>
+</tr>
+<tr>
+<td>p ≥ 0.05</td>
+<td>No significant correlation (fail to reject the null hypothesis)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example:</strong></p>
+<ul>
+<li>If r = 0.62, p = 0.02, we conclude that there is a strong positive correlation, and it is statistically significant.</li>
+<li>If ρ = -0.20, p = 0.30, we conclude that there is a weak negative correlation, but it is not statistically significant.</li>
+</ul>
+<hr>
+<h2 id="correlation-in-terms-of-research-objectives-questions-and-hypotheses">Correlation in Terms of Research Objectives, Questions, and Hypotheses </h2>
+<p><strong>Research Objective</strong></p>
+<p>Research objectives often explore whether a relationship exists between two variables.</p>
+<p><strong>Example Objective:</strong></p>
+<ul>
+<li>"To examine the relationship between students' study time and academic performance."</li>
+</ul>
+<p><strong>Research Question</strong></p>
+<p>Research questions are derived from objectives and focus on specific associations.</p>
+<p><strong>Example Question:</strong></p>
+<ul>
+<li>"Is there a significant relationship between students' study time and their academic performance?"</li>
+</ul>
+<p><strong>Research Hypothesis</strong></p>
+<p>Hypothesis states the expected relationship between two variables.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Hypothesis Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Null Hypothesis (H₀)</td>
+<td>"There is no significant relationship between study time and academic performance."</td>
+</tr>
+<tr>
+<td>Alternative Hypothesis (H₁)</td>
+<td>"There is a significant positive relationship between study time and academic performance."</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong></p>
+<ul>
+<li>
+<p>Before performing correlation analysis, it is important to visualise the relationship between the two variables using a scatter plot.</p>
+</li>
+<li>
+<p>After generating the scatter plot, examine the pattern and spread of data points to interpret the strength and nature of the correlation.</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Observation</th>
+<th>Implication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data points spread all over the place</td>
+<td>Suggests a very low correlation or no relationship.</td>
+</tr>
+<tr>
+<td>Data points form a narrow cigar-shaped pattern</td>
+<td>Indicates a strong correlation. The more tightly packed the points, the stronger the relationship.</td>
+</tr>
+<tr>
+<td>Straight-line pattern</td>
+<td>Suggests a linear relationship, suitable for Pearson’s correlation.</td>
+</tr>
+<tr>
+<td>Curved pattern (U-shaped or S-shaped trend)</td>
+<td>Suggests a non-linear relationship, meaning Pearson’s correlation may not be appropriate. Consider using Spearman’s rank correlation instead.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>APA-Style Interpretation of Correlation Results</strong></p>
+<p>Assuming a Pearson correlation analysis was conducted to examine the relationship between students' study time (hours per week) and academic performance (exam scores), and the results showed:</p>
+<ul>
+<li>r = .474, p &lt; .05</li>
+</ul>
+<p><strong>Interpretation in APA Format</strong></p>
+<blockquote>
+<p>A Pearson correlation analysis was conducted to examine the relationship between students' study time and academic performance. Results revealed a moderate positive correlation between study time and exam scores, (r = .474, p &lt; .05), indicating that students who spent more time studying tended to have higher academic performance. Given that the p-value is less than .05, the null hypothesis was rejected, suggesting that the relationship is statistically significant.</p>
+</blockquote>
+<h2 id="students-t-test-for-hypothesis-testing">Student’s t-Test for Hypothesis Testing </h2>
+<p>The Student’s t-test (or simply t-test) is a parametric statistical test used to compare means and test hypotheses about population parameters.</p>
+<p>There are three main types of t-tests:</p>
+<ol>
+<li>One-sample t-test – Compares the mean of a single sample with a known or hypothetical value.</li>
+<li>Independent samples t-test – Compares the means of two independent groups.</li>
+<li>Paired t-test – Compares the means of two related (paired) samples.</li>
+</ol>
+<hr>
+<h2 id="1-one-sample-t-test">1. One-Sample t-Test </h2>
+<p>The one-sample t-test is used to compare the mean of a sample to a specific value.</p>
+<h3 id="example-scenario">Example Scenario </h3>
+<p>A study was conducted to determine if the mean age of senior secondary school students in Ibadan North Local Government is 15 years.</p>
+<h3 id="hypothesis">Hypothesis: </h3>
+<ul>
+<li>H₀ (Null Hypothesis): The mean age of students is equal to 15 years.</li>
+<li>Hₐ (Alternative Hypothesis): The mean age of students is not equal to 15 years.</li>
+</ul>
+<h3 id="assumptions">Assumptions: </h3>
+<ol>
+<li>The sample is a random and independent selection of students.</li>
+<li>The age distribution in the population is approximately normal.</li>
+</ol>
+<h3 id="hypothetical-results">Hypothetical Results: </h3>
+<p>A random sample of n = 50 students was selected. The sample mean age was 15.8 years (SD = 1.2). A one-sample t-test was conducted to compare the mean age of students to 15 years.</p>
+<p>Results:</p>
+<ul>
+<li>t(49) = 4.73, p &lt; .001</li>
+</ul>
+<h3 id="apa-formatted-report">APA-Formatted Report: </h3>
+<blockquote>
+<p>A one-sample t-test was conducted to determine whether the mean age of senior secondary school students in Ibadan North differed from 15 years. The results indicated a statistically significant difference in mean age, t(49) = 4.73, p &lt; .001, suggesting that the students’ mean age (M = 15.8, SD = 1.2) was significantly higher than 15 years.  Therefore the null hypothesis is not accepted</p>
+</blockquote>
+<hr>
+<h2 id="2-independent-samples-t-test">2. Independent Samples t-Test </h2>
+<p>The independent samples t-test compares the means of two independent groups.</p>
+<h3 id="example-scenario-1">Example Scenario </h3>
+<p>A researcher investigated whether male and female students differ in their mathematics test scores.</p>
+<h3 id="hypothesis-1">Hypothesis: </h3>
+<ul>
+<li>H₀: The mean math scores of male and female students are equal.</li>
+<li>Hₐ: The mean math scores of male and female students are different.</li>
+</ul>
+<h3 id="assumptions-1">Assumptions: </h3>
+<ol>
+<li>The two groups are independent (i.e., different students for each group).</li>
+<li>The dependent variable (math scores) is normally distributed.</li>
+<li>The two groups have equal variances (tested with Levene’s test).</li>
+</ol>
+<h3 id="hypothetical-results-1">Hypothetical Results: </h3>
+<p>A sample of 30 male and 30 female students was analyzed. The mean math score for males was 72.5 (SD = 9.4), and for females, it was 68.2 (SD = 7.8).</p>
+<p>A Levene’s test for equality of variances was not significant (p = .203), indicating that equal variances could be assumed. The independent samples t-test yielded the following result:</p>
+<ul>
+<li>t(58) = 2.04, p = .046</li>
+</ul>
+<h3 id="apa-formatted-report-1">APA-Formatted Report: </h3>
+<blockquote>
+<p>An independent samples t-test was conducted to compare mathematics test scores between male and female students. The results showed a significant difference in scores, F(2,207) = 2.04, p = .046, with male students (M = 72.5, SD = 9.4) scoring higher than female students (M = 68.2, SD = 7.8).</p>
+</blockquote>
+<hr>
+<h2 id="3-paired-t-test">3. Paired t-Test </h2>
+<p>The paired t-test (also called dependent t-test) is used when the same individuals or matched pairs are tested before and after an intervention.</p>
+<h3 id="example-scenario-2">Example Scenario </h3>
+<p>A company conducted a training programme to improve employees' job performance scores. Performance was measured before and after the training.</p>
+<h3 id="hypothesis-2">Hypothesis: </h3>
+<ul>
+<li>H₀: The mean job performance scores before and after training are equal.</li>
+<li>Hₐ: The mean job performance scores before and after training are different.</li>
+</ul>
+<h3 id="assumptions-2">Assumptions: </h3>
+<ol>
+<li>The differences between paired observations are normally distributed.</li>
+<li>The pairs represent matched observations (same employees before and after training)</li>
+</ol>
+<h3 id="hypothetical-results-2">Hypothetical Results: </h3>
+<p>A group of 25 employees completed the training programme. Their mean job performance score before training was 65.4 (SD = 10.2), and after training, it was 75.8 (SD = 9.1).</p>
+<p>A paired t-test was conducted:</p>
+<ul>
+<li>t(24) = 5.62, p &lt; .001</li>
+</ul>
+<h3 id="apa-formatted-report-2">APA-Formatted Report: </h3>
+<blockquote>
+<p>A paired t-test was conducted to compare job performance scores before and after training. The results indicated a significant increase in performance scores after training, t(24) = 5.62, p &lt; .001. Employees performed better after training (M = 75.8, SD = 9.1) than before training (M = 65.4, SD = 10.2), suggesting that the training programme was effective.</p>
+</blockquote>
+<hr>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><a href="https://docs.python.org/3/search.html?q=Datetime">https://docs.python.org/3/search.html?q=Datetime</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

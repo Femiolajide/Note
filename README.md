@@ -8,39 +8,37 @@
     - [String](#strings-in-python)
     - [Number](#numbers-and-math-in-python)
 
-2. [CONTROL](#control-flow-and-exception-handling-in-python)
+1. [CONTROL](#control-flow-and-exception-handling-in-python)
     - [ifs](#if-statement)
     - [elif](#elif-statement)
     - [try & except](#try-and-except-clauses)
     - [Common error](#common-exceptions-errors-in-python)
 
-3. [DATA STRUCTURE](#data-structure)
+1. [DATA STRUCTURE](#data-structure)
     - [Tuple](#tuples-in-python)
     - [List](#lists-in-python)
     - [Set](#sets-in-python)
     - [Dictionary](#python-dictionaries)
 
-4. [LOOPING](#range-function-for-loop-and-while-loop-in-python)
+1. [LOOPING](#range-function-for-loop-and-while-loop-in-python)
     - [for](#for-loop)
     - [while](#while-loop)
     - [control in loop](#common-loop-control-statements)
 
-5. [REGULAR EXPRESSION](#regular-expressions-re-for-string-manipulayion)
+1. [REGULAR EXPRESSION](#regular-expressions-re-for-string-manipulayion)
     - [RE chars](#common-special-characters)
     - [Special sequence](#special-sequences)
     - [Quantifiers](#quantifiers)
     - [Assertion](#assertion)
     - [re functions](#main-functions)
     - [re flags](#common-flags)
-<<<<<<< HEAD
+
 1. [DATETIME](#introduction-to-datetime-in-python)
-6. [FUNCTION](#functions-in-python-1)
-=======
-6. [DATETIME](#introduction-to datetime-in-python) 
 
+1. [FUNCTION](#functions-in-python-1)
 
-7. [FUNCTION](#functions-in-python-1)
->>>>>>> b209ffd31eb45e9ff0a76e8958f8a3d88ce4b3cd
+1. [FUNCTION](#functions-in-python-1)
+
     - [def](#defining-a-function)
     - [return](#the-return-statement)
     - [Sope](#variable-scope)
@@ -51,19 +49,19 @@
     - [Best practices](#best-practices-with-functions)
     - [Creating module](#creating-your-own-python-module)
 
-8. [Numpy into](#very-breif-intro-to-numpy)
+1. [NUMPY INTO](#very-breif-intro-to-numpy)
     - [Intro](#very-breif-intro-to-numpy)
     - [Crating array](#creating-arrays)
     - [Slicing](#slicing)
     - [Shaping](#common-data-shaping-funtions-in-numpy)
     - [Math & Stats Funcs](#common-arithmetic-and-statistical-funtions-in-numpy)
 
-9. [PANDAS](#introduction-to-pandas)
+1. [PANDAS](#introduction-to-pandas)
     - [Data creation](#pandas-data-structures)
     - [Data Loading](#data-loading-in-pandas)
     - [Exporting](#exporting-your-data-in-pandas)
 
-10. [STATISIICAL ANALYSIS](#statistical-analysis)
+1. [STATISIICAL ANALYSIS](#statistical-analysis)
 
 
 # Brief Introduction to Python
@@ -1025,7 +1023,7 @@ You can create a date object in several ways:
 ```python
 # Create a date object
 today = dt.date.today()
-<<<<<<< HEAD
+
 print(today)  
 
 # Create a specific date
@@ -1037,7 +1035,7 @@ print(today)  # e.g., 2025-11-11
 # Create a specific date
 date1= dt.date(1998, 7, 15)
 print(date1)  # 1998-07-15
->>>>>>> b209ffd31eb45e9ff0a76e8958f8a3d88ce4b3cd
+
 ```
 
 ---
@@ -1116,10 +1114,7 @@ print(now.hour, now.minute, now.second)
 |---------|--------------|----------|
 | `.now()` | Returns the current local date and time | `datetime.now()` |
 | `.today()` | Returns the current local date and time (same as `now()`) | `datetime.today()` |
-<<<<<<< HEAD
-=======
 | `.utcnow()` | Returns the current UTC date and time | `datetime.utcnow()` |
->>>>>>> b209ffd31eb45e9ff0a76e8958f8a3d88ce4b3cd
 | `.date()` | Returns only the date portion | `now.date()  |
 | `.time()` | Returns only the time portion | `now.time()  |
 | `.timestamp()` | Returns POSIX timestamp (seconds since epoch) | `now.timestamp()` |
@@ -1130,11 +1125,9 @@ print(now.hour, now.minute, now.second)
 | `.strptime(date_string, format)` | Convert a readable string to datetime object | `now.strftime('%A, %d %B %Y %I:%M %p')` |
 | `datetime.fromtimestamp(ts)` | Creates a datetime object from a timestamp | `datetime.fromtimestamp(1696425600)` |
 
-<<<<<<< HEAD
+
 ##  Timedelta/Datetime Arithmetic 
-=======
-##  Datetime Arithmetic/Timedelta 
->>>>>>> b209ffd31eb45e9ff0a76e8958f8a3d88ce4b3cd
+
 
 You can perform addition or subtraction using **`timedelta`** objects.
 
@@ -1151,10 +1144,6 @@ print(two_hours_ago)
 ```
 
 ## Datetime Formating
-<<<<<<< HEAD
-=======
-### General 
->>>>>>> b209ffd31eb45e9ff0a76e8958f8a3d88ce4b3cd
 
 | Directive | Meaning |
 |-----------|---------|
@@ -1180,18 +1169,11 @@ print(two_hours_ago)
 | %X        | Locale’s appropriate time representation. |
 | %%        | A literal % character. |
 ___
-<<<<<<< HEAD
+
 Read more on datetime in pytho documentation[^1]
 [^1]: https://docs.python.org/3/search.html?q=Datetime
 
 
-
-=======
-Read more on datetime in python[^1]
-[^1]: https://docs.python.org/3/search.html?q=Datetime
-
-
->>>>>>> b209ffd31eb45e9ff0a76e8958f8a3d88ce4b3cd
 # Functions in Python
 
 A function is a reusable block of code designed to perform a specific task. Functions allow us to organize code into smaller, manageable parts, making it more readable, reusable, and efficient.
